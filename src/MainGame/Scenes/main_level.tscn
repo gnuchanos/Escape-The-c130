@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://37diyqjihxd5"]
+[gd_scene load_steps=6 format=3 uid="uid://37diyqjihxd5"]
 
 [ext_resource type="Environment" uid="uid://ofuuhkoyp2b0" path="res://DefaultEnviroment.tres" id="1_abhj5"]
 [ext_resource type="Script" path="res://MainGame/Scripts/main_level.gd" id="1_viuor"]
 [ext_resource type="PackedScene" uid="uid://cns1uy01wn0kj" path="res://BaseGame/FPS/fps.tscn" id="2_8x067"]
 [ext_resource type="PackedScene" uid="uid://c6e4rg0av3jxs" path="res://MainGame/3D/level3D/jail.glb" id="3_uhlp8"]
+[ext_resource type="PackedScene" uid="uid://cvnlfakn40thk" path="res://MainGame/3D/Prefabs/light.tscn" id="5_ffgsf"]
 
 [node name="mainLevel" type="Node3D"]
 script = ExtResource("1_viuor")
@@ -15,3 +16,78 @@ environment = ExtResource("1_abhj5")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.11917, 0, 2.17835)
 
 [node name="jail" parent="." instance=ExtResource("3_uhlp8")]
+
+[node name="light" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218255, 2.26437, 2.60863)
+
+[node name="light" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.99573, 1.64167, -0.20578)
+
+[node name="light2" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.353109, 1.64333, 0)
+
+[node name="light19" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.353109, 2.07332, 5.76485)
+
+[node name="light20" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.353109, 3.34123, 10.2997)
+
+[node name="light21" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.353109, 4.07992, 14.8459)
+
+[node name="light22" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.353109, 4.07992, 18.4791)
+
+[node name="light4" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25102, 1.65915, 0)
+
+[node name="light9" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25102, 1.64966, 3.86004)
+
+[node name="light10" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25102, 1.01584, 6.70212)
+
+[node name="light11" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25102, 0.0907128, 10.9692)
+
+[node name="light12" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25102, -0.31807, 15.9064)
+
+[node name="light13" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.21795, -0.597815, 15.9064)
+
+[node name="light5" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.6537, 1.60775, 0)
+
+[node name="light6" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6997, 0.28488, 0)
+
+[node name="light7" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0452, -0.32812, 0)
+
+[node name="light8" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6577, -0.369312, 3.97288)
+
+[node name="light17" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6577, -0.369312, 10.9413)
+
+[node name="light18" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6577, -0.369312, 14.6796)
+
+[node name="light14" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0731, -0.653453, 4.45013)
+
+[node name="light23" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.42923, -0.653453, 4.45013)
+
+[node name="light24" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.42923, -0.653453, 12.6664)
+
+[node name="light15" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0731, -0.653453, 9.11778)
+
+[node name="light16" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0731, -0.653453, 17.0364)
+
+[node name="light3" parent="light" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.353109, 1.76797, -4.32978)

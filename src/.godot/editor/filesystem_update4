@@ -18,3 +18,6 @@ res://MainGame/3D/level3D/Material/top_0.tres
 res://MainGame/3D/level3D/Material/top_1.tres
 res://MainGame/3D/level3D/Material/v_0.tres
 res://MainGame/Scripts/main_level.gd
+res://MainGame/3D/Prefabs/door.tscn
+res://MainGame/3D/Prefabs/light.tscn
+res://MainGame/3D/level3D/lamb.tres
