@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://37diyqjihxd5"]
+[gd_scene load_steps=8 format=3 uid="uid://37diyqjihxd5"]
 
 [ext_resource type="Environment" uid="uid://ofuuhkoyp2b0" path="res://DefaultEnviroment.tres" id="1_abhj5"]
 [ext_resource type="Script" path="res://MainGame/Scripts/main_level.gd" id="1_viuor"]
 [ext_resource type="PackedScene" uid="uid://cns1uy01wn0kj" path="res://BaseGame/FPS/fps.tscn" id="2_8x067"]
 [ext_resource type="PackedScene" uid="uid://c6e4rg0av3jxs" path="res://MainGame/3D/level3D/jail.glb" id="3_uhlp8"]
-[ext_resource type="PackedScene" uid="uid://dvn0rr23uxh25" path="res://BaseGame/Scenes/door.tscn" id="5_x4nb7"]
-[ext_resource type="PackedScene" uid="uid://c3wcwju1ragoc" path="res://BaseGame/Scenes/cube.tscn" id="6_vdhdk"]
+[ext_resource type="PackedScene" uid="uid://cvnlfakn40thk" path="res://MainGame/3D/Prefabs/light.tscn" id="5_ffgsf"]
+[ext_resource type="PackedScene" path="res://BaseGame/Scenes/door.tscn" id="5_x4nb7"]
+[ext_resource type="PackedScene" path="res://BaseGame/Scenes/cube.tscn" id="6_vdhdk"]
 
 [node name="mainLevel" type="Node3D"]
 script = ExtResource("1_viuor")
@@ -32,5 +33,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.13199)
 
 [node name="Cube" parent="Node3D/Cubes" instance=ExtResource("6_vdhdk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.176885, 0.718797, 0.745989)
+
+[node name="lights" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.80348, 0)
+
+[node name="light" parent="lights" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.472482, 1.09033, 2.694)
+
+[node name="light2" parent="lights" instance=ExtResource("5_ffgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.74023, 1.08433, 2.11218)
 
 [editable path="Node3D/Doors/Door"]
