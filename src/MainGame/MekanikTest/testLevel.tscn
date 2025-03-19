@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://crvj1sxkrrfom"]
+[gd_scene load_steps=8 format=3 uid="uid://crvj1sxkrrfom"]
 
 [ext_resource type="PackedScene" uid="uid://cns1uy01wn0kj" path="res://BaseGame/FPS/fps.tscn" id="1_3k7ga"]
 [ext_resource type="Environment" uid="uid://ofuuhkoyp2b0" path="res://DefaultEnviroment.tres" id="2_hptxb"]
+[ext_resource type="PackedScene" uid="uid://c3wcwju1ragoc" path="res://BaseGame/Scenes/cube.tscn" id="3_xp4j7"]
+[ext_resource type="PackedScene" uid="uid://dvn0rr23uxh25" path="res://BaseGame/Scenes/door.tscn" id="4_uw8em"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pj8r3"]
 albedo_color = Color(0.125911, 0.125911, 0.125911, 1)
@@ -12,6 +14,7 @@ albedo_color = Color(0.125911, 0.125911, 0.125911, 1)
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="test" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0385551, -0.042007, 0.0246601)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_hptxb")
@@ -27,3 +30,23 @@ mesh = SubResource("BoxMesh_5h8dm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_gt3q0")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Cube" parent="Node3D" instance=ExtResource("3_xp4j7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.676765, 2, 1.19664)
+
+[node name="Cube2" parent="Node3D" instance=ExtResource("3_xp4j7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06497, 1.06281, 1.5517)
+
+[node name="Cube3" parent="Node3D" instance=ExtResource("3_xp4j7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45768, 2.00337, -0.233836)
+
+[node name="Cube4" parent="Node3D" instance=ExtResource("3_xp4j7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45768, 2.00337, -2.18009)
+
+[node name="Cube5" parent="Node3D" instance=ExtResource("3_xp4j7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.908233, 2.00337, -2.39609)
+
+[node name="Door" parent="Node3D" instance=ExtResource("4_uw8em")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65547, 0, 0)

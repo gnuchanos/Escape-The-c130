@@ -29,3 +29,23 @@ var PlayerSettings = {
 	"screenMode":false,
 	"talkMode":false
 }
+
+func _Load():
+	if FileAccess.file_exists('user://Global.save'):
+		var File = FileAccess.open('user://Global.save',FileAccess.READ)
+		PlayerSettings=JSON.parse_string(File.get_line())
+		File.close()
+
+func _Save():
+	var File = FileAccess.open('user://Global.save',FileAccess.WRITE)
+	File.store_line(JSON.stringify(PlayerSettings))
+	File.close()
+
+func _ready() -> void:
+	_Load()
+	pass
+	
+func _process(delta: float) -> void:
+	_Save()
+	pass
+	
