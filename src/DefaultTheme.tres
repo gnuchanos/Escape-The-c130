@@ -1,0 +1,62 @@
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://cmqilhqwhy1tl"]
+
+[ext_resource type="Texture2D" uid="uid://oxts8pmqowpr" path="res://BaseGame/Images/checkbox_normal.png" id="1_gncfv"]
+[ext_resource type="Texture2D" uid="uid://sgh7swkfc5y3" path="res://BaseGame/Images/checkbox_pressed.png" id="2_ljpu2"]
+[ext_resource type="Texture2D" uid="uid://ccwgbftrpjbe7" path="res://BaseGame/Images/sliderGrab_normal.png" id="3_4ua2l"]
+[ext_resource type="Texture2D" uid="uid://cfuh72rfmjy87" path="res://BaseGame/Images/close_normal.png" id="3_yts01"]
+[ext_resource type="Texture2D" uid="uid://dyte6x01udjef" path="res://BaseGame/Images/sliderGrab_press.png" id="4_30p8t"]
+[ext_resource type="Texture2D" uid="uid://lpt4ee4pxnbk" path="res://BaseGame/Images/close_hover.png" id="4_wdygp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqs0c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ouljd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjxwb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgbgb"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_m4nvp"]
+color = Color(0.352283, 0.122883, 0.495088, 1)
+thickness = 15
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_lkl3i"]
+color = Color(0.67822, 0.376709, 0.886413, 1)
+thickness = 15
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_mkojr"]
+color = Color(0.493929, 0.144387, 0.691784, 1)
+thickness = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wkty0"]
+bg_color = Color(0.587036, 0.174399, 0.849061, 1)
+expand_margin_left = 3.0
+expand_margin_top = 28.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[resource]
+CheckBox/icons/checked = ExtResource("2_ljpu2")
+CheckBox/icons/checked_disabled = ExtResource("2_ljpu2")
+CheckBox/icons/unchecked = ExtResource("1_gncfv")
+CheckBox/icons/unchecked_disabled = ExtResource("1_gncfv")
+CheckBox/styles/disabled = SubResource("StyleBoxEmpty_cqs0c")
+CheckBox/styles/disabled_mirrored = SubResource("StyleBoxEmpty_ouljd")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_bjxwb")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_lgbgb")
+CheckBox/styles/hover_mirrored = SubResource("StyleBoxEmpty_lgbgb")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_lgbgb")
+CheckBox/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lgbgb")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_lgbgb")
+CheckBox/styles/normal_mirrored = SubResource("StyleBoxEmpty_lgbgb")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_lgbgb")
+CheckBox/styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbgb")
+HSlider/icons/grabber = ExtResource("3_4ua2l")
+HSlider/icons/grabber_disabled = ExtResource("3_4ua2l")
+HSlider/icons/grabber_highlight = ExtResource("4_30p8t")
+HSlider/styles/grabber_area = SubResource("StyleBoxLine_m4nvp")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_lkl3i")
+HSlider/styles/slider = SubResource("StyleBoxLine_mkojr")
+Window/icons/close = ExtResource("3_yts01")
+Window/icons/close_pressed = ExtResource("4_wdygp")
+Window/styles/embedded_border = SubResource("StyleBoxFlat_wkty0")
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_wkty0")

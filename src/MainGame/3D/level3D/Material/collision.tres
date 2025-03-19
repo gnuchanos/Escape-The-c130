@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d3pwi8yrat22d"]
+
+[resource]
+resource_name = "collision"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.905882, 0.905882, 0.905882, 0)
+roughness = 0.5

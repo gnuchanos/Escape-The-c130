@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://crvj1sxkrrfom"]
+
+[ext_resource type="PackedScene" uid="uid://cns1uy01wn0kj" path="res://BaseGame/FPS/fps.tscn" id="1_3k7ga"]
+[ext_resource type="Environment" uid="uid://ofuuhkoyp2b0" path="res://DefaultEnviroment.tres" id="2_hptxb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pj8r3"]
+albedo_color = Color(0.125911, 0.125911, 0.125911, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5h8dm"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gt3q0"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="test" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_hptxb")
+
+[node name="fps" parent="." instance=ExtResource("1_3k7ga")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.63064, 0, 0, 0, 0.138611, 0, 0, 0, 9.08561, 0, -0.0724623, 0)
+material_override = SubResource("StandardMaterial3D_pj8r3")
+mesh = SubResource("BoxMesh_5h8dm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_gt3q0")
