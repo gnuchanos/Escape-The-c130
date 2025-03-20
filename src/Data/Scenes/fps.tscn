@@ -1,0 +1,407 @@
+[gd_scene load_steps=21 format=3 uid="uid://cns1uy01wn0kj"]
+
+[ext_resource type="Script" path="res://Data/Scripts/fps.gd" id="1_apen5"]
+[ext_resource type="Texture2D" uid="uid://cu15jqtsbg4t3" path="res://Data/Images and Sprites/Gnu iImages/cursor0.png" id="2_imjip"]
+[ext_resource type="Texture2D" uid="uid://dvflpekblut54" path="res://Data/Images and Sprites/Gnu iImages/cursor1.png" id="3_svr78"]
+[ext_resource type="Theme" uid="uid://cmqilhqwhy1tl" path="res://Data/Environments/DefaultTheme.tres" id="4_oee01"]
+[ext_resource type="Script" path="res://Data/Scripts/settings.gd" id="5_rpkvk"]
+[ext_resource type="Script" path="res://Data/Scripts/console_win.gd" id="6_0rnxf"]
+[ext_resource type="FontFile" uid="uid://dpn24n1mjdh6q" path="res://Data/Fonts/FreeSans.otf" id="7_lq2l8"]
+[ext_resource type="Shader" path="res://Data/Shaders/vhs.gdshader" id="8_2ul81"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xwnqa"]
+radius = 0.225
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bm48d"]
+radius = 0.215
+height = 0.895
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fvg5h"]
+radius = 0.215
+height = 1.3
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_eik4a"]
+top_radius = 0.01
+bottom_radius = 0.005
+height = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn4aq"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hx18i"]
+texture = ExtResource("2_imjip")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_unico"]
+texture = ExtResource("3_svr78")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uohdh"]
+bg_color = Color(0.23056, 0.0286582, 0.344021, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7eobx"]
+bg_color = Color(0.170968, 0.0297881, 0.280621, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vvf2"]
+bg_color = Color(0.326543, 0.0382518, 0.577341, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ev6us"]
+bg_color = Color(0.32549, 0.0392157, 0.576471, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hibti"]
+shader = ExtResource("8_2ul81")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 0.565
+shader_parameter/blur_samples = 15
+
+[node name="fps" type="CharacterBody3D"]
+script = ExtResource("1_apen5")
+
+[node name="stand" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.993943, 0)
+shape = SubResource("CapsuleShape3D_xwnqa")
+
+[node name="crawling" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.445113, 0)
+shape = SubResource("CapsuleShape3D_bm48d")
+
+[node name="duck" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.643902, 0)
+shape = SubResource("CapsuleShape3D_fvg5h")
+
+[node name="head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.966, 0)
+
+[node name="standCam" type="Camera3D" parent="head"]
+current = true
+fov = 90.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="head/standCam"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -2.47574)
+mesh = SubResource("CylinderMesh_eik4a")
+skeleton = NodePath("../hitRay")
+surface_material_override/0 = SubResource("StandardMaterial3D_wn4aq")
+
+[node name="hitRay" type="RayCast3D" parent="head/standCam"]
+target_position = Vector3(0, 0, -3)
+collision_mask = 2
+
+[node name="Node3D" type="Node3D" parent="head/standCam/hitRay"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.63262)
+
+[node name="headRay" type="Node3D" parent="."]
+
+[node name="r0" type="RayCast3D" parent="headRay"]
+transform = Transform3D(0.985864, 0.160812, -0.0470287, -0.16638, 0.972713, -0.161695, 0.019743, 0.167234, 0.98572, 0, 0.885626, 0)
+target_position = Vector3(0, 1.295, 0)
+
+[node name="r1" type="RayCast3D" parent="headRay"]
+transform = Transform3D(0.985874, 0.16099, 0.0462113, -0.166505, 0.971917, 0.166293, -0.0181421, -0.171639, 0.984993, 0, 0.885626, 0)
+target_position = Vector3(0, 1.295, 0)
+
+[node name="r2" type="RayCast3D" parent="headRay"]
+transform = Transform3D(0.985926, 0.167167, -0.00216792, -0.167182, 0.985843, -0.012785, 0, 0.0129674, 0.999916, 0, 0.885626, 0)
+target_position = Vector3(0, 1.295, 0)
+
+[node name="r3" type="RayCast3D" parent="headRay"]
+transform = Transform3D(0.984233, -0.170053, 0.0486616, 0.175763, 0.971136, -0.161247, -0.0198365, 0.167257, 0.985714, 0, 0.885626, 0)
+target_position = Vector3(0, 1.295, 0)
+
+[node name="r4" type="RayCast3D" parent="headRay"]
+transform = Transform3D(0.984241, -0.170226, -0.0478804, 0.175889, 0.970338, 0.165852, 0.0182281, -0.171659, 0.984988, 0, 0.885626, 0)
+target_position = Vector3(0, 1.295, 0)
+
+[node name="r5" type="RayCast3D" parent="headRay"]
+transform = Transform3D(0.984289, -0.176554, 0.00228965, 0.17657, 0.984205, -0.0127637, 2.2608e-10, 0.0129674, 0.999916, 0, 0.885626, 0)
+target_position = Vector3(0, 1.295, 0)
+
+[node name="r6" type="RayCast3D" parent="headRay"]
+transform = Transform3D(0.999999, -0.00155319, 2.01422e-05, 0.00153296, 0.984676, -0.174387, 0.000251034, 0.174387, 0.984677, 0, 0.885626, 0)
+target_position = Vector3(0, 1.295, 0)
+
+[node name="r7" type="RayCast3D" parent="headRay"]
+transform = Transform3D(0.999999, -0.00155319, 2.01422e-05, 0.00152532, 0.984302, 0.176484, -0.000293951, -0.176484, 0.984303, 0, 0.885626, 0)
+target_position = Vector3(0, 1.295, 0)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="cursor" type="Panel" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hx18i")
+
+[node name="cursor_raycast" type="Panel" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_unico")
+
+[node name="settings" type="Window" parent="UI"]
+position = Vector2i(194, 36)
+size = Vector2i(730, 530)
+visible = false
+theme = ExtResource("4_oee01")
+script = ExtResource("5_rpkvk")
+
+[node name="gb" type="Panel" parent="UI/settings"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_uohdh")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/settings"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/settings/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MusicVolume" type="HBoxContainer" parent="UI/settings/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+
+[node name="MusicVolumeSlider" type="HSlider" parent="UI/settings/ScrollContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="sep" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+text = " "
+
+[node name="EffectVolume" type="HBoxContainer" parent="UI/settings/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/EffectVolume"]
+layout_mode = 2
+
+[node name="EffectVolumeSlider" type="HSlider" parent="UI/settings/ScrollContainer/VBoxContainer/EffectVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="sep2" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/EffectVolume"]
+layout_mode = 2
+text = " "
+
+[node name="AmbianceVolume" type="HBoxContainer" parent="UI/settings/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/AmbianceVolume"]
+layout_mode = 2
+
+[node name="AmbianceVolumeSlider" type="HSlider" parent="UI/settings/ScrollContainer/VBoxContainer/AmbianceVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="sep2" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/AmbianceVolume"]
+layout_mode = 2
+text = " "
+
+[node name="VoiceVolume" type="HBoxContainer" parent="UI/settings/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/VoiceVolume"]
+layout_mode = 2
+
+[node name="VoiceVolumeSlider" type="HSlider" parent="UI/settings/ScrollContainer/VBoxContainer/VoiceVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="sep3" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/VoiceVolume"]
+layout_mode = 2
+text = " "
+
+[node name="mouseSpeed" type="HBoxContainer" parent="UI/settings/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/mouseSpeed"]
+layout_mode = 2
+
+[node name="mouseSpeedSlider" type="HSlider" parent="UI/settings/ScrollContainer/VBoxContainer/mouseSpeed"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 0.1
+max_value = 0.8
+step = 0.1
+value = 0.5
+
+[node name="sep4" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/mouseSpeed"]
+layout_mode = 2
+text = " "
+
+[node name="camFOV" type="HBoxContainer" parent="UI/settings/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/camFOV"]
+layout_mode = 2
+text = " FOV"
+
+[node name="camFOVSlider" type="HSlider" parent="UI/settings/ScrollContainer/VBoxContainer/camFOV"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 60.0
+max_value = 120.0
+value = 90.0
+
+[node name="sep4" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/camFOV"]
+layout_mode = 2
+text = " "
+
+[node name="headShake" type="HBoxContainer" parent="UI/settings/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/headShake"]
+layout_mode = 2
+
+[node name="headShakeCheckBox" type="CheckBox" parent="UI/settings/ScrollContainer/VBoxContainer/headShake"]
+layout_mode = 2
+button_pressed = true
+
+[node name="fullScreen" type="HBoxContainer" parent="UI/settings/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="UI/settings/ScrollContainer/VBoxContainer/fullScreen"]
+layout_mode = 2
+
+[node name="fullScreenCheckBox" type="CheckBox" parent="UI/settings/ScrollContainer/VBoxContainer/fullScreen"]
+layout_mode = 2
+theme = ExtResource("4_oee01")
+
+[node name="consoleWin" type="Window" parent="UI"]
+auto_translate_mode = 1
+position = Vector2i(20, 336)
+size = Vector2i(480, 275)
+visible = false
+theme = ExtResource("4_oee01")
+script = ExtResource("6_0rnxf")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/consoleWin"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/consoleWin/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="output" type="TextEdit" parent="UI/consoleWin/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_styles/read_only = SubResource("StyleBoxFlat_7eobx")
+editable = false
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="input" type="LineEdit" parent="UI/consoleWin/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_5vvf2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ev6us")
+
+[node name="dialog" type="AudioStreamPlayer" parent="UI/consoleWin"]
+bus = &"Voice"
+
+[node name="test" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 17.0
+offset_right = 597.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("7_lq2l8")
+
+[node name="shaders" type="CanvasLayer" parent="."]
+
+[node name="vhs" type="ColorRect" parent="shaders"]
+material = SubResource("ShaderMaterial_hibti")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="close_requested" from="UI/settings" to="UI/settings" method="_on_close_requested"]
+[connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/MusicVolume/MusicVolumeSlider" to="UI/settings" method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/EffectVolume/EffectVolumeSlider" to="UI/settings" method="_on_effect_volume_slider_value_changed"]
+[connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/AmbianceVolume/AmbianceVolumeSlider" to="UI/settings" method="_on_ambiance_volume_slider_value_changed"]
+[connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/VoiceVolume/VoiceVolumeSlider" to="UI/settings" method="_on_voice_volume_slider_value_changed"]
+[connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/mouseSpeed/mouseSpeedSlider" to="UI/settings" method="_on_mouse_speed_slider_value_changed"]
+[connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/camFOV/camFOVSlider" to="UI/settings" method="_on_cam_fov_slider_value_changed"]
+[connection signal="toggled" from="UI/settings/ScrollContainer/VBoxContainer/headShake/headShakeCheckBox" to="UI/settings" method="_on_head_shake_check_box_toggled"]
+[connection signal="pressed" from="UI/settings/ScrollContainer/VBoxContainer/fullScreen/fullScreenCheckBox" to="UI/settings" method="_on_full_screen_check_box_pressed"]
+[connection signal="close_requested" from="UI/consoleWin" to="UI/consoleWin" method="_on_close_requested"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

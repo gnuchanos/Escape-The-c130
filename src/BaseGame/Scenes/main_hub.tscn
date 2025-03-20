@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://q66cixqomdbw"]
-
-[ext_resource type="Script" path="res://BaseGame/Scripts/main_hub.gd" id="1_77ibe"]
-
-[node name="MainHUB" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_77ibe")

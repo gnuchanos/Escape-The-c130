@@ -14,16 +14,16 @@ config/name="Escape The c130"
 run/main_scene="res://BaseGame/Scenes/main_hub.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.109804, 0.0196078, 0.196078, 1)
-boot_splash/image="res://BaseGame/Images/bg.png"
-config/icon="res://BaseGame/Images/icon.png"
+boot_splash/image="res://Data/Images and Sprites/Gnu iImages/bg.png"
+config/icon="res://Data/Images and Sprites/Gnu iImages/icon.png"
 
 [audio]
 
-buses/default_bus_layout="res://DefaultBUS.tres"
+buses/default_bus_layout="res://Data/Styles/DefaultBUS.tres"
 
 [autoload]
 
-GLobalVar="*res://BaseGame/Scripts/GLobalVAR.gd"
+GLobalVar="*res://Data/Scripts/GLobalVAR.gd"
 
 [display]
 
@@ -198,4 +198,4 @@ lights_and_shadows/positional_shadow/soft_shadow_filter_quality=5
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality.mobile=5
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 anti_aliasing/quality/msaa_3d=2
-environment/defaults/default_environment="res://DefaultEnviroment.tres"
+environment/defaults/default_environment="res://Data/Environments/DefaultEnviroment.tres"
