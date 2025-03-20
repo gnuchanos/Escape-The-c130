@@ -16,7 +16,7 @@ script = ExtResource("1_viuor")
 environment = ExtResource("1_abhj5")
 
 [node name="fps" parent="." instance=ExtResource("2_8x067")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.11917, 0, 2.17835)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.11917, 0, 1.77425)
 
 [node name="jail" parent="." instance=ExtResource("3_uhlp8")]
 
