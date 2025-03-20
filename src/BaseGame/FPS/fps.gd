@@ -20,11 +20,18 @@ func _changeFOV():
 	$head/standCam.fov = GLobalVar.PlayerSettings["FOV"]
 
 func _ready():
+	GLobalVar.CubeCollising.connect(_CubeCollising)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$stand.disabled = false
 	$duck.disabled = true
 	$crawling.disabled = true
 	$head/standCam.fov = GLobalVar.PlayerSettings["FOV"]
+
+func _CubeCollising():
+	Fallse=false
+	ObjectNode=null
+	Input.is_action_just_released('left_m')
+	$Timer.start()
 
 func _input(event):
 	if GLobalVar.PlayerSettings["CanWalk"] and not GLobalVar.PlayerSettings["GiveLife"] and not GLobalVar.PlayerSettings["UsingPC"]:
@@ -38,29 +45,31 @@ var ObjectPos = Vector3()
 var ObjectNode = null
 
 func  _process(_delta: float) -> void:
-	if Input.is_action_pressed('left_m'):
-			if $head/standCam/hitRay.is_colliding():
-				if $head/standCam/hitRay.get_collider().get_node('.').is_in_group('Object'):
-					ObjectNode=$head/standCam/hitRay.get_collider().get_node('.')
+	if Fallse==true:
+		if Input.is_action_pressed('left_m'):
+				if $head/standCam/hitRay.is_colliding():
+					if $head/standCam/hitRay.get_collider().get_node('.').is_in_group('Object'):
+						ObjectNode=$head/standCam/hitRay.get_collider().get_node('.')
+						ObjectNode.global_position=$head/standCam/hitRay/Node3D.global_position
+				
+				if ObjectNode!=null:
 					ObjectNode.global_position=$head/standCam/hitRay/Node3D.global_position
-			
-			if ObjectNode!=null:
-				ObjectNode.global_position=$head/standCam/hitRay/Node3D.global_position
-	elif Input.is_action_just_released('left_m'):
-			Tutuyor=true
-			ObjectNode=null
-				
-				
-	if $head/standCam/hitRay.is_colliding():#if $head/standCam/hitRay.get_collider().get_node('.').is_in_group('Object'):
-		$head/standCam/MeshInstance3D.visible=true
-	elif not $head/standCam/hitRay.is_colliding():
-		$head/standCam/MeshInstance3D.visible=false
+		elif Input.is_action_just_released('left_m'):
+				Tutuyor=true
+				ObjectNode=null
+					
+					
+		if $head/standCam/hitRay.is_colliding():#if $head/standCam/hitRay.get_collider().get_node('.').is_in_group('Object'):
+				$head/standCam/MeshInstance3D.visible=true
+		elif not $head/standCam/hitRay.is_colliding():
+				$head/standCam/MeshInstance3D.visible=false
 	
 	
 	
 	if GLobalVar.PlayerSettings["CanWalk"] and not GLobalVar.PlayerSettings["GiveLife"] and not GLobalVar.PlayerSettings["UsingPC"]:
-		_changeFOV()
+			_changeFOV()
 
+var Fallse = true
 
 func _duckORcrawling():
 	if Input.is_action_pressed("ctrl"):
@@ -156,3 +165,6 @@ func _physics_process(delta: float) -> void:
 			Camera.transform.origin = _headbob(t_bob)
 
 		move_and_slide()
+
+func _on_timer_timeout() -> void:
+	Fallse=true

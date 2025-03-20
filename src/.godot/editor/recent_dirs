@@ -1,3 +1,4 @@
+res://BaseGame/Scripts
 res://MainGame/3D/Prefabs
 res://MainGame/3D/level3D/Material
 res://MainGame/3D/level3D/
@@ -5,6 +6,5 @@ res://
 res://MainGame/Scripts
 res://MainGame/Scenes
 res://MainGame/MekanikTest
-res://BaseGame/Scripts
 /home/archkubi/Export
 res://BaseGame/Shaders

@@ -42,10 +42,11 @@ func _Save():
 	File.close()
 
 func _ready() -> void:
-	_Load()
+	#_Load()
 	pass
 	
 func _process(delta: float) -> void:
 	_Save()
 	pass
 	
+signal CubeCollising

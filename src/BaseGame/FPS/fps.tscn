@@ -389,6 +389,11 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
 [connection signal="close_requested" from="UI/settings" to="UI/settings" method="_on_close_requested"]
 [connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/MusicVolume/MusicVolumeSlider" to="UI/settings" method="_on_music_volume_slider_value_changed"]
 [connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/EffectVolume/EffectVolumeSlider" to="UI/settings" method="_on_effect_volume_slider_value_changed"]
@@ -399,3 +404,4 @@ size_flags_vertical = 3
 [connection signal="toggled" from="UI/settings/ScrollContainer/VBoxContainer/headShake/headShakeCheckBox" to="UI/settings" method="_on_head_shake_check_box_toggled"]
 [connection signal="pressed" from="UI/settings/ScrollContainer/VBoxContainer/fullScreen/fullScreenCheckBox" to="UI/settings" method="_on_full_screen_check_box_pressed"]
 [connection signal="close_requested" from="UI/consoleWin" to="UI/consoleWin" method="_on_close_requested"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
