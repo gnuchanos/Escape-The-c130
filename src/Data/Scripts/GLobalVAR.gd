@@ -30,6 +30,9 @@ var PlayerSettings = {
 	"talkMode":false
 }
 
+#Games
+var Game1ProgressBar = 100
+
 func _Load():
 	if FileAccess.file_exists('user://Global.save'):
 		var File = FileAccess.open('user://Global.save',FileAccess.READ)
@@ -50,3 +53,6 @@ func _process(delta: float) -> void:
 	pass
 	
 signal CubeCollising
+
+#Character Movement
+var CharacterMovement = 0

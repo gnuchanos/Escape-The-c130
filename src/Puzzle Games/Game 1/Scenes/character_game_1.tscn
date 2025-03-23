@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=3 uid="uid://dq0ffnlvvup1n"]
+
+[ext_resource type="Script" path="res://Puzzle Games/Game 1/Scripts/character_game_1.gd" id="1_dggjh"]
+[ext_resource type="Texture2D" uid="uid://c14p86to7uaud" path="res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 23.png" id="1_pi86q"]
+[ext_resource type="Texture2D" uid="uid://l0227nsl2io6" path="res://Puzzle Games/Game 1/Images/down.png" id="3_bjhr2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvaol"]
+size = Vector2(32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7qht1"]
+texture = ExtResource("3_bjhr2")
+modulate_color = Color(0.427493, 0.427493, 0.427493, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wwefr"]
+texture = ExtResource("3_bjhr2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tr0ml"]
+texture = ExtResource("3_bjhr2")
+modulate_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[node name="CharacterGame1" type="CharacterBody2D" groups=["Game1 Character"]]
+script = ExtResource("1_dggjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nvaol")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("1_pi86q")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("1_pi86q")
+expand_mode = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="Node2D"]
+position = Vector2(0, 8)
+target_position = Vector2(0, 84)
+
+[node name="Button" type="Button" parent="Node2D/RayCast2D"]
+offset_left = -32.0
+offset_top = 24.0
+offset_right = 32.0
+offset_bottom = 88.0
+focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7qht1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wwefr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tr0ml")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wwefr")
+
+[node name="RayCast2D2" type="RayCast2D" parent="Node2D"]
+position = Vector2(0, -8)
+target_position = Vector2(0, -84)
+
+[node name="Button2" type="Button" parent="Node2D/RayCast2D2"]
+offset_left = -32.0
+offset_top = -88.0
+offset_right = 32.0
+offset_bottom = -24.0
+focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7qht1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wwefr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tr0ml")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wwefr")
+
+[node name="RayCast2D3" type="RayCast2D" parent="Node2D"]
+position = Vector2(-8, 0)
+target_position = Vector2(-84, 0)
+
+[node name="Button3" type="Button" parent="Node2D/RayCast2D3"]
+offset_left = -88.0
+offset_top = -32.0
+offset_right = -24.0
+offset_bottom = 32.0
+focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7qht1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wwefr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tr0ml")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wwefr")
+
+[node name="RayCast2D4" type="RayCast2D" parent="Node2D"]
+position = Vector2(8, 0)
+target_position = Vector2(84, 0)
+
+[node name="Button4" type="Button" parent="Node2D/RayCast2D4"]
+offset_left = 24.0
+offset_top = -32.0
+offset_right = 88.0
+offset_bottom = 32.0
+focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7qht1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wwefr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tr0ml")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wwefr")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="Node2D/RayCast2D/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Node2D/RayCast2D2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Node2D/RayCast2D3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Node2D/RayCast2D4/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

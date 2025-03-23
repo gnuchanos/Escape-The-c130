@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcwc38njcdthr"]
+
+[ext_resource type="Script" path="res://Data/Scripts/cubes.gd" id="1_1qnnc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sqryo"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j7pt3"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yavhx"]
+size = Vector3(0.6, 0.6, 0.6)
+
+[node name="Cubes" type="CharacterBody3D" groups=["Object"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_1qnnc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_sqryo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_j7pt3")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_yavhx")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

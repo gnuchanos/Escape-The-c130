@@ -16,10 +16,10 @@ func _headbob(time) -> Vector3:
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
 
-func _changeFOV():
+func _changeFOV():if GLobalVar.CharacterMovement==0:
 	$head/standCam.fov = GLobalVar.PlayerSettings["FOV"]
 
-func _ready():
+func _ready():if GLobalVar.CharacterMovement==0:
 	GLobalVar.CubeCollising.connect(_CubeCollising)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$stand.disabled = false
@@ -27,13 +27,13 @@ func _ready():
 	$crawling.disabled = true
 	$head/standCam.fov = GLobalVar.PlayerSettings["FOV"]
 
-func _CubeCollising():
+func _CubeCollising():if GLobalVar.CharacterMovement==0:
 	Fallse=false
 	ObjectNode=null
 	Input.is_action_just_released('left_m')
 	$Timer.start()
 
-func _input(event):
+func _input(event):if GLobalVar.CharacterMovement==0:
 	if GLobalVar.PlayerSettings["CanWalk"] and not GLobalVar.PlayerSettings["GiveLife"] and not GLobalVar.PlayerSettings["UsingPC"]:
 		if event is InputEventMouseMotion:
 			rotate_y(deg_to_rad(-event.relative.x * GLobalVar.PlayerSettings["MouseSpeed"]))
@@ -44,7 +44,7 @@ var Tutuyor = true
 var ObjectPos = Vector3()
 var ObjectNode = null
 
-func  _process(_delta: float) -> void:
+func  _process(_delta: float) -> void:if GLobalVar.CharacterMovement==0:
 	if Fallse==true:
 		if Input.is_action_pressed('left_m'):
 				if $head/standCam/hitRay.is_colliding():
@@ -71,7 +71,7 @@ func  _process(_delta: float) -> void:
 
 var Fallse = true
 
-func _duckORcrawling():
+func _duckORcrawling():if GLobalVar.CharacterMovement==0:
 	if Input.is_action_pressed("ctrl"):
 		GLobalVar.PlayerSettings["Duck"] = true
 		GLobalVar.PlayerSettings["Crawling"] = false
@@ -103,7 +103,7 @@ func _duckORcrawling():
 				$stand.disabled = false
 				$crawling.disabled = true
 
-func _SpeedChange():
+func _SpeedChange():if GLobalVar.CharacterMovement==0:
 	if not Input.is_action_pressed("shift"):
 		if not $stand.disabled:
 			GLobalVar.PlayerSettings["Speed"] = 3
@@ -112,7 +112,7 @@ func _SpeedChange():
 		elif not $crawling.disabled:
 			GLobalVar.PlayerSettings["Speed"] = 1
 
-func _Run(delta):
+func _Run(delta):if GLobalVar.CharacterMovement==0:
 	# run
 	if Input.is_action_pressed("w") and Input.is_action_pressed("shift"):
 		if GLobalVar.PlayerSettings["CanRun"]:
@@ -134,12 +134,12 @@ func _Run(delta):
 		elif GLobalVar.PlayerSettings["FOV"] < GLobalVar.PlayerSettings["FOVMAX"]:
 			GLobalVar.PlayerSettings["FOV"] += 50 * delta
 
-func _jump():
+func _jump():if GLobalVar.CharacterMovement==0:
 	if Input.is_action_just_pressed("space") and is_on_floor():
 		if GLobalVar.PlayerSettings["CanJump"]:
 			velocity.y = GLobalVar.PlayerSettings["JumpHeight"]
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float) -> void:if GLobalVar.CharacterMovement==0:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -166,5 +166,5 @@ func _physics_process(delta: float) -> void:
 
 		move_and_slide()
 
-func _on_timer_timeout() -> void:
+func _on_timer_timeout() -> void:if GLobalVar.CharacterMovement==0:
 	Fallse=true

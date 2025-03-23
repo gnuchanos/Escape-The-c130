@@ -1,11 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742510928
+::res://::1742748524
 export_presets.cfg::TextFile::-1::1742408229::0::1::::<><>::
 ::res://Data/::1742510653
 ::res://Data/Backgrounds/::1742510682
-::res://Data/Environments/::1742510878
-DefaultEnviroment.tres::Environment::994216139216463455::1742510878::0::1::::<><>::uid://bjuqyq5hw43wi::::res://Data/Environments/skybox0.png
-DefaultTheme.tres::Theme::5648643308172862057::1742510698::0::1::::<><>::uid://oxts8pmqowpr::::res://Data/Images and Sprites/Gnu iImages/checkbox_normal.png<>uid://sgh7swkfc5y3::::res://Data/Images and Sprites/Gnu iImages/checkbox_pressed.png<>uid://ccwgbftrpjbe7::::res://Data/Images and Sprites/Gnu iImages/sliderGrab_normal.png<>uid://cfuh72rfmjy87::::res://Data/Images and Sprites/Gnu iImages/close_normal.png<>uid://dyte6x01udjef::::res://Data/Images and Sprites/Gnu iImages/sliderGrab_press.png<>uid://lpt4ee4pxnbk::::res://Data/Images and Sprites/Gnu iImages/close_hover.png
+::res://Data/Environments/::1742734831
+DefaultEnviroment.tres::Environment::994216139216463455::1742734831::0::1::::<><>::uid://bjuqyq5hw43wi::::res://Data/Environments/skybox0.png
+DefaultTheme.tres::Theme::5648643308172862057::1742732993::0::1::::<><>::uid://oxts8pmqowpr::::res://Data/Images and Sprites/Gnu iImages/checkbox_normal.png<>uid://sgh7swkfc5y3::::res://Data/Images and Sprites/Gnu iImages/checkbox_pressed.png<>uid://ccwgbftrpjbe7::::res://Data/Images and Sprites/Gnu iImages/sliderGrab_normal.png<>uid://cfuh72rfmjy87::::res://Data/Images and Sprites/Gnu iImages/close_normal.png<>uid://dyte6x01udjef::::res://Data/Images and Sprites/Gnu iImages/sliderGrab_press.png<>uid://lpt4ee4pxnbk::::res://Data/Images and Sprites/Gnu iImages/close_hover.png
 skybox0.png::CompressedTexture2D::3060423049520924044::1742408229::1742510683::1::::<><>::
 ::res://Data/Fonts/::1742510512
 FreeSans.otf::FontFile::8240623486806348402::1742408229::1742510512::1::::<><>::
@@ -15,7 +15,7 @@ FreeSansOblique.otf::FontFile::3488208823566053736::1742408229::1742510512::1:::
 Goldman-Bold.ttf::FontFile::4122872496232604185::1722332555::1742510415::1::::<><>::
 OpenSans-VariableFont_wdth,wght.ttf::FontFile::8029735034365006115::1742408229::1742510512::1::::<><>::
 ::res://Data/Grid Map/::1722331904
-::res://Data/Images and Sprites/::1742510605
+::res://Data/Images and Sprites/::1742670167
 ::res://Data/Images and Sprites/Gnu iImages/::1742510605
 bg.png::CompressedTexture2D::2822813646052180135::1742408229::1742510605::1::::<><>::
 checkbox_normal.png::CompressedTexture2D::1031312023438482839::1742408229::1742510605::1::::<><>::
@@ -28,25 +28,94 @@ icon.png::CompressedTexture2D::5387545411049102107::1742408229::1742510605::1:::
 sliderGrab_normal.png::CompressedTexture2D::4959001745762922564::1742408229::1742510605::1::::<><>::
 sliderGrab_press.png::CompressedTexture2D::8883316951166673673::1742408229::1742510605::1::::<><>::
 ::res://Data/Logo/::1722331863
-::res://Data/Models/::1722331827
-::res://Data/Scenes/::1742510878
-door.tscn::PackedScene::8661613897502808456::1742510826::0::1::::<><>::res://Data/Scripts/door.gd
-fps.tscn::PackedScene::5724070792335499529::1742510878::0::1::::<><>::res://Data/Scripts/fps.gd<>uid://cu15jqtsbg4t3::::res://Data/Images and Sprites/Gnu iImages/cursor0.png<>uid://dvflpekblut54::::res://Data/Images and Sprites/Gnu iImages/cursor1.png<>uid://cmqilhqwhy1tl::::res://Data/Environments/DefaultTheme.tres<>res://Data/Scripts/settings.gd<>res://Data/Scripts/console_win.gd<>uid://dpn24n1mjdh6q::::res://Data/Fonts/FreeSans.otf<>res://Data/Shaders/vhs.gdshader
-::res://Data/Scripts/::1742510563
+::res://Data/Models/::1742665981
+4xPuzzle_door_key.glb::PackedScene::6334743939151811750::1742593702::1742593709::1::::<><>::uid://dwpa6orp7bu2n::::res://Data/Models/4xPuzzle_door_key_slab_tiles_diff_1k.jpg<>uid://db0mgbnpxi0qa::::res://Data/Models/4xPuzzle_door_key_slab_tiles_nor_gl_1k.png
+4xPuzzle_door_key_slab_tiles_diff_1k.jpg::CompressedTexture2D::8734438399350898587::1742593709::1742593710::1::::<><>::
+4xPuzzle_door_key_slab_tiles_nor_gl_1k.png::CompressedTexture2D::7281799730563875412::1742593709::1742593710::1::::<><>::
+bad.glb::PackedScene::5985516530410133492::1742665757::1742665981::1::::<><>::uid://m3ssbk7ml003::::res://Data/Models/bad_wood_planks_diff_1k.jpg<>uid://bki70bp7f4qrv::::res://Data/Models/bad_wood_planks_nor_gl_1k.png<>uid://bje3iefpnby8h::::res://Data/Models/bad_fabric_pattern_07_col_1_1k.png<>uid://ch4km1bdgg5x3::::res://Data/Models/bad_fabric_pattern_07_nor_gl_1k.png
+bad_fabric_pattern_07_col_1_1k.png::CompressedTexture2D::3028092368116726337::1742665981::1742665981::1::::<><>::
+bad_fabric_pattern_07_nor_gl_1k.png::CompressedTexture2D::5324660194471189458::1742665981::1742665981::1::::<><>::
+bad_wood_planks_diff_1k.jpg::CompressedTexture2D::901193820371972842::1742665981::1742665981::1::::<><>::
+bad_wood_planks_nor_gl_1k.png::CompressedTexture2D::3106811807879242895::1742665980::1742665981::1::::<><>::
+barnaklik.glb::PackedScene::8841336132393019050::1742564926::1742564936::1::::<><>::uid://dig8qesroyvv4::::res://Data/Models/barnaklik_slab_tiles_diff_1k.jpg<>uid://y2ylmgnti4di::::res://Data/Models/barnaklik_slab_tiles_nor_gl_1k.png
+barnaklik_slab_tiles_diff_1k.jpg::CompressedTexture2D::7735191538863651835::1742564936::1742564938::1::::<><>::
+barnaklik_slab_tiles_nor_gl_1k.png::CompressedTexture2D::1741747938397167346::1742564936::1742564938::1::::<><>::
+door.glb::PackedScene::875568297790999859::1742564926::1742564936::1::::<><>::uid://dqglef1u4f5mm::::res://Data/Models/door_rusty_metal_grid_diff_1k.jpg<>uid://bodo15wmb2cab::::res://Data/Models/door_rusty_metal_grid_nor_gl_1k.png<>uid://dcn0bung2koe5::::res://Data/Models/door_rusty_metal_04_diff_1k.jpg<>uid://bhomtfmewdjbc::::res://Data/Models/door_rusty_metal_04_nor_gl_1k.png
+door_rusty_metal_04_diff_1k.jpg::CompressedTexture2D::7327997430629774814::1742564936::1742564938::1::::<><>::
+door_rusty_metal_04_nor_gl_1k.png::CompressedTexture2D::2907406693079228352::1742564936::1742564938::1::::<><>::
+door_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::8295345149637590036::1742564936::1742564938::1::::<><>::
+door_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::3376155706661817969::1742564936::1742564938::1::::<><>::
+easterCube.glb::PackedScene::9080480640257961424::1742564926::1742564936::1::::<><>::uid://blkiaafm6ooeu::::res://Data/Models/easterCube_rusty_metal_grid_diff_1k.jpg<>uid://b58gmsvcbj5gn::::res://Data/Models/easterCube_rusty_metal_grid_nor_gl_1k.png
+easterCube_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::3179627485505426932::1742564936::1742564938::1::::<><>::
+easterCube_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::4560597168155293865::1742564936::1742564938::1::::<><>::
+jail.glb::PackedScene::3699033512145870290::1742593944::1742594171::1::::<><>::uid://1bhray0klnd7::::res://Data/Models/jail_floor_tiles_02_diff_1k.jpg<>uid://d1vme8rupt7b6::::res://Data/Models/jail_slab_tiles_diff_1k.jpg<>uid://dt0lfttsss2nq::::res://Data/Models/jail_slab_tiles_nor_gl_1k.png<>uid://b8nqq2gcgnjml::::res://Data/Models/jail_rusty_metal_04_diff_1k.jpg<>uid://2ya7u20yx3r6::::res://Data/Models/jail_rusty_metal_04_nor_gl_1k.png<>uid://byamidbci53i1::::res://Data/Models/jail_rubble_diff_1k.jpg<>uid://c77dx2h1gnqie::::res://Data/Models/jail_rubble_nor_gl_1k.png<>uid://b442on7cplbyt::::res://Data/Models/jail_plastered_wall_03_diff_1k.jpg<>uid://dp2o0vrhe6wmj::::res://Data/Models/jail_plastered_wall_03_nor_gl_1k.png<>uid://bdssfkmybjy83::::res://Data/Models/jail_cracked_concrete_diff_1k.jpg<>uid://chap86cdvpg1s::::res://Data/Models/jail_cracked_concrete_nor_gl_1k.png<>uid://c8pv4ndm23t8e::::res://Data/Models/jail_concrete_floor_worn_02_diff_1k.jpg<>uid://bv8w7sxph3idq::::res://Data/Models/jail_concrete_floor_worn_02_disp_1k.png
+jail_concrete_floor_worn_02_diff_1k.jpg::CompressedTexture2D::7121366406643900034::1742564937::1742594171::1::::<><>::
+jail_concrete_floor_worn_02_disp_1k.png::CompressedTexture2D::3929904766864372358::1742564937::1742594171::1::::<><>::
+jail_cracked_concrete_diff_1k.jpg::CompressedTexture2D::2635248393882918582::1742564937::1742594171::1::::<><>::
+jail_cracked_concrete_nor_gl_1k.png::CompressedTexture2D::5265134590421217350::1742564937::1742594171::1::::<><>::
+jail_floor_tiles_02_diff_1k.jpg::CompressedTexture2D::1827429728013652690::1742564936::1742594171::1::::<><>::
+jail_plastered_wall_03_diff_1k.jpg::CompressedTexture2D::4483429196331780175::1742564937::1742594171::1::::<><>::
+jail_plastered_wall_03_nor_gl_1k.png::CompressedTexture2D::8268728717332421457::1742564937::1742594171::1::::<><>::
+jail_rubble_diff_1k.jpg::CompressedTexture2D::4071695980487943178::1742564937::1742594171::1::::<><>::
+jail_rubble_nor_gl_1k.png::CompressedTexture2D::7085169106305216796::1742564937::1742594171::1::::<><>::
+jail_rusty_metal_04_diff_1k.jpg::CompressedTexture2D::4730490906636379599::1742564936::1742594171::1::::<><>::
+jail_rusty_metal_04_nor_gl_1k.png::CompressedTexture2D::1944702083074882409::1742564936::1742594171::1::::<><>::
+jail_slab_tiles_diff_1k.jpg::CompressedTexture2D::9028261426053984777::1742564936::1742594171::1::::<><>::
+jail_slab_tiles_nor_gl_1k.png::CompressedTexture2D::8545137368080935910::1742564936::1742594171::1::::<><>::
+lamb.glb::PackedScene::2829402760205568284::1742564926::1742564937::1::::<><>::uid://bbh01codwnlea::::res://Data/Models/lamb_rusty_metal_grid_diff_1k.jpg<>uid://clfjkixybf73a::::res://Data/Models/lamb_rusty_metal_grid_nor_gl_1k.png<>uid://dgxqlrluyjtid::::res://Data/Models/lamb_rusty_metal_04_diff_1k.jpg<>uid://b45tnqi50t7nt::::res://Data/Models/lamb_rusty_metal_04_nor_gl_1k.png
+lamb_rusty_metal_04_diff_1k.jpg::CompressedTexture2D::7628867827699047143::1742564937::1742564938::1::::<><>::
+lamb_rusty_metal_04_nor_gl_1k.png::CompressedTexture2D::4485006174130452917::1742564937::1742564938::1::::<><>::
+lamb_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::2472624653910432348::1742564937::1742564938::1::::<><>::
+lamb_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::5555805303858128048::1742564937::1742564938::1::::<><>::
+puzzle_4X.glb::PackedScene::4277088481765482393::1742593702::1742593709::1::::<><>::uid://ckdm0p1w4qfjd::::res://Data/Models/puzzle_4X_rusty_metal_grid_diff_1k.jpg<>uid://2w6pmnlw86jr::::res://Data/Models/puzzle_4X_rusty_metal_grid_nor_gl_1k.png
+puzzle_4X_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::5481697014843660249::1742593709::1742593710::1::::<><>::
+puzzle_4X_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::1942424753393704647::1742593709::1742593710::1::::<><>::
+table.glb::PackedScene::4263779976224510057::1742665757::1742665981::1::::<><>::uid://djt53xeea2km4::::res://Data/Models/table_wood_peeling_paint_weathered_diff_1k-wood_peeling_paint_weathered_nor_gl_1k.png<>uid://q1ahmb4lpx0q::::res://Data/Models/table_wood_table_001_diff_1k.jpg<>uid://djpuwa2rjakww::::res://Data/Models/table_wood_table_001_nor_gl_1k.png
+table_wood_peeling_paint_weathered_diff_1k-wood_peeling_paint_weathered_nor_gl_1k.png::CompressedTexture2D::7832057547560147253::1742665981::1742665981::1::::<><>::
+table_wood_table_001_diff_1k.jpg::CompressedTexture2D::1176708453529356742::1742665981::1742665981::1::::<><>::
+table_wood_table_001_nor_gl_1k.png::CompressedTexture2D::7823180979947889050::1742665981::1742665981::1::::<><>::
+::res://Data/Scenes/::1742734810
+cubes.tscn::PackedScene::7345229238924296803::1742734810::0::1::::<><>::res://Data/Scripts/cubes.gd
+door.tscn::PackedScene::8661613897502808456::1742734810::0::1::::<><>::res://Data/Scripts/door.gd<>uid://dqglef1u4f5mm::::res://Data/Models/door_rusty_metal_grid_diff_1k.jpg<>uid://bodo15wmb2cab::::res://Data/Models/door_rusty_metal_grid_nor_gl_1k.png<>uid://dcn0bung2koe5::::res://Data/Models/door_rusty_metal_04_diff_1k.jpg<>uid://bhomtfmewdjbc::::res://Data/Models/door_rusty_metal_04_nor_gl_1k.png
+fps.tscn::PackedScene::5724070792335499529::1742734810::0::1::::<><>::res://Data/Scripts/fps.gd<>uid://cu15jqtsbg4t3::::res://Data/Images and Sprites/Gnu iImages/cursor0.png<>uid://dvflpekblut54::::res://Data/Images and Sprites/Gnu iImages/cursor1.png<>uid://cmqilhqwhy1tl::::res://Data/Environments/DefaultTheme.tres<>res://Data/Scripts/settings.gd<>res://Data/Scripts/console_win.gd<>uid://dpn24n1mjdh6q::::res://Data/Fonts/FreeSans.otf
+world.tscn::PackedScene::988407992698759968::1742734810::0::1::::<><>::res://Data/Scripts/world.gd<>uid://dig8qesroyvv4::::res://Data/Models/barnaklik_slab_tiles_diff_1k.jpg<>uid://y2ylmgnti4di::::res://Data/Models/barnaklik_slab_tiles_nor_gl_1k.png<>uid://bsx3sn8qu7lxy::::res://Data/Models/jail.glb<>uid://dvn0rr23uxh25::::res://Data/Scenes/door.tscn<>uid://ofuuhkoyp2b0::::res://Data/Environments/DefaultEnviroment.tres<>uid://dcwc38njcdthr::::res://Data/Scenes/cubes.tscn<>uid://cns1uy01wn0kj::::res://Data/Scenes/fps.tscn<>uid://dqglef1u4f5mm::::res://Data/Models/door_rusty_metal_grid_diff_1k.jpg<>uid://bodo15wmb2cab::::res://Data/Models/door_rusty_metal_grid_nor_gl_1k.png<>uid://dcn0bung2koe5::::res://Data/Models/door_rusty_metal_04_diff_1k.jpg<>uid://bhomtfmewdjbc::::res://Data/Models/door_rusty_metal_04_nor_gl_1k.png<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf
+::res://Data/Scripts/::1742734804
 console_win.gd::GDScript::-1::1742420865::0::1::::<>Window<>::
+cubes.gd::GDScript::-1::1742568152::0::1::::<>CharacterBody3D<>::
 door.gd::GDScript::-1::1742329210::0::1::::<>Node3D<>::
-fps.gd::GDScript::-1::1742430162::0::1::::<>CharacterBody3D<>::
-GLobalVAR.gd::GDScript::-1::1742429774::0::1::::<>Node<>::
+fps.gd::GDScript::-1::1742595602::0::1::::<>CharacterBody3D<>::
+GLobalVAR.gd::GDScript::-1::1742734804::0::1::::<>Node<>::
 settings.gd::GDScript::-1::1742420865::0::1::::<>Window<>::
-::res://Data/Shaders/::1742423190
+world.gd::GDScript::-1::1742595755::0::1::::<>Node3D<>::
+::res://Data/Shaders/::1742734844
 glass.gdshader::Shader::-1::1742408229::0::1::::<><>::
 main.gdshader::Shader::-1::1742423190::0::1::::<><>::
 old_vhs.gdshader::Shader::-1::1742423190::0::1::::<><>::
 tf2.gdshader::Shader::-1::1742423190::0::1::::<><>::
-vhs.gdshader::Shader::-1::1742423190::0::1::::<><>::
+vhs.gdshader::Shader::-1::1742734844::0::1::::<><>::
 ::res://Data/Sounds/::1722331897
 ::res://Data/Styles/::1742510622
 DefaultBUS.tres::AudioBusLayout::1024917755897270693::1742408229::0::1::::<><>::
 ::res://Data/Tilemap/::1722331911
 ::res://Data/TNGR Bios/::1742510417
 Group 1.png::CompressedTexture2D::5558466030849136294::1728405188::1742510417::1::::<><>::
+::res://Puzzle Games/::1742667791
+::res://Puzzle Games/Game 1/::1742667954
+::res://Puzzle Games/Game 1/Images/::1742671881
+bomb.png::CompressedTexture2D::3131096547433812403::1742669420::1742669440::1::::<><>::
+down.png::CompressedTexture2D::825376000773247651::1742671873::1742671881::1::::<><>::
+::res://Puzzle Games/Game 1/Images/Tilemaps/::1742671903
+down.png::CompressedTexture2D::5145796616989145909::1742671903::1742671903::1::::<><>::
+Rectangle 19.png::CompressedTexture2D::2607556014224157143::1742668493::1742668553::1::::<><>::
+Rectangle 20.png::CompressedTexture2D::6735276457993025605::1742668493::1742668553::1::::<><>::
+Rectangle 21.png::CompressedTexture2D::991053079164152786::1742668493::1742668553::1::::<><>::
+Rectangle 22.png::CompressedTexture2D::7495546713534139271::1742668493::1742668553::1::::<><>::
+Rectangle 23.png::CompressedTexture2D::6658589601187919947::1742670158::1742670167::1::::<><>::
+::res://Puzzle Games/Game 1/Scenes/::1742734831
+bomb_area.tscn::PackedScene::1695263235678010896::1742734810::0::1::::<><>::res://Puzzle Games/Game 1/Scripts/bomb_area.gd<>uid://bkuyx5ka8itih::::res://Puzzle Games/Game 1/Images/bomb.png
+character_game_1.tscn::PackedScene::8334206207852084237::1742734810::0::1::::<><>::res://Puzzle Games/Game 1/Scripts/character_game_1.gd<>uid://c14p86to7uaud::::res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 23.png<>uid://l0227nsl2io6::::res://Puzzle Games/Game 1/Images/down.png
+game_1.tscn::PackedScene::9218683805567986614::1742734831::0::1::::<><>::res://Puzzle Games/Game 1/Scripts/game_1.gd<>uid://c27vawhxwe5mv::::res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 20.png<>uid://dq0ffnlvvup1n::::res://Puzzle Games/Game 1/Scenes/character_game_1.tscn<>uid://yfg0c552s0ue::::res://Puzzle Games/Game 1/Scenes/bomb_area.tscn<>uid://de15tardx6056::::res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 22.png
+::res://Puzzle Games/Game 1/Scripts/::1742734831
+bomb_area.gd::GDScript::-1::1742734831::0::1::::<>Area2D<>::
+character_game_1.gd::GDScript::-1::1742691839::0::1::::<>CharacterBody2D<>::
+game_1.gd::GDScript::-1::1742734804::0::1::::<>Control<>::
