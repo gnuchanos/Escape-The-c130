@@ -27,12 +27,41 @@ var PlayerSettings = {
 	"OpenConsole":false,
 	"OpenSettings":false,
 	"screenMode":false,
-	"talkMode":false
+	"talkMode":false,
+	#General Settings
+	"MiniGames":{
+		'1':false,
+		'2':false,
+		'3':false,
+		'4':false,
+		'5':false
+	},
+	'Day':1,
+	'KeyPlaced':false
 }
 
-#Games
-var Game1ProgressBar = 100
+var Asleep = false
+var EPress = true
+var KeyPress = false
+var KeyMaked = false
 
+##Games
+var GamesPanelVisible = true
+#Game 1
+var Game1ProgressBar = 100
+signal Game1Restart
+
+#Game 2
+var Countdown = 0
+var GameResult = 3
+signal Game2GameResult
+var Game2Panel = true
+var Game2PanelText = ''
+
+#Game 3
+var Game3Devam = true
+
+#
 func _Load():
 	if FileAccess.file_exists('user://Global.save'):
 		var File = FileAccess.open('user://Global.save',FileAccess.READ)

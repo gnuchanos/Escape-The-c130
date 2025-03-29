@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxq1ukt1yc3et"]
+
+[ext_resource type="Script" path="res://Puzzle Games/Game 3/Scripts/spaceship.gd" id="1_w375g"]
+[ext_resource type="Texture2D" uid="uid://cikrakbpru4ne" path="res://Puzzle Games/Game 3/Images/3d-rocket.png" id="2_w6ox8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rrkk4"]
+radius = 64.4981
+
+[node name="Spaceship" type="CharacterBody2D"]
+script = ExtResource("1_w375g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rrkk4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("2_w6ox8")
+expand_mode = 1

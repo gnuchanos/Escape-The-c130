@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://cr8ecy1uoq4ox"]
+
+[ext_resource type="Script" path="res://Puzzle Games/Game 3/Scripts/game_3.gd" id="1_nusrp"]
+[ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="2_slti6"]
+[ext_resource type="PackedScene" uid="uid://bxq1ukt1yc3et" path="res://Puzzle Games/Game 3/Scenes/spaceship.tscn" id="2_ybh3c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jw24m"]
+bg_color = Color(0, 0.31663, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kfwo"]
+bg_color = Color(0, 0.540633, 7.70092e-07, 1)
+
+[node name="Game 3" type="CanvasLayer"]
+script = ExtResource("1_nusrp")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = -128.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="Spaceship" parent="Control/Control" instance=ExtResource("2_ybh3c")]
+
+[node name="Node2D" type="Node2D" parent="Control/Control"]
+position = Vector2(1024, 128)
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.638884, 1.29953e-06, 2.40654e-07, 1)
+
+[node name="Label" type="Label" parent="Control/ColorRect"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 35
+
+[node name="Play Again" type="Button" parent="Control/ColorRect"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 136.0
+offset_right = 800.0
+offset_bottom = 216.0
+theme_override_fonts/font = ExtResource("2_slti6")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/disabled = SubResource("StyleBoxFlat_jw24m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1kfwo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jw24m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1kfwo")
+text = "Play Again"

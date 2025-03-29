@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmw7h7bc7tm7h"]
+
+[ext_resource type="Script" path="res://Puzzle Games/Game 2/Scripts/game_2.gd" id="1_cwphe"]
+[ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="2_pwadq"]
+[ext_resource type="Script" path="res://Puzzle Games/Game 2/Scripts/node_2d.gd" id="3_2bwbd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alqht"]
+size = Vector2(96, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eu726"]
+size = Vector2(1922, 58)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c77xa"]
+bg_color = Color(0, 0.31663, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1opix"]
+bg_color = Color(0, 0.540633, 7.70092e-07, 1)
+
+[node name="Game 2" type="CanvasLayer"]
+script = ExtResource("1_cwphe")
+
+[node name="CanvasLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.554118, 0.600278, 0.749404, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/ColorRect" groups=["Game2_Character"]]
+position = Vector2(592, 608)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/ColorRect/CharacterBody2D"]
+shape = SubResource("RectangleShape2D_alqht")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ColorRect/CharacterBody2D"]
+offset_left = -48.0
+offset_top = -16.0
+offset_right = 48.0
+offset_bottom = 16.0
+color = Color(1.26343e-06, 0.399053, 0.109792, 1)
+
+[node name="Area2D" type="StaticBody2D" parent="CanvasLayer" groups=["Game2_Floor"]]
+position = Vector2(-336, 656)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D"]
+position = Vector2(951, 19)
+shape = SubResource("RectangleShape2D_eu726")
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 50
+text = "AA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.205928, 0.395535, 0.550139, 1)
+
+[node name="Play Again" type="Button" parent="CanvasLayer/ColorRect2"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 136.0
+offset_right = 800.0
+offset_bottom = 216.0
+theme_override_fonts/font = ExtResource("2_pwadq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/disabled = SubResource("StyleBoxFlat_c77xa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1opix")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c77xa")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1opix")
+text = "Play Again"
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect2"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+autostart = true
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("3_2bwbd")
+
+[connection signal="pressed" from="CanvasLayer/ColorRect2/Play Again" to="." method="_on_play_again_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

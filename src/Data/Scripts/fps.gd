@@ -27,13 +27,13 @@ func _ready():if GLobalVar.CharacterMovement==0:
 	$crawling.disabled = true
 	$head/standCam.fov = GLobalVar.PlayerSettings["FOV"]
 
-func _CubeCollising():if GLobalVar.CharacterMovement==0:
+func _CubeCollising():if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:
 	Fallse=false
 	ObjectNode=null
 	Input.is_action_just_released('left_m')
 	$Timer.start()
 
-func _input(event):if GLobalVar.CharacterMovement==0:
+func _input(event):if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:
 	if GLobalVar.PlayerSettings["CanWalk"] and not GLobalVar.PlayerSettings["GiveLife"] and not GLobalVar.PlayerSettings["UsingPC"]:
 		if event is InputEventMouseMotion:
 			rotate_y(deg_to_rad(-event.relative.x * GLobalVar.PlayerSettings["MouseSpeed"]))
@@ -44,34 +44,39 @@ var Tutuyor = true
 var ObjectPos = Vector3()
 var ObjectNode = null
 
-func  _process(_delta: float) -> void:if GLobalVar.CharacterMovement==0:
-	if Fallse==true:
-		if Input.is_action_pressed('left_m'):
-				if $head/standCam/hitRay.is_colliding():
-					if $head/standCam/hitRay.get_collider().get_node('.').is_in_group('Object'):
-						ObjectNode=$head/standCam/hitRay.get_collider().get_node('.')
+func  _process(_delta: float) -> void:
+	if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:
+		if Fallse==true:
+			if Input.is_action_pressed('left_m'):
+					if $head/standCam/hitRay.is_colliding():
+						if $head/standCam/hitRay.get_collider().get_node('.').is_in_group('Object'):
+							ObjectNode=$head/standCam/hitRay.get_collider().get_node('.')
+							ObjectNode.global_position=$head/standCam/hitRay/Node3D.global_position
+					
+					if ObjectNode!=null:
 						ObjectNode.global_position=$head/standCam/hitRay/Node3D.global_position
-				
-				if ObjectNode!=null:
-					ObjectNode.global_position=$head/standCam/hitRay/Node3D.global_position
-		elif Input.is_action_just_released('left_m'):
-				Tutuyor=true
-				ObjectNode=null
-					
-					
-		if $head/standCam/hitRay.is_colliding():#if $head/standCam/hitRay.get_collider().get_node('.').is_in_group('Object'):
-				$head/standCam/MeshInstance3D.visible=true
-		elif not $head/standCam/hitRay.is_colliding():
-				$head/standCam/MeshInstance3D.visible=false
+			elif Input.is_action_just_released('left_m'):
+					Tutuyor=true
+					ObjectNode=null
+						
+						
+			if $head/standCam/hitRay.is_colliding():#if $head/standCam/hitRay.get_collider().get_node('.').is_in_group('Object'):
+					$head/standCam/MeshInstance3D.visible=true
+			elif not $head/standCam/hitRay.is_colliding():
+					$head/standCam/MeshInstance3D.visible=false
+		
+		$head/standCam.current=true
+		
+		if GLobalVar.PlayerSettings["CanWalk"] and not GLobalVar.PlayerSettings["GiveLife"] and not GLobalVar.PlayerSettings["UsingPC"]:
+				_changeFOV()
+	elif GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==true:
+		$head/standCam.current=false
 	
+	$head/standCam/main_004.visible=GLobalVar.KeyPress
 	
-	
-	if GLobalVar.PlayerSettings["CanWalk"] and not GLobalVar.PlayerSettings["GiveLife"] and not GLobalVar.PlayerSettings["UsingPC"]:
-			_changeFOV()
-
 var Fallse = true
 
-func _duckORcrawling():if GLobalVar.CharacterMovement==0:
+func _duckORcrawling():if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:
 	if Input.is_action_pressed("ctrl"):
 		GLobalVar.PlayerSettings["Duck"] = true
 		GLobalVar.PlayerSettings["Crawling"] = false
@@ -103,7 +108,7 @@ func _duckORcrawling():if GLobalVar.CharacterMovement==0:
 				$stand.disabled = false
 				$crawling.disabled = true
 
-func _SpeedChange():if GLobalVar.CharacterMovement==0:
+func _SpeedChange():if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:
 	if not Input.is_action_pressed("shift"):
 		if not $stand.disabled:
 			GLobalVar.PlayerSettings["Speed"] = 3
@@ -112,7 +117,7 @@ func _SpeedChange():if GLobalVar.CharacterMovement==0:
 		elif not $crawling.disabled:
 			GLobalVar.PlayerSettings["Speed"] = 1
 
-func _Run(delta):if GLobalVar.CharacterMovement==0:
+func _Run(delta):if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:
 	# run
 	if Input.is_action_pressed("w") and Input.is_action_pressed("shift"):
 		if GLobalVar.PlayerSettings["CanRun"]:
@@ -134,12 +139,12 @@ func _Run(delta):if GLobalVar.CharacterMovement==0:
 		elif GLobalVar.PlayerSettings["FOV"] < GLobalVar.PlayerSettings["FOVMAX"]:
 			GLobalVar.PlayerSettings["FOV"] += 50 * delta
 
-func _jump():if GLobalVar.CharacterMovement==0:
+func _jump():if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:
 	if Input.is_action_just_pressed("space") and is_on_floor():
 		if GLobalVar.PlayerSettings["CanJump"]:
 			velocity.y = GLobalVar.PlayerSettings["JumpHeight"]
 
-func _physics_process(delta: float) -> void:if GLobalVar.CharacterMovement==0:
+func _physics_process(delta: float) -> void:if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
