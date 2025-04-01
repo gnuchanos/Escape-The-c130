@@ -60,6 +60,13 @@ var Game2PanelText = ''
 
 #Game 3
 var Game3Devam = true
+var Game3Countdown = 0
+signal Game3Finish(Result:int)
+
+#Game 4
+var Game4Devam = true
+var Game4Countdown = 0
+signal Game4Finish(Result:int)
 
 #
 func _Load():

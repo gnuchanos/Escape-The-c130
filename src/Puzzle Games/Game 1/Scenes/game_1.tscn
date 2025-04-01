@@ -65,7 +65,7 @@ tile_set = SubResource("TileSet_cqubl")
 position = Vector2(32, 320)
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer"]
-position = Vector2(-16, 504)
+position = Vector2(144, 288)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D"]
 position = Vector2(19, 40)

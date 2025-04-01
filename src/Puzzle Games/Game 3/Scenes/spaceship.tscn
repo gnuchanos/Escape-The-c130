@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_rrkk4"]
 radius = 64.4981
 
-[node name="Spaceship" type="CharacterBody2D"]
+[node name="Spaceship" type="Area2D"]
 script = ExtResource("1_w375g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -19,3 +19,6 @@ offset_right = 64.0
 offset_bottom = 64.0
 texture = ExtResource("2_w6ox8")
 expand_mode = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,13 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://cr8ecy1uoq4ox"]
+[gd_scene load_steps=9 format=3 uid="uid://cr8ecy1uoq4ox"]
 
 [ext_resource type="Script" path="res://Puzzle Games/Game 3/Scripts/game_3.gd" id="1_nusrp"]
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="2_slti6"]
 [ext_resource type="PackedScene" uid="uid://bxq1ukt1yc3et" path="res://Puzzle Games/Game 3/Scenes/spaceship.tscn" id="2_ybh3c"]
+[ext_resource type="Texture2D" uid="uid://nci76ar5rhoa" path="res://Puzzle Games/Game 3/Images/Group 92.png" id="4_atwbj"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jw24m"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4qq1"]
+texture = ExtResource("4_atwbj")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_6wpqc"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_f4qq1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efu2j"]
 bg_color = Color(0, 0.31663, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kfwo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfa4w"]
 bg_color = Color(0, 0.540633, 7.70092e-07, 1)
 
 [node name="Game 3" type="CanvasLayer"]
@@ -29,6 +41,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [node name="Button" type="Button" parent="Control/Control"]
 layout_mode = 1
 anchors_preset = 15
@@ -44,39 +65,56 @@ focus_mode = 0
 flat = true
 
 [node name="Spaceship" parent="Control/Control" instance=ExtResource("2_ybh3c")]
+position = Vector2(584, 328)
 
 [node name="Node2D" type="Node2D" parent="Control/Control"]
-position = Vector2(1024, 128)
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
-visible = false
+[node name="Label" type="Label" parent="Control/Control"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Control"]
+tile_set = SubResource("TileSet_6wpqc")
+
+[node name="Node2D" type="Node2D" parent="Control"]
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.638884, 1.29953e-06, 2.40654e-07, 1)
+color = Color(0.0952468, 0.093984, 0.144128, 1)
 
-[node name="Label" type="Label" parent="Control/ColorRect"]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 96.0
-theme_override_font_sizes/font_size = 35
-horizontal_alignment = 1
-vertical_alignment = 1
-justification_flags = 35
-
-[node name="Play Again" type="Button" parent="Control/ColorRect"]
+[node name="Play Again" type="Button" parent="Control/ColorRect2"]
 layout_mode = 0
 offset_left = 368.0
 offset_top = 136.0
 offset_right = 800.0
 offset_bottom = 216.0
+focus_mode = 0
 theme_override_fonts/font = ExtResource("2_slti6")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/disabled = SubResource("StyleBoxFlat_jw24m")
-theme_override_styles/hover = SubResource("StyleBoxFlat_1kfwo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_jw24m")
-theme_override_styles/normal = SubResource("StyleBoxFlat_1kfwo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_efu2j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nfa4w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_efu2j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nfa4w")
 text = "Play Again"
+
+[node name="Label" type="Label" parent="Control/ColorRect2"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="Control/ColorRect2/Play Again" to="." method="_on_play_again_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,140 @@
+[gd_scene load_steps=13 format=4 uid="uid://cukg8atfgupcp"]
+
+[ext_resource type="Script" path="res://Puzzle Games/Game 4/Scripts/game_4.gd" id="1_2bwry"]
+[ext_resource type="PackedScene" uid="uid://dvhhpfypm2vng" path="res://Puzzle Games/Game 4/Scenes/spaceship.tscn" id="2_pxu41"]
+[ext_resource type="Texture2D" uid="uid://nci76ar5rhoa" path="res://Puzzle Games/Game 3/Images/Group 92.png" id="3_b2qgl"]
+[ext_resource type="Texture2D" uid="uid://dl1k4ieqk67kx" path="res://Puzzle Games/Game 4/Images/Rectangle 26.png" id="4_2617v"]
+[ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="4_rps0g"]
+[ext_resource type="Script" path="res://Puzzle Games/Game 4/Scripts/game_4_wall.gd" id="5_yf3nt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4qq1"]
+texture = ExtResource("3_b2qgl")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_6wpqc"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_f4qq1")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ioqsq"]
+texture = ExtResource("4_2617v")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_ntcmn"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ioqsq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efu2j"]
+bg_color = Color(0, 0.31663, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfa4w"]
+bg_color = Color(0, 0.540633, 7.70092e-07, 1)
+
+[node name="Game 4" type="CanvasLayer"]
+script = ExtResource("1_2bwry")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" parent="Control/Control"]
+
+[node name="Label" type="Label" parent="Control/Control"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spaceship" parent="Control/Control" instance=ExtResource("2_pxu41")]
+position = Vector2(592, 344)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Control"]
+tile_set = SubResource("TileSet_6wpqc")
+
+[node name="Node2D" type="Node2D" parent="Control"]
+
+[node name="Game4Wall" type="TileMapLayer" parent="Control/Node2D" groups=["Game4Wall"]]
+self_modulate = Color(0.751322, 0, 0.0914389, 1)
+tile_map_data = PackedByteArray("AAD8////AAAAAAAAAAD9////AAAAAAAAAAD+////AAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAAAAAAAAAALAP//AAAAAAAAAAAMAP//AAAAAAAAAAANAP//AAAAAAAAAAAOAP//AAAAAAAAAAAPAP//AAAAAAAAAAAQAP//AAAAAAAAAAARAP//AAAAAAAAAAASAP//AAAAAAAAAAATAP//AAAAAAAAAAAUAP//AAAAAAAAAAAVAP//AAAAAAAAAAAWAP//AAAAAAAAAAAXAP//AAAAAAAAAAAYAP//AAAAAAAAAAD7////AAAAAAAAAAD6////AAAAAAAAAAD5////AAAAAAAAAAAZAP//AAAAAAAAAAAaAP//AAAAAAAAAAAbAP//AAAAAAAAAAAcAP//AAAAAAAAAAD4////AAAAAAAAAAD3////AAAAAAAAAAD2////AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ntcmn")
+script = ExtResource("5_yf3nt")
+
+[node name="Game4Wall2" type="TileMapLayer" parent="Control/Node2D" groups=["Game4Wall"]]
+self_modulate = Color(0.751322, 0, 0.0914389, 1)
+position = Vector2(0, -384)
+tile_map_data = PackedByteArray("AAD8////AAAAAAAAAAD9////AAAAAAAAAAD+////AAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAAAAAAAAAALAP//AAAAAAAAAAAMAP//AAAAAAAAAAANAP//AAAAAAAAAAAOAP//AAAAAAAAAAAPAP//AAAAAAAAAAAQAP//AAAAAAAAAAARAP//AAAAAAAAAAASAP//AAAAAAAAAAATAP//AAAAAAAAAAAUAP//AAAAAAAAAAAVAP//AAAAAAAAAAAWAP//AAAAAAAAAAAXAP//AAAAAAAAAAAYAP//AAAAAAAAAAD7////AAAAAAAAAAD6////AAAAAAAAAAD5////AAAAAAAAAAAZAP//AAAAAAAAAAAaAP//AAAAAAAAAAAbAP//AAAAAAAAAAAcAP//AAAAAAAAAAD4////AAAAAAAAAAD3////AAAAAAAAAAD2////AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ntcmn")
+script = ExtResource("5_yf3nt")
+
+[node name="Game4Wall3" type="TileMapLayer" parent="Control/Node2D" groups=["Game4Wall"]]
+self_modulate = Color(0.751322, 0, 0.0914389, 1)
+position = Vector2(0, -768)
+tile_map_data = PackedByteArray("AAD8////AAAAAAAAAAD9////AAAAAAAAAAD+////AAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAAAAAAAAAALAP//AAAAAAAAAAAMAP//AAAAAAAAAAANAP//AAAAAAAAAAAOAP//AAAAAAAAAAAPAP//AAAAAAAAAAAQAP//AAAAAAAAAAARAP//AAAAAAAAAAASAP//AAAAAAAAAAATAP//AAAAAAAAAAAUAP//AAAAAAAAAAAVAP//AAAAAAAAAAAWAP//AAAAAAAAAAAXAP//AAAAAAAAAAAYAP//AAAAAAAAAAD7////AAAAAAAAAAD6////AAAAAAAAAAD5////AAAAAAAAAAAZAP//AAAAAAAAAAAaAP//AAAAAAAAAAAbAP//AAAAAAAAAAAcAP//AAAAAAAAAAD4////AAAAAAAAAAD3////AAAAAAAAAAD2////AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ntcmn")
+script = ExtResource("5_yf3nt")
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.484438, 0.193524, 0.285097, 1)
+
+[node name="Play Again" type="Button" parent="Control/ColorRect2"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 136.0
+offset_right = 800.0
+offset_bottom = 216.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("4_rps0g")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/disabled = SubResource("StyleBoxFlat_efu2j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nfa4w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_efu2j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nfa4w")
+text = "Play Again"
+
+[node name="Label" type="Label" parent="Control/ColorRect2"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="Control/ColorRect2/Play Again" to="." method="_on_play_again_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

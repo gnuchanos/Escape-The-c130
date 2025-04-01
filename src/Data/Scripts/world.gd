@@ -7,10 +7,20 @@ var Door1Info = false
 var Door2Info = false
 
 func _ready() -> void:
+	GLobalVar.Game2GameResult.connect(_Game2GameResult)
 	if GLobalVar.PlayerSettings['KeyPlaced']==true:
 		$"Doors and Cubes/Door_3/MeshInstance3D5/AnimationPlayer".play("A")
 
+func _Game2GameResult():
+	var Cube = preload('res://Data/Scenes/cubes.tscn').instantiate()
+	Cube.global_position=Vector3(-0.45,0.375,0.554)
+	$"Doors and Cubes".add_child(Cube)
+	Cube.global_position=Vector3(-0.45,0.375,0.554)
+
 func _process(delta: float) -> void:
+	$CanvasLayer/ColorRect.visible=GLobalVar.Asleep
+	$Label.visible=not GLobalVar.Asleep
+	$Label.text='Day '+str(GLobalVar.PlayerSettings['Day'])
 	if $CanvasLayer/Control/Label4.visible==true:
 		if Input.is_action_pressed('e'):if GLobalVar.EPress==true:
 			$Node3D2/Area3D5.queue_free()

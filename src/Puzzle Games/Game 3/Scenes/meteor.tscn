@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpmw8dw0t2wib"]
+
+[ext_resource type="Script" path="res://Puzzle Games/Game 3/Scripts/meteor.gd" id="1_4mh50"]
+[ext_resource type="Texture2D" uid="uid://bi3n7kd3wl26o" path="res://Puzzle Games/Game 3/Images/comet.png" id="1_wdomc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_goo3v"]
+radius = 64.0
+
+[node name="Meteor" type="CharacterBody2D" groups=["Game3Meteor"]]
+script = ExtResource("1_4mh50")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_goo3v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("1_wdomc")
+expand_mode = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

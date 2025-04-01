@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmw7h7bc7tm7h"]
+[gd_scene load_steps=7 format=3 uid="uid://cmw7h7bc7tm7h"]
 
 [ext_resource type="Script" path="res://Puzzle Games/Game 2/Scripts/game_2.gd" id="1_cwphe"]
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="2_pwadq"]
-[ext_resource type="Script" path="res://Puzzle Games/Game 2/Scripts/node_2d.gd" id="3_2bwbd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_alqht"]
 size = Vector2(96, 32)
@@ -21,15 +20,17 @@ script = ExtResource("1_cwphe")
 
 [node name="CanvasLayer" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.554118, 0.600278, 0.749404, 1)
@@ -75,13 +76,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.205928, 0.395535, 0.550139, 1)
@@ -115,7 +113,6 @@ autostart = true
 autostart = true
 
 [node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("3_2bwbd")
 
 [connection signal="pressed" from="CanvasLayer/ColorRect2/Play Again" to="." method="_on_play_again_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

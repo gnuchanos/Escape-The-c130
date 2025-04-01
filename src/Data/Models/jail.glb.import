@@ -33,9 +33,37 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
+"arrow_0": {
+"use_external/enabled": true,
+"use_external/path": "res://Data/Models/Toprak.tres"
+},
 "collision": {
 "use_external/enabled": true,
 "use_external/path": "res://Data/Materials/CollisionMaterial.tres"
+},
+"floor_0": {
+"use_external/enabled": true,
+"use_external/path": "res://Data/Models/Floor.tres"
+},
+"metal_0": {
+"use_external/enabled": true,
+"use_external/path": "res://Data/Models/Toprak.tres"
+},
+"metal_1": {
+"use_external/enabled": true,
+"use_external/path": "res://Data/Models/Toprak.tres"
+},
+"screet_0": {
+"use_external/enabled": true,
+"use_external/path": "res://Data/Models/Toprak.tres"
+},
+"steirs": {
+"use_external/enabled": true,
+"use_external/path": "res://Data/Models/Toprak.tres"
+},
+"wall_0": {
+"use_external/enabled": true,
+"use_external/path": "res://Data/Models/Toprak.tres"
 }
 },
 "nodes": {
