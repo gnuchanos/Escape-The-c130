@@ -37,13 +37,16 @@ var PlayerSettings = {
 		'5':false
 	},
 	'Day':1,
-	'KeyPlaced':false
+	'KeyPlaced':false,
+	'Game5Level':1,
 }
 
 var Asleep = false
 var EPress = true
 var KeyPress = false
 var KeyMaked = false
+
+var Test = true
 
 ##Games
 var GamesPanelVisible = true
@@ -67,6 +70,10 @@ signal Game3Finish(Result:int)
 var Game4Devam = true
 var Game4Countdown = 0
 signal Game4Finish(Result:int)
+
+#Game 5
+var DevamGame5 = false
+var SonucGame5 = 'Play'
 
 #
 func _Load():

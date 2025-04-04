@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c00baku4ok14r"]
+
+[ext_resource type="Script" path="res://Puzzle Games/Game 5/Scripts/character_game_5.gd" id="1_jtcm3"]
+[ext_resource type="Texture2D" uid="uid://dtiw7ikwjwcqa" path="res://Puzzle Games/Game 5/Images/Rectangle 141.png" id="2_q531k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4cjsh"]
+radius = 24.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vtsqh"]
+radius = 32.0
+
+[node name="CharacterGame5" type="CharacterBody2D" groups=["C5"]]
+script = ExtResource("1_jtcm3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4cjsh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("2_q531k")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_vtsqh")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

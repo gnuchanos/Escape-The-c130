@@ -4,13 +4,16 @@ extends CanvasLayer
 signal PositionChange(_Number)
 
 func _process(delta: float) -> void:
-	if GLobalVar.GamesPanelVisible==false:
-		if GLobalVar.PlayerSettings['Day']==GameDay:
-			visible=true
-		elif GLobalVar.PlayerSettings['Day']!=GameDay:
-			visible=false
-	elif GLobalVar.GamesPanelVisible==true:
-		visible=false
+	if GLobalVar.Test==false:
+		if GLobalVar.GamesPanelVisible==false:
+			if GLobalVar.PlayerSettings['Day']==GameDay:
+				visible=true
+			elif GLobalVar.PlayerSettings['Day']!=GameDay:
+				visible=false
+		elif GLobalVar.GamesPanelVisible==true:
+				visible=false
+	elif GLobalVar.Test==true:
+		visible=true
 	$Control/Control/Label.text=str(GLobalVar.Game4Countdown)
 	if $Control/ColorRect2.visible==false:
 		if $Control/Control/Node2D.get_global_mouse_position().x>=0 and $Control/Control/Node2D.get_global_mouse_position().x<=1152:

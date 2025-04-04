@@ -7,13 +7,16 @@ func _ready() -> void:if GLobalVar.GameResult==0:
 	CreateBomb(randi_range(1,2))
 
 func _process(delta: float) -> void:
-	if GLobalVar.GamesPanelVisible==false:
-		if GLobalVar.PlayerSettings['Day']==GameDay:
-			visible=true
-		elif GLobalVar.PlayerSettings['Day']!=GameDay:
-			visible=false
-	elif GLobalVar.GamesPanelVisible==true:
-		visible=false
+	if GLobalVar.Test==false:
+		if GLobalVar.GamesPanelVisible==false:
+			if GLobalVar.PlayerSettings['Day']==GameDay:
+				visible=true
+			elif GLobalVar.PlayerSettings['Day']!=GameDay:
+				visible=false
+		elif GLobalVar.GamesPanelVisible==true:
+				visible=false
+	elif GLobalVar.Test==true:
+		visible=true
 	$CanvasLayer/ColorRect2/Label.text=GLobalVar.Game2PanelText
 	$CanvasLayer/ColorRect2.visible=GLobalVar.Game2Panel
 	$CanvasLayer/Label.text=str(GLobalVar.Countdown)

@@ -3,13 +3,16 @@ extends CanvasLayer
 @export var GameDay = 3
 
 func _process(delta: float) -> void:
-	if GLobalVar.GamesPanelVisible==false:
-		if GLobalVar.PlayerSettings['Day']==GameDay:
-			visible=true
-		elif GLobalVar.PlayerSettings['Day']!=GameDay:
-			visible=false
-	elif GLobalVar.GamesPanelVisible==true:
-		visible=false
+	if GLobalVar.Test==false:
+		if GLobalVar.GamesPanelVisible==false:
+			if GLobalVar.PlayerSettings['Day']==GameDay:
+				visible=true
+			elif GLobalVar.PlayerSettings['Day']!=GameDay:
+				visible=false
+		elif GLobalVar.GamesPanelVisible==true:
+				visible=false
+	elif GLobalVar.Test==true:
+		visible=true
 	$Control/Control/Label.text=str(GLobalVar.Game3Countdown)
 	if $Control/Control/Node2D.get_global_mouse_position().x>=128 and $Control/Control/Node2D.get_global_mouse_position().x<=1024:
 		if $Control/Control/Node2D.get_global_mouse_position().y>=128 and $Control/Control/Node2D.get_global_mouse_position().y<=512:

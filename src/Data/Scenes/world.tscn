@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://oc162eltjbu3"]
+[gd_scene load_steps=56 format=4 uid="uid://oc162eltjbu3"]
 
 [ext_resource type="Script" path="res://Data/Scripts/world.gd" id="1_1vpts"]
 [ext_resource type="PackedScene" uid="uid://b10n3lisq7g14" path="res://Data/Models/table.glb" id="2_wiwhr"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cr8ecy1uoq4ox" path="res://Puzzle Games/Game 3/Scenes/game_3.tscn" id="22_u8hhy"]
 [ext_resource type="Texture2D" uid="uid://bhomtfmewdjbc" path="res://Data/Models/door_rusty_metal_04_nor_gl_1k.png" id="22_wejpq"]
 [ext_resource type="PackedScene" uid="uid://cukg8atfgupcp" path="res://Puzzle Games/Game 4/Scenes/game_4.tscn" id="23_nqkmm"]
+[ext_resource type="PackedScene" uid="uid://byny7ttftllob" path="res://Puzzle Games/Game 5/Scenes/game_5.tscn" id="24_iped3"]
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="25_jsed2"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s63fm"]
@@ -408,6 +409,90 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.0940
 [node name="SpotLight3D6" type="SpotLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.09403, 4.08622, 3.4661)
 
+[node name="SpotLight3D7" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.84171, 3.83116, 2.86471)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -14.511, 3.83116, 2.86471)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -20.5202, 3.83116, 2.86471)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -20.5202, 3.83116, 7.31172)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -20.5202, 3.83116, 15.9678)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -14.3851, 3.83116, 15.9678)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -14.3851, 3.83116, 9.37371)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -9.3262, 3.83116, 9.37371)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.33567, 3.83116, 9.37371)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.33567, 3.83116, 19.1339)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -18.9719, 3.83116, 19.1339)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.581976, 6.93101, 21.9303)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.581976, 6.93101, 10.5608)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.581976, 6.93101, 26.318)
+light_energy = 2.0
+spot_range = 15.0
+spot_angle = 81.36
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Node3D"]
 visible = false
 
@@ -787,6 +872,9 @@ GameDay = 2
 visible = false
 
 [node name="Game 4" parent="CanvasLayer/Control/Control/ColorRect/Control" instance=ExtResource("23_nqkmm")]
+visible = false
+
+[node name="Game 5" parent="CanvasLayer/Control/Control/ColorRect/Control" instance=ExtResource("24_iped3")]
 visible = false
 
 [node name="Timer" type="Timer" parent="."]

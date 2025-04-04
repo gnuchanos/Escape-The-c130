@@ -3,13 +3,16 @@ extends CanvasLayer
 @export var GameDay = 0
 
 func _process(delta: float) -> void:
-	if GLobalVar.GamesPanelVisible==false:
-		if GLobalVar.PlayerSettings['Day']==GameDay:
-			visible=true
-		elif GLobalVar.PlayerSettings['Day']!=GameDay:
-			visible=false
-	elif GLobalVar.GamesPanelVisible==true:
-		visible=false
+	if GLobalVar.Test==false:
+		if GLobalVar.GamesPanelVisible==false:
+			if GLobalVar.PlayerSettings['Day']==GameDay:
+				visible=true
+			elif GLobalVar.PlayerSettings['Day']!=GameDay:
+				visible=false
+		elif GLobalVar.GamesPanelVisible==true:
+				visible=false
+	elif GLobalVar.Test==true:
+		visible=true
 	$CanvasLayer/Control/ProgressBar.value=GLobalVar.Game1ProgressBar
 	if GLobalVar.Game1ProgressBar<1:
 		$CanvasLayer/ColorRect.visible=true
