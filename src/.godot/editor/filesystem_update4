@@ -1,31 +1,9 @@
+res://Data/Scenes/world.tscn
 res://Data/Environments/DefaultEnviroment.tres
-res://Puzzle Games/Game 5/Levels/level_4.tscn
-res://Data/Materials/table.tres
-res://Data/Models/Toprak.tres
-res://Data/Models/Floor.tres
-res://Data/Materials/CollisionMaterial.tres
 res://Data/Environments/DefaultTheme.tres
 res://Data/Shaders/vhs.gdshader
-res://Puzzle Games/Game 5/Levels/level_1.tscn
-res://Data/Scenes/world.tscn
-res://Data/Scenes/bullet_game_2.tscn
-res://Puzzle Games/Game 2/Scenes/game_2.tscn
-res://Puzzle Games/Game 2/Scenes/bomb_ball.tscn
-res://Puzzle Games/Game 1/Scenes/bomb_area.tscn
 res://Puzzle Games/Game 1/Scenes/character_game_1.tscn
-res://Puzzle Games/Game 1/Scenes/game_1.tscn
-res://Puzzle Games/Game 5/Scenes/game_5.tscn
-res://Data/Scripts/GLobalVAR.gd
-res://Puzzle Games/Game 5/Scenes/character_game_5.tscn
-res://Puzzle Games/Game 5/Levels/level_2.tscn
-res://Puzzle Games/Game 5/Levels/level_3.tscn
-res://Puzzle Games/Game 3/Scenes/game_3.tscn
-res://Puzzle Games/Game 4/Scenes/game_4.tscn
-res://Puzzle Games/Game 1/Scripts/character_game_1.gd
-res://Puzzle Games/Game 2/Scripts/game_2.gd
-res://Puzzle Games/Game 1/Scripts/game_1.gd
-res://Puzzle Games/Game 3/Scripts/game_3.gd
-res://Puzzle Games/Game 4/Scripts/game_4.gd
-res://Puzzle Games/Game 5/Scripts/game_5.gd
-res://Data/Scripts/world.gd
 res://Data/Scenes/door.tscn
+res://Puzzle Games/Game 5/Scenes/game_5.tscn
+res://Puzzle Games/Game 1/Scenes/game_1.tscn
+res://Data/Sound/sound_test.tscn

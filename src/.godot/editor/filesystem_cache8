@@ -1,212 +1,216 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743943455
-export_presets.cfg::TextFile::-1::1742408229::0::1::::<><>::
-::res://Data/::1742749570
-::res://Data/Backgrounds/::1742510682
-::res://Data/Environments/::1743959512
-DefaultEnviroment.tres::Environment::994216139216463455::1743959512::0::1::::<><>::uid://bjuqyq5hw43wi::::res://Data/Environments/skybox0.png
-DefaultTheme.tres::Theme::5648643308172862057::1743943900::0::1::::<><>::uid://oxts8pmqowpr::::res://Data/Images and Sprites/Gnu iImages/checkbox_normal.png<>uid://sgh7swkfc5y3::::res://Data/Images and Sprites/Gnu iImages/checkbox_pressed.png<>uid://ccwgbftrpjbe7::::res://Data/Images and Sprites/Gnu iImages/sliderGrab_normal.png<>uid://cfuh72rfmjy87::::res://Data/Images and Sprites/Gnu iImages/close_normal.png<>uid://dyte6x01udjef::::res://Data/Images and Sprites/Gnu iImages/sliderGrab_press.png<>uid://lpt4ee4pxnbk::::res://Data/Images and Sprites/Gnu iImages/close_hover.png
-skybox0.png::CompressedTexture2D::3060423049520924044::1742408229::1742510683::1::::<><>::
-::res://Data/Fonts/::1742510512
-FreeSans.otf::FontFile::8240623486806348402::1742408229::1742510512::1::::<><>::
-FreeSansBold.otf::FontFile::1656486002736241208::1742408229::1742510512::1::::<><>::
-FreeSansBoldOblique.otf::FontFile::7798334511492075488::1742408229::1742510512::1::::<><>::
-FreeSansOblique.otf::FontFile::3488208823566053736::1742408229::1742510512::1::::<><>::
-Goldman-Bold.ttf::FontFile::4122872496232604185::1722332555::1742510415::1::::<><>::
-OpenSans-VariableFont_wdth,wght.ttf::FontFile::8029735034365006115::1742408229::1742510512::1::::<><>::
-::res://Data/Grid Map/::1722331904
-::res://Data/Images and Sprites/::1742751232
-red-flag.png::CompressedTexture2D::61264976934610927::1742751228::1742751232::1::::<><>::
-::res://Data/Images and Sprites/Gnu iImages/::1742510605
-bg.png::CompressedTexture2D::2822813646052180135::1742408229::1742510605::1::::<><>::
-checkbox_normal.png::CompressedTexture2D::1031312023438482839::1742408229::1742510605::1::::<><>::
-checkbox_pressed.png::CompressedTexture2D::1276268596230413284::1742408229::1742510605::1::::<><>::
-close_hover.png::CompressedTexture2D::804248574826267304::1742408229::1742510605::1::::<><>::
-close_normal.png::CompressedTexture2D::5165556749647606218::1742408229::1742510605::1::::<><>::
-cursor0.png::CompressedTexture2D::6232130514224872150::1742408229::1742510605::1::::<><>::
-cursor1.png::CompressedTexture2D::8644244555679675605::1742408229::1742510605::1::::<><>::
-icon.png::CompressedTexture2D::5387545411049102107::1742408229::1742510605::1::::<><>::
-sliderGrab_normal.png::CompressedTexture2D::4959001745762922564::1742408229::1742510605::1::::<><>::
-sliderGrab_press.png::CompressedTexture2D::8883316951166673673::1742408229::1742510605::1::::<><>::
-::res://Data/Logo/::1722331863
-::res://Data/Materials/::1743943900
-CollisionMaterial.tres::StandardMaterial3D::8633700432256895589::1743943900::0::1::::<><>::
-table.tres::StandardMaterial3D::1939464344310767099::1743943900::0::1::::<><>::uid://cyd6hv6g6mpjp::::res://Data/Materials/Texturelabs_Wood_189S.jpg
-Texturelabs_Wood_189S.jpg::CompressedTexture2D::6465462626488071501::1743265086::1743265987::1::::<><>::
-::res://Data/Models/::1743959706
-4xPuzzle_door_key.glb::PackedScene::6334743939151811750::1742748781::1742748793::1::::<><>::uid://bpaer3s1p4qmu::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Albedo.jpg<>uid://c3advms8crjiq::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Normal.jpg
-4xPuzzle_door_key_slab_tiles_diff_1k.jpg::CompressedTexture2D::8734438399350898587::1742593709::1742748792::1::::<><>::
-4xPuzzle_door_key_slab_tiles_nor_gl_1k.png::CompressedTexture2D::7281799730563875412::1742593709::1742748792::1::::<><>::
-4xPuzzle_door_key_xhtnbhlg_2K_Albedo.jpg::CompressedTexture2D::3439528064393844228::1742748793::1742748794::1::::<><>::
-4xPuzzle_door_key_xhtnbhlg_2K_Normal.jpg::CompressedTexture2D::6738349301490812812::1742748793::1742748794::1::::<><>::
-bad.glb::PackedScene::5985516530410133492::1742665757::1742665981::1::::<><>::uid://m3ssbk7ml003::::res://Data/Models/bad_wood_planks_diff_1k.jpg<>uid://bki70bp7f4qrv::::res://Data/Models/bad_wood_planks_nor_gl_1k.png<>uid://bje3iefpnby8h::::res://Data/Models/bad_fabric_pattern_07_col_1_1k.png<>uid://ch4km1bdgg5x3::::res://Data/Models/bad_fabric_pattern_07_nor_gl_1k.png
-bad_fabric_pattern_07_col_1_1k.png::CompressedTexture2D::3028092368116726337::1742665981::1742665981::1::::<><>::
-bad_fabric_pattern_07_nor_gl_1k.png::CompressedTexture2D::5324660194471189458::1742665981::1742665981::1::::<><>::
-bad_wood_planks_diff_1k.jpg::CompressedTexture2D::901193820371972842::1742665981::1742665981::1::::<><>::
-bad_wood_planks_nor_gl_1k.png::CompressedTexture2D::3106811807879242895::1742665980::1742665981::1::::<><>::
-barnaklik.glb::PackedScene::8841336132393019050::1742564926::1742564936::1::::<><>::uid://dig8qesroyvv4::::res://Data/Models/barnaklik_slab_tiles_diff_1k.jpg<>uid://y2ylmgnti4di::::res://Data/Models/barnaklik_slab_tiles_nor_gl_1k.png
-barnaklik_slab_tiles_diff_1k.jpg::CompressedTexture2D::7735191538863651835::1742564936::1742564938::1::::<><>::
-barnaklik_slab_tiles_nor_gl_1k.png::CompressedTexture2D::1741747938397167346::1742564936::1742564938::1::::<><>::
-door.glb::PackedScene::875568297790999859::1743959706::1743959709::1::::<><>::
-door_rusty_metal_04_diff_1k.jpg::CompressedTexture2D::7327997430629774814::1742564936::1743959709::1::::<><>::
-door_rusty_metal_04_nor_gl_1k.png::CompressedTexture2D::2907406693079228352::1742564936::1743959709::1::::<><>::
-door_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::8295345149637590036::1742564936::1743959709::1::::<><>::
-door_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::3376155706661817969::1742564936::1743959709::1::::<><>::
-easterCube.glb::PackedScene::9080480640257961424::1742564926::1742564936::1::::<><>::uid://blkiaafm6ooeu::::res://Data/Models/easterCube_rusty_metal_grid_diff_1k.jpg<>uid://b58gmsvcbj5gn::::res://Data/Models/easterCube_rusty_metal_grid_nor_gl_1k.png
-easterCube_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::3179627485505426932::1742564936::1742564938::1::::<><>::
-easterCube_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::4560597168155293865::1742564936::1742564938::1::::<><>::
-Floor.tres::StandardMaterial3D::9026614083739802758::1743943900::0::1::::<><>::uid://cwp4geos4onar::::res://Data/Models/jail_xephfh3_2K_Albedo.jpg
-jail.glb::PackedScene::3699033512145870290::1743262826::1743264537::1::::<><>::uid://bjjlyicjtvuxv::::res://Data/Models/Toprak.tres<>uid://d1utarrvlk5mw::::res://Data/Models/Floor.tres<>uid://dvah1xevnf6gf::::res://Data/Materials/CollisionMaterial.tres
-jail_concrete_floor_worn_02_diff_1k.jpg::CompressedTexture2D::7121366406643900034::1742564937::1742748792::1::::<><>::
-jail_concrete_floor_worn_02_disp_1k.png::CompressedTexture2D::3929904766864372358::1742564937::1742748792::1::::<><>::
-jail_cracked_concrete_diff_1k.jpg::CompressedTexture2D::2635248393882918582::1742564937::1742748792::1::::<><>::
-jail_cracked_concrete_nor_gl_1k.png::CompressedTexture2D::5265134590421217350::1742564937::1742748792::1::::<><>::
-jail_floor_tiles_02_diff_1k.jpg::CompressedTexture2D::1827429728013652690::1742564936::1742748792::1::::<><>::
-jail_plastered_wall_03_diff_1k.jpg::CompressedTexture2D::4483429196331780175::1742564937::1742748792::1::::<><>::
-jail_plastered_wall_03_nor_gl_1k.png::CompressedTexture2D::8268728717332421457::1742564937::1742748792::1::::<><>::
-jail_rubble_diff_1k.jpg::CompressedTexture2D::4071695980487943178::1742564937::1742748792::1::::<><>::
-jail_rubble_nor_gl_1k.png::CompressedTexture2D::7085169106305216796::1742564937::1742748792::1::::<><>::
-jail_rusty_metal_04_diff_1k.jpg::CompressedTexture2D::4730490906636379599::1742564936::1742748792::1::::<><>::
-jail_rusty_metal_04_nor_gl_1k.png::CompressedTexture2D::1944702083074882409::1742564936::1742748792::1::::<><>::
-jail_slab_tiles_diff_1k.jpg::CompressedTexture2D::9028261426053984777::1742564936::1742748792::1::::<><>::
-jail_slab_tiles_nor_gl_1k.png::CompressedTexture2D::8545137368080935910::1742564936::1742748792::1::::<><>::
-jail_vckieff_2K_Albedo.jpg::CompressedTexture2D::6543874651495419139::1742748792::1743262854::1::::<><>::
-jail_vckieff_2K_Normal.jpg::CompressedTexture2D::6315740431301494614::1742748792::1743262854::1::::<><>::
-jail_vckjca2_2K_Albedo.jpg::CompressedTexture2D::2054460429021586910::1742748792::1743262854::1::::<><>::
-jail_vckjca2_2K_Normal.jpg::CompressedTexture2D::3036280821441260886::1742748792::1743262854::1::::<><>::
-jail_vhqnfhu_2K_Albedo.jpg::CompressedTexture2D::9104916390227150323::1742748793::1743262854::1::::<><>::
-jail_vhqnfhu_2K_Normal.jpg::CompressedTexture2D::2986744051041598394::1742748792::1743262854::1::::<><>::
-jail_xdfedbe_2K_Albedo.jpg::CompressedTexture2D::6366504348337276763::1742748793::1743262854::1::::<><>::
-jail_xdfedbe_2K_Normal.jpg::CompressedTexture2D::4097870639988018947::1742748793::1743262854::1::::<><>::
-jail_xephfh3_2K_Albedo.jpg::CompressedTexture2D::6349733333865287109::1742748792::1743262854::1::::<><>::
-jail_xephfh3_2K_Normal.jpg::CompressedTexture2D::6405850275843622397::1742748792::1743262854::1::::<><>::
-jail_xevhaj1s_2K_Albedo.jpg::CompressedTexture2D::3000448218739566060::1742748792::1743262854::1::::<><>::
-jail_xevhaj1s_2K_Normal.jpg::CompressedTexture2D::6062321685442413437::1742748792::1743262854::1::::<><>::
-jail_xhtnbhlg_2K_Albedo.jpg::CompressedTexture2D::5982400318859978085::1742748793::1743262854::1::::<><>::
-jail_xhtnbhlg_2K_Normal.jpg::CompressedTexture2D::3553728870237555438::1742748793::1743262854::1::::<><>::
-lamb.glb::PackedScene::2829402760205568284::1742564926::1742564937::1::::<><>::uid://bbh01codwnlea::::res://Data/Models/lamb_rusty_metal_grid_diff_1k.jpg<>uid://clfjkixybf73a::::res://Data/Models/lamb_rusty_metal_grid_nor_gl_1k.png<>uid://dgxqlrluyjtid::::res://Data/Models/lamb_rusty_metal_04_diff_1k.jpg<>uid://b45tnqi50t7nt::::res://Data/Models/lamb_rusty_metal_04_nor_gl_1k.png
-lamb_rusty_metal_04_diff_1k.jpg::CompressedTexture2D::7628867827699047143::1742564937::1742564938::1::::<><>::
-lamb_rusty_metal_04_nor_gl_1k.png::CompressedTexture2D::4485006174130452917::1742564937::1742564938::1::::<><>::
-lamb_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::2472624653910432348::1742564937::1742564938::1::::<><>::
-lamb_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::5555805303858128048::1742564937::1742564938::1::::<><>::
-puzzle_4X.glb::PackedScene::4277088481765482393::1742593702::1742593709::1::::<><>::uid://ckdm0p1w4qfjd::::res://Data/Models/puzzle_4X_rusty_metal_grid_diff_1k.jpg<>uid://2w6pmnlw86jr::::res://Data/Models/puzzle_4X_rusty_metal_grid_nor_gl_1k.png
-puzzle_4X_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::5481697014843660249::1742593709::1742593710::1::::<><>::
-puzzle_4X_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::1942424753393704647::1742593709::1742593710::1::::<><>::
-table.glb::PackedScene::4263779976224510057::1742665757::1743266031::1::::<><>::uid://2vqxuymm0hvn::::res://Data/Materials/table.tres<>uid://q1ahmb4lpx0q::::res://Data/Models/table_wood_table_001_diff_1k.jpg<>uid://djpuwa2rjakww::::res://Data/Models/table_wood_table_001_nor_gl_1k.png
-table_wood_peeling_paint_weathered_diff_1k-wood_peeling_paint_weathered_nor_gl_1k.png::CompressedTexture2D::7832057547560147253::1742665981::1742665981::1::::<><>::
-table_wood_table_001_diff_1k.jpg::CompressedTexture2D::1176708453529356742::1742665981::1742665981::1::::<><>::
-table_wood_table_001_nor_gl_1k.png::CompressedTexture2D::7823180979947889050::1742665981::1742665981::1::::<><>::
-Toprak.tres::StandardMaterial3D::3037410845907647595::1743943900::0::1::::<><>::uid://b442on7cplbyt::::res://Data/Models/jail_plastered_wall_03_diff_1k.jpg
-::res://Data/Scenes/::1743959512
-bullet_game_2.tscn::PackedScene::2543684840603571840::1743945687::0::1::::<><>::res://Data/Scripts/bullet_game_2.gd<>uid://c6rvqy2cmqk0n::::res://Puzzle Games/Game 2/Images/bullet.png
-cubes.tscn::PackedScene::7345229238924296803::1743214240::0::1::::<><>::res://Data/Scripts/cubes.gd
-door.tscn::PackedScene::8661613897502808456::1743959481::0::1::::<><>::res://Data/Scripts/door.gd<>uid://dqglef1u4f5mm::::res://Data/Models/door_rusty_metal_grid_diff_1k.jpg<>uid://bodo15wmb2cab::::res://Data/Models/door_rusty_metal_grid_nor_gl_1k.png<>uid://dcn0bung2koe5::::res://Data/Models/door_rusty_metal_04_diff_1k.jpg<>uid://bhomtfmewdjbc::::res://Data/Models/door_rusty_metal_04_nor_gl_1k.png
-fps.tscn::PackedScene::5724070792335499529::1743214240::0::1::::<><>::res://Data/Scripts/fps.gd<>uid://cu15jqtsbg4t3::::res://Data/Images and Sprites/Gnu iImages/cursor0.png<>uid://bpaer3s1p4qmu::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Albedo.jpg<>uid://c3advms8crjiq::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Normal.jpg<>uid://dvflpekblut54::::res://Data/Images and Sprites/Gnu iImages/cursor1.png<>uid://cmqilhqwhy1tl::::res://Data/Environments/DefaultTheme.tres<>res://Data/Scripts/settings.gd<>res://Data/Scripts/console_win.gd<>uid://dpn24n1mjdh6q::::res://Data/Fonts/FreeSans.otf
-parmaklik.tscn::PackedScene::6972594508025680589::1743875994::0::1::::<><>::res://Data/Scripts/parmaklik.gd<>uid://dig8qesroyvv4::::res://Data/Models/barnaklik_slab_tiles_diff_1k.jpg<>uid://y2ylmgnti4di::::res://Data/Models/barnaklik_slab_tiles_nor_gl_1k.png
-world.tscn::PackedScene::988407992698759968::1743959512::0::1::::<><>::res://Data/Scripts/world.gd<>uid://b10n3lisq7g14::::res://Data/Models/table.glb<>uid://m3ssbk7ml003::::res://Data/Models/bad_wood_planks_diff_1k.jpg<>uid://bki70bp7f4qrv::::res://Data/Models/bad_wood_planks_nor_gl_1k.png<>uid://bje3iefpnby8h::::res://Data/Models/bad_fabric_pattern_07_col_1_1k.png<>uid://ch4km1bdgg5x3::::res://Data/Models/bad_fabric_pattern_07_nor_gl_1k.png<>uid://c6ltu3o88p3m4::::res://Data/Scenes/parmaklik.tscn<>res://Data/Scripts/area_3d_5.gd<>uid://bpaer3s1p4qmu::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Albedo.jpg<>uid://bsx3sn8qu7lxy::::res://Data/Models/jail.glb<>uid://c3advms8crjiq::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Normal.jpg<>uid://dvn0rr23uxh25::::res://Data/Scenes/door.tscn<>uid://ofuuhkoyp2b0::::res://Data/Environments/DefaultEnviroment.tres<>uid://dcwc38njcdthr::::res://Data/Scenes/cubes.tscn<>uid://cns1uy01wn0kj::::res://Data/Scenes/fps.tscn<>uid://dqglef1u4f5mm::::res://Data/Models/door_rusty_metal_grid_diff_1k.jpg<>uid://bodo15wmb2cab::::res://Data/Models/door_rusty_metal_grid_nor_gl_1k.png<>uid://dcn0bung2koe5::::res://Data/Models/door_rusty_metal_04_diff_1k.jpg<>uid://bhomtfmewdjbc::::res://Data/Models/door_rusty_metal_04_nor_gl_1k.png<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf
-::res://Data/Scripts/::1743957374
-area_3d_5.gd::GDScript::-1::1743213822::0::1::::<>Area3D<>::
-bullet_game_2.gd::GDScript::-1::1743878659::0::1::::<>CharacterBody2D<>::
-console_win.gd::GDScript::-1::1742420865::0::1::::<>Window<>::
-cubes.gd::GDScript::-1::1742568152::0::1::::<>CharacterBody3D<>::
-door.gd::GDScript::-1::1743875492::0::1::::<>Node3D<>::
-fps.gd::GDScript::-1::1743212137::0::1::::<>CharacterBody3D<>::
-GLobalVAR.gd::GDScript::-1::1743957218::0::1::::<>Node<>::
-parmaklik.gd::GDScript::-1::1743875586::0::1::::<>Node3D<>::
-settings.gd::GDScript::-1::1742420865::0::1::::<>Window<>::
-world.gd::GDScript::-1::1743957374::0::1::::<>Node3D<>::
-::res://Data/Shaders/::1743959512
-glass.gdshader::Shader::-1::1742408229::0::1::::<><>::
-main.gdshader::Shader::-1::1742423190::0::1::::<><>::
-old_vhs.gdshader::Shader::-1::1742423190::0::1::::<><>::
-tf2.gdshader::Shader::-1::1742423190::0::1::::<><>::
-vhs.gdshader::Shader::-1::1743959512::0::1::::<><>::
-::res://Data/Sounds/::1722331897
-::res://Data/Styles/::1742510622
-DefaultBUS.tres::AudioBusLayout::1024917755897270693::1742408229::0::1::::<><>::
-::res://Data/Tilemap/::1722331911
-::res://Data/TNGR Bios/::1742510417
-Group 1.png::CompressedTexture2D::5558466030849136294::1728405188::1742510417::1::::<><>::
-::res://Puzzle Games/::1743699922
-::res://Puzzle Games/Game 1/::1742667954
-::res://Puzzle Games/Game 1/Images/::1743047899
-bomb.png::CompressedTexture2D::3131096547433812403::1742669420::1742669440::1::::<><>::
-down.png::CompressedTexture2D::825376000773247651::1742671873::1742671881::1::::<><>::
-WhatsApp Görsel 2025-03-24 saat 00.42.23_1f6e4b2f.jpg::CompressedTexture2D::4005122417422737281::1742766739::1743047899::1::::<><>::
-::res://Puzzle Games/Game 1/Images/Tilemaps/::1742671903
-down.png::CompressedTexture2D::5145796616989145909::1742671903::1742671903::1::::<><>::
-Rectangle 19.png::CompressedTexture2D::2607556014224157143::1742668493::1742668553::1::::<><>::
-Rectangle 20.png::CompressedTexture2D::6735276457993025605::1742668493::1742668553::1::::<><>::
-Rectangle 21.png::CompressedTexture2D::991053079164152786::1742668493::1742668553::1::::<><>::
-Rectangle 22.png::CompressedTexture2D::7495546713534139271::1742668493::1742668553::1::::<><>::
-Rectangle 23.png::CompressedTexture2D::6658589601187919947::1742670158::1742670167::1::::<><>::
-::res://Puzzle Games/Game 1/Scenes/::1743959481
-bomb_area.tscn::PackedScene::1695263235678010896::1743945687::0::1::::<><>::res://Puzzle Games/Game 1/Scripts/bomb_area.gd<>uid://bkuyx5ka8itih::::res://Puzzle Games/Game 1/Images/bomb.png
-character_game_1.tscn::PackedScene::8334206207852084237::1743959480::0::1::::<><>::res://Puzzle Games/Game 1/Scripts/character_game_1.gd<>uid://c14p86to7uaud::::res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 23.png<>uid://l0227nsl2io6::::res://Puzzle Games/Game 1/Images/down.png
-game_1.tscn::PackedScene::9218683805567986614::1743959481::0::1::::<><>::res://Puzzle Games/Game 1/Scripts/game_1.gd<>uid://c27vawhxwe5mv::::res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 20.png<>uid://dq0ffnlvvup1n::::res://Puzzle Games/Game 1/Scenes/character_game_1.tscn<>uid://yfg0c552s0ue::::res://Puzzle Games/Game 1/Scenes/bomb_area.tscn<>uid://4xa4fhkq27d::::res://Data/Images and Sprites/red-flag.png<>uid://de15tardx6056::::res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 22.png<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf
-::res://Puzzle Games/Game 1/Scripts/::1743957277
-bomb_area.gd::GDScript::-1::1743878759::0::1::::<>Area2D<>::
-character_game_1.gd::GDScript::-1::1743952102::0::1::::<>CharacterBody2D<>::
-game_1.gd::GDScript::-1::1743957277::0::1::::<>CanvasLayer<>::
-::res://Puzzle Games/Game 2/::1743109409
-::res://Puzzle Games/Game 2/Images/::1743949800
-bullet-shooter-game.png::CompressedTexture2D::6782311409717754844::1743949798::1743949800::1::::<><>::
-bullet.png::CompressedTexture2D::6985094873912467143::1743877851::1743877852::1::::<><>::
-::res://Puzzle Games/Game 2/Scenes/::1743957295
-area_2d.gd::GDScript::-1::1743481216::0::1::::<>Area2D<>::
-bomb_ball.tscn::PackedScene::4384308515492988302::1743948596::0::1::::<><>::res://Puzzle Games/Game 2/Scripts/bomb_ball.gd<>uid://28dyhnd3qlfn::::res://Puzzle Games/Game 3/Images/fire.png
-game_2.tscn::PackedScene::5662480928384171279::1743957295::0::1::::<><>::res://Puzzle Games/Game 2/Scripts/game_2.gd<>uid://c3vnxb1rdx4km::::res://Puzzle Games/Game 2/Images/bullet-shooter-game.png<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf
-::res://Puzzle Games/Game 2/Scripts/::1743957296
-bomb_ball.gd::GDScript::-1::1743878739::0::1::::<>CharacterBody2D<>::
-game_2.gd::GDScript::-1::1743957296::0::1::::<>CanvasLayer<>::
-node_2d.gd::GDScript::-1::1743125459::0::1::::<>Node2D<>::
-::res://Puzzle Games/Game 3/::1743215587
-::res://Puzzle Games/Game 3/Images/::1743949951
-3d-rocket.png::CompressedTexture2D::5356028610391463810::1743223236::1743223321::1::::<><>::
-comet.png::CompressedTexture2D::3006581007391925136::1743223273::1743223321::1::::<><>::
-fire.png::CompressedTexture2D::1963448642063137731::1743112789::1743223321::1::::<><>::
-Group 92.png::CompressedTexture2D::917128233186652416::1743266159::1743266160::1::::<><>::
-meteor-spaceship-game.png::CompressedTexture2D::6178808411813112784::1743949948::1743949951::1::::<><>::
-::res://Puzzle Games/Game 3/Scenes/::1743957313
-game_3.tscn::PackedScene::6034423916328999239::1743957313::0::1::::<><>::res://Puzzle Games/Game 3/Scripts/game_3.gd<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf<>uid://bxq1ukt1yc3et::::res://Puzzle Games/Game 3/Scenes/spaceship.tscn<>uid://nci76ar5rhoa::::res://Puzzle Games/Game 3/Images/Group 92.png<>uid://cubccpak0vrto::::res://Puzzle Games/Game 3/Images/meteor-spaceship-game.png
-meteor.tscn::PackedScene::5851841452763239441::1743876442::0::1::::<><>::res://Puzzle Games/Game 3/Scripts/meteor.gd<>uid://bi3n7kd3wl26o::::res://Puzzle Games/Game 3/Images/comet.png
-spaceship.tscn::PackedScene::4035409044921117851::1743876419::0::1::::<><>::res://Puzzle Games/Game 3/Scripts/spaceship.gd<>uid://cikrakbpru4ne::::res://Puzzle Games/Game 3/Images/3d-rocket.png
-::res://Puzzle Games/Game 3/Scripts/::1743957310
-game_3.gd::GDScript::-1::1743957310::0::1::::<>CanvasLayer<>::
-meteor.gd::GDScript::-1::1743878809::0::1::::<>CharacterBody2D<>::
-spaceship.gd::GDScript::-1::1743878814::0::1::::<>Area2D<>::
-::res://Puzzle Games/Game 4/::1743463438
-::res://Puzzle Games/Game 4/Images/::1743950146
-Rectangle 26.png::CompressedTexture2D::7985672537761724931::1743464533::1743464534::1::::<><>::
-spaceship-game-trying-to-get-through-walls.png::CompressedTexture2D::551620494174063728::1743950144::1743950146::1::::<><>::
-spaceship.png::CompressedTexture2D::2431879133107251813::1743472710::1743472711::1::::<><>::
-::res://Puzzle Games/Game 4/Scenes/::1743957326
-game_4.tscn::PackedScene::6197685280430190447::1743957326::0::1::::<><>::res://Puzzle Games/Game 4/Scripts/game_4.gd<>uid://dvhhpfypm2vng::::res://Puzzle Games/Game 4/Scenes/spaceship.tscn<>uid://nci76ar5rhoa::::res://Puzzle Games/Game 3/Images/Group 92.png<>uid://dl1k4ieqk67kx::::res://Puzzle Games/Game 4/Images/Rectangle 26.png<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf<>res://Puzzle Games/Game 4/Scripts/game_4_wall.gd<>uid://h4hdx7a3uwbw::::res://Puzzle Games/Game 4/Images/spaceship-game-trying-to-get-through-walls.png
-spaceship.tscn::PackedScene::8648130518005050380::1743876570::0::1::::<><>::res://Puzzle Games/Game 4/Scripts/spaceship.gd<>uid://bawaxuj1kcpdt::::res://Puzzle Games/Game 4/Images/spaceship.png
-::res://Puzzle Games/Game 4/Scripts/::1743957326
-game_4.gd::GDScript::-1::1743957326::0::1::::<>CanvasLayer<>::
-game_4_wall.gd::GDScript::-1::1743478608::0::1::::<>TileMapLayer<>::
-spaceship.gd::GDScript::-1::1743878841::0::1::::<>Area2D<>::
-::res://Puzzle Games/Game 5/::1743879784
-::res://Puzzle Games/Game 5/Images/::1743701875
-Rectangle 137.png::CompressedTexture2D::7060640371889149297::1743700589::1743700591::1::::<><>::
-Rectangle 138.png::CompressedTexture2D::5141135656869880535::1743700589::1743700591::1::::<><>::
-Rectangle 139.png::CompressedTexture2D::1743162602313212894::1743700589::1743700591::1::::<><>::
-Rectangle 140.png::CompressedTexture2D::8437983401405555275::1743701869::1743701875::1::::<><>::
-Rectangle 141.png::CompressedTexture2D::8510758458127534760::1743701873::1743701875::1::::<><>::
-::res://Puzzle Games/Game 5/Levels/::1743945688
-level_1.tscn::PackedScene::7759377119702202853::1743945688::0::1::::<><>::uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd<>res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd<>uid://bg6cfb58igsty::::res://Puzzle Games/Game 5/Scenes/enemy.tscn
-level_2.tscn::PackedScene::2381119007067586521::1743945688::0::1::::<><>::uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd<>res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd<>uid://bg6cfb58igsty::::res://Puzzle Games/Game 5/Scenes/enemy.tscn
-level_3.tscn::PackedScene::3554328498461112267::1743945688::0::1::::<><>::uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd<>res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd<>uid://bg6cfb58igsty::::res://Puzzle Games/Game 5/Scenes/enemy.tscn
-level_4.tscn::PackedScene::1516300981392653680::1743944059::0::1::::<><>::uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd<>res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd<>uid://bg6cfb58igsty::::res://Puzzle Games/Game 5/Scenes/enemy.tscn
-::res://Puzzle Games/Game 5/Scenes/::1743959481
-character_game_5.tscn::PackedScene::6579233176647622435::1743945688::0::1::::<><>::res://Puzzle Games/Game 5/Scripts/character_game_5.gd<>uid://dtiw7ikwjwcqa::::res://Puzzle Games/Game 5/Images/Rectangle 141.png
-enemy.tscn::PackedScene::2871679919230005430::1743877619::0::1::::<><>::res://Puzzle Games/Game 5/Scripts/enemy.gd<>uid://dshombanrx0hr::::res://Puzzle Games/Game 5/Images/Rectangle 140.png
-game_5.tscn::PackedScene::4099305222587956849::1743959481::0::1::::<><>::res://Puzzle Games/Game 5/Scripts/game_5.gd<>uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>uid://c00baku4ok14r::::res://Puzzle Games/Game 5/Scenes/character_game_5.tscn<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf<>uid://4xa4fhkq27d::::res://Data/Images and Sprites/red-flag.png
-::res://Puzzle Games/Game 5/Scripts/::1743957342
-character_game_5.gd::GDScript::-1::1743878767::0::1::::<>CharacterBody2D<>::
-enemy.gd::GDScript::-1::1743878869::0::1::::<>Node2D<>::
-game_5.gd::GDScript::-1::1743957342::0::1::::<>CanvasLayer<>::
-path_follow_2d.gd::GDScript::-1::1743767041::0::1::::<>PathFollow2D<>::
-tile_map_layer_game_5.gd::GDScript::-1::1743878869::0::1::::<>TileMapLayer<>::
-up_enemy.gd::GDScript::-1::1743702475::0::1::::<>Node2D<>::
+::res://::1743973997
+export_presets.cfg::TextFile::-1::1743960279::0::1::::<><>::
+::res://Data/::1743970652
+::res://Data/Environments/::1743973933
+DefaultEnviroment.tres::Environment::994216139216463455::1743973933::0::1::::<><>::uid://bjuqyq5hw43wi::::res://Data/Environments/skybox0.png
+DefaultTheme.tres::Theme::5648643308172862057::1743973933::0::1::::<><>::uid://oxts8pmqowpr::::res://Data/Images and Sprites/Gnu iImages/checkbox_normal.png<>uid://sgh7swkfc5y3::::res://Data/Images and Sprites/Gnu iImages/checkbox_pressed.png<>uid://ccwgbftrpjbe7::::res://Data/Images and Sprites/Gnu iImages/sliderGrab_normal.png<>uid://cfuh72rfmjy87::::res://Data/Images and Sprites/Gnu iImages/close_normal.png<>uid://dyte6x01udjef::::res://Data/Images and Sprites/Gnu iImages/sliderGrab_press.png<>uid://lpt4ee4pxnbk::::res://Data/Images and Sprites/Gnu iImages/close_hover.png
+skybox0.png::CompressedTexture2D::3060423049520924044::1743960279::1743973930::1::::<><>::
+::res://Data/Fonts/::1743973930
+FreeSans.otf::FontFile::8240623486806348402::1743960279::1743973930::1::::<><>::
+FreeSansBold.otf::FontFile::1656486002736241208::1743960279::1743973930::1::::<><>::
+FreeSansBoldOblique.otf::FontFile::7798334511492075488::1743960279::1743973930::1::::<><>::
+FreeSansOblique.otf::FontFile::3488208823566053736::1743960279::1743973930::1::::<><>::
+Goldman-Bold.ttf::FontFile::4122872496232604185::1743960279::1743973930::1::::<><>::
+OpenSans-VariableFont_wdth,wght.ttf::FontFile::8029735034365006115::1743960279::1743973930::1::::<><>::
+::res://Data/Images and Sprites/::1743973930
+red-flag.png::CompressedTexture2D::61264976934610927::1743960279::1743973930::1::::<><>::
+::res://Data/Images and Sprites/Gnu iImages/::1743973930
+bg.png::CompressedTexture2D::2822813646052180135::1743960279::1743973930::1::::<><>::
+checkbox_normal.png::CompressedTexture2D::1031312023438482839::1743960279::1743973930::1::::<><>::
+checkbox_pressed.png::CompressedTexture2D::1276268596230413284::1743960279::1743973930::1::::<><>::
+close_hover.png::CompressedTexture2D::804248574826267304::1743960279::1743973930::1::::<><>::
+close_normal.png::CompressedTexture2D::5165556749647606218::1743960279::1743973930::1::::<><>::
+cursor0.png::CompressedTexture2D::6232130514224872150::1743960279::1743973930::1::::<><>::
+cursor1.png::CompressedTexture2D::8644244555679675605::1743960279::1743973930::1::::<><>::
+icon.png::CompressedTexture2D::5387545411049102107::1743960279::1743973930::1::::<><>::
+sliderGrab_normal.png::CompressedTexture2D::4959001745762922564::1743960279::1743973930::1::::<><>::
+sliderGrab_press.png::CompressedTexture2D::8883316951166673673::1743960279::1743973930::1::::<><>::
+::res://Data/Materials/::1743973930
+CollisionMaterial.tres::StandardMaterial3D::8633700432256895589::1743970680::0::1::::<><>::
+table.tres::StandardMaterial3D::1939464344310767099::1743970680::0::1::::<><>::uid://cyd6hv6g6mpjp::::res://Data/Materials/Texturelabs_Wood_189S.jpg
+Texturelabs_Wood_189S.jpg::CompressedTexture2D::6465462626488071501::1743960279::1743973930::1::::<><>::
+::res://Data/Models/::1743973930
+4xPuzzle_door_key.glb::PackedScene::6334743939151811750::1743960279::1743973929::1::::<><>::
+4xPuzzle_door_key_slab_tiles_diff_1k.jpg::CompressedTexture2D::8734438399350898587::1743960279::1743973930::1::::<><>::
+4xPuzzle_door_key_slab_tiles_nor_gl_1k.png::CompressedTexture2D::7281799730563875412::1743960279::1743973930::1::::<><>::
+4xPuzzle_door_key_xhtnbhlg_2K_Albedo.jpg::CompressedTexture2D::3439528064393844228::1743960279::1743973930::1::::<><>::
+4xPuzzle_door_key_xhtnbhlg_2K_Normal.jpg::CompressedTexture2D::6738349301490812812::1743960279::1743973930::1::::<><>::
+bad.glb::PackedScene::5985516530410133492::1743960279::1743973929::1::::<><>::
+bad_fabric_pattern_07_col_1_1k.png::CompressedTexture2D::3028092368116726337::1743960279::1743973930::1::::<><>::
+bad_fabric_pattern_07_nor_gl_1k.png::CompressedTexture2D::5324660194471189458::1743960279::1743973930::1::::<><>::
+bad_wood_planks_diff_1k.jpg::CompressedTexture2D::901193820371972842::1743960279::1743973930::1::::<><>::
+bad_wood_planks_nor_gl_1k.png::CompressedTexture2D::3106811807879242895::1743960279::1743973930::1::::<><>::
+barnaklik.glb::PackedScene::8841336132393019050::1743960279::1743973929::1::::<><>::
+barnaklik_slab_tiles_diff_1k.jpg::CompressedTexture2D::7735191538863651835::1743960279::1743973930::1::::<><>::
+barnaklik_slab_tiles_nor_gl_1k.png::CompressedTexture2D::1741747938397167346::1743960279::1743973930::1::::<><>::
+door.glb::PackedScene::875568297790999859::1743960279::1743973930::1::::<><>::
+door_rusty_metal_04_diff_1k.jpg::CompressedTexture2D::7327997430629774814::1743960279::1743973930::1::::<><>::
+door_rusty_metal_04_nor_gl_1k.png::CompressedTexture2D::2907406693079228352::1743960279::1743973930::1::::<><>::
+door_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::8295345149637590036::1743960279::1743973930::1::::<><>::
+door_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::3376155706661817969::1743960279::1743973930::1::::<><>::
+easterCube.glb::PackedScene::9080480640257961424::1743961548::1743973930::1::::<><>::
+easterCube_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::3179627485505426932::1743960279::1743973930::1::::<><>::
+easterCube_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::4560597168155293865::1743960279::1743973930::1::::<><>::
+Floor.tres::StandardMaterial3D::9026614083739802758::1743970680::0::1::::<><>::uid://cwp4geos4onar::::res://Data/Models/jail_xephfh3_2K_Albedo.jpg
+jail.glb::PackedScene::3699033512145870290::1743960279::1743973929::1::::<><>::uid://bjjlyicjtvuxv::::res://Data/Models/Toprak.tres<>uid://d1utarrvlk5mw::::res://Data/Models/Floor.tres<>uid://dvah1xevnf6gf::::res://Data/Materials/CollisionMaterial.tres
+jail_concrete_floor_worn_02_diff_1k.jpg::CompressedTexture2D::7121366406643900034::1743960279::1743973930::1::::<><>::
+jail_concrete_floor_worn_02_disp_1k.png::CompressedTexture2D::3929904766864372358::1743960279::1743973930::1::::<><>::
+jail_cracked_concrete_diff_1k.jpg::CompressedTexture2D::2635248393882918582::1743960279::1743973930::1::::<><>::
+jail_cracked_concrete_nor_gl_1k.png::CompressedTexture2D::5265134590421217350::1743960279::1743973930::1::::<><>::
+jail_floor_tiles_02_diff_1k.jpg::CompressedTexture2D::1827429728013652690::1743960279::1743973930::1::::<><>::
+jail_plastered_wall_03_diff_1k.jpg::CompressedTexture2D::4483429196331780175::1743960279::1743973930::1::::<><>::
+jail_plastered_wall_03_nor_gl_1k.png::CompressedTexture2D::8268728717332421457::1743960279::1743973930::1::::<><>::
+jail_rubble_diff_1k.jpg::CompressedTexture2D::4071695980487943178::1743960279::1743973930::1::::<><>::
+jail_rubble_nor_gl_1k.png::CompressedTexture2D::7085169106305216796::1743960279::1743973930::1::::<><>::
+jail_rusty_metal_04_diff_1k.jpg::CompressedTexture2D::4730490906636379599::1743960279::1743973930::1::::<><>::
+jail_rusty_metal_04_nor_gl_1k.png::CompressedTexture2D::1944702083074882409::1743960279::1743973930::1::::<><>::
+jail_slab_tiles_diff_1k.jpg::CompressedTexture2D::9028261426053984777::1743960279::1743973930::1::::<><>::
+jail_slab_tiles_nor_gl_1k.png::CompressedTexture2D::8545137368080935910::1743960279::1743973930::1::::<><>::
+jail_vckieff_2K_Albedo.jpg::CompressedTexture2D::6543874651495419139::1743960279::1743973930::1::::<><>::
+jail_vckieff_2K_Normal.jpg::CompressedTexture2D::6315740431301494614::1743960279::1743973930::1::::<><>::
+jail_vckjca2_2K_Albedo.jpg::CompressedTexture2D::2054460429021586910::1743960279::1743973930::1::::<><>::
+jail_vckjca2_2K_Normal.jpg::CompressedTexture2D::3036280821441260886::1743960279::1743973930::1::::<><>::
+jail_vhqnfhu_2K_Albedo.jpg::CompressedTexture2D::9104916390227150323::1743960279::1743973930::1::::<><>::
+jail_vhqnfhu_2K_Normal.jpg::CompressedTexture2D::2986744051041598394::1743960279::1743973930::1::::<><>::
+jail_xdfedbe_2K_Albedo.jpg::CompressedTexture2D::6366504348337276763::1743960279::1743973930::1::::<><>::
+jail_xdfedbe_2K_Normal.jpg::CompressedTexture2D::4097870639988018947::1743960279::1743973930::1::::<><>::
+jail_xephfh3_2K_Albedo.jpg::CompressedTexture2D::6349733333865287109::1743960279::1743973930::1::::<><>::
+jail_xephfh3_2K_Normal.jpg::CompressedTexture2D::6405850275843622397::1743960279::1743973930::1::::<><>::
+jail_xevhaj1s_2K_Albedo.jpg::CompressedTexture2D::3000448218739566060::1743960279::1743973930::1::::<><>::
+jail_xevhaj1s_2K_Normal.jpg::CompressedTexture2D::6062321685442413437::1743960279::1743973930::1::::<><>::
+jail_xhtnbhlg_2K_Albedo.jpg::CompressedTexture2D::5982400318859978085::1743960279::1743973930::1::::<><>::
+jail_xhtnbhlg_2K_Normal.jpg::CompressedTexture2D::3553728870237555438::1743960279::1743973930::1::::<><>::
+lamb.glb::PackedScene::2829402760205568284::1743960279::1743973929::1::::<><>::
+lamb_rusty_metal_04_diff_1k.jpg::CompressedTexture2D::7628867827699047143::1743960279::1743973930::1::::<><>::
+lamb_rusty_metal_04_nor_gl_1k.png::CompressedTexture2D::4485006174130452917::1743960279::1743973930::1::::<><>::
+lamb_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::2472624653910432348::1743960279::1743973930::1::::<><>::
+lamb_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::5555805303858128048::1743960279::1743973930::1::::<><>::
+puzzle_4X.glb::PackedScene::4277088481765482393::1743960279::1743973929::1::::<><>::
+puzzle_4X_rusty_metal_grid_diff_1k.jpg::CompressedTexture2D::5481697014843660249::1743960279::1743973930::1::::<><>::
+puzzle_4X_rusty_metal_grid_nor_gl_1k.png::CompressedTexture2D::1942424753393704647::1743960279::1743973930::1::::<><>::
+table.glb::PackedScene::4263779976224510057::1743960279::1743973929::1::::<><>::uid://2vqxuymm0hvn::::res://Data/Materials/table.tres
+table_wood_peeling_paint_weathered_diff_1k-wood_peeling_paint_weathered_nor_gl_1k.png::CompressedTexture2D::7832057547560147253::1743960279::1743973930::1::::<><>::
+table_wood_table_001_diff_1k.jpg::CompressedTexture2D::1176708453529356742::1743960279::1743973930::1::::<><>::
+table_wood_table_001_nor_gl_1k.png::CompressedTexture2D::7823180979947889050::1743960279::1743973930::1::::<><>::
+Toprak.tres::StandardMaterial3D::3037410845907647595::1743970680::0::1::::<><>::uid://b442on7cplbyt::::res://Data/Models/jail_plastered_wall_03_diff_1k.jpg
+::res://Data/Scenes/::1743973933
+bullet_game_2.tscn::PackedScene::2543684840603571840::1743960279::0::1::::<><>::res://Data/Scripts/bullet_game_2.gd<>uid://c6rvqy2cmqk0n::::res://Puzzle Games/Game 2/Images/bullet.png
+cubes.tscn::PackedScene::7345229238924296803::1743960279::0::1::::<><>::res://Data/Scripts/cubes.gd
+door.tscn::PackedScene::8661613897502808456::1743973933::0::1::::<><>::res://Data/Scripts/door.gd<>uid://dqglef1u4f5mm::::res://Data/Models/door_rusty_metal_grid_diff_1k.jpg<>uid://dcn0bung2koe5::::res://Data/Models/door_rusty_metal_04_diff_1k.jpg
+fps.tscn::PackedScene::5724070792335499529::1743960279::0::1::::<><>::res://Data/Scripts/fps.gd<>uid://cu15jqtsbg4t3::::res://Data/Images and Sprites/Gnu iImages/cursor0.png<>uid://bpaer3s1p4qmu::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Albedo.jpg<>uid://c3advms8crjiq::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Normal.jpg<>uid://dvflpekblut54::::res://Data/Images and Sprites/Gnu iImages/cursor1.png<>uid://cmqilhqwhy1tl::::res://Data/Environments/DefaultTheme.tres<>res://Data/Scripts/settings.gd<>res://Data/Scripts/console_win.gd<>uid://dpn24n1mjdh6q::::res://Data/Fonts/FreeSans.otf
+parmaklik.tscn::PackedScene::6972594508025680589::1743960279::0::1::::<><>::res://Data/Scripts/parmaklik.gd<>uid://dig8qesroyvv4::::res://Data/Models/barnaklik_slab_tiles_diff_1k.jpg<>uid://y2ylmgnti4di::::res://Data/Models/barnaklik_slab_tiles_nor_gl_1k.png
+world.tscn::PackedScene::988407992698759968::1743973933::0::1::::<><>::res://Data/Scripts/world.gd<>uid://b10n3lisq7g14::::res://Data/Models/table.glb<>uid://m3ssbk7ml003::::res://Data/Models/bad_wood_planks_diff_1k.jpg<>uid://bki70bp7f4qrv::::res://Data/Models/bad_wood_planks_nor_gl_1k.png<>uid://bje3iefpnby8h::::res://Data/Models/bad_fabric_pattern_07_col_1_1k.png<>uid://ch4km1bdgg5x3::::res://Data/Models/bad_fabric_pattern_07_nor_gl_1k.png<>uid://c6ltu3o88p3m4::::res://Data/Scenes/parmaklik.tscn<>res://Data/Scripts/area_3d_5.gd<>uid://bpaer3s1p4qmu::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Albedo.jpg<>uid://bsx3sn8qu7lxy::::res://Data/Models/jail.glb<>uid://c3advms8crjiq::::res://Data/Models/4xPuzzle_door_key_xhtnbhlg_2K_Normal.jpg<>uid://dvn0rr23uxh25::::res://Data/Scenes/door.tscn<>uid://ofuuhkoyp2b0::::res://Data/Environments/DefaultEnviroment.tres<>uid://dcwc38njcdthr::::res://Data/Scenes/cubes.tscn<>uid://cns1uy01wn0kj::::res://Data/Scenes/fps.tscn<>uid://dqglef1u4f5mm::::res://Data/Models/door_rusty_metal_grid_diff_1k.jpg<>uid://dcn0bung2koe5::::res://Data/Models/door_rusty_metal_04_diff_1k.jpg<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf
+::res://Data/Scripts/::1743973908
+area_3d_5.gd::GDScript::-1::1743960279::0::1::::<>Area3D<>::
+bullet_game_2.gd::GDScript::-1::1743960279::0::1::::<>CharacterBody2D<>::
+console_win.gd::GDScript::-1::1743960279::0::1::::<>Window<>::
+cubes.gd::GDScript::-1::1743960279::0::1::::<>CharacterBody3D<>::
+door.gd::GDScript::-1::1743960279::0::1::::<>Node3D<>::
+fps.gd::GDScript::-1::1743960279::0::1::::<>CharacterBody3D<>::
+GLobalVAR.gd::GDScript::-1::1743973908::0::1::::<>Node<>::
+parmaklik.gd::GDScript::-1::1743960279::0::1::::<>Node3D<>::
+settings.gd::GDScript::-1::1743960279::0::1::::<>Window<>::
+world.gd::GDScript::-1::1743973908::0::1::::<>Node3D<>::
+::res://Data/Shaders/::1743973964
+glass.gdshader::Shader::-1::1743960279::0::1::::<><>::
+main.gdshader::Shader::-1::1743960279::0::1::::<><>::
+old_vhs.gdshader::Shader::-1::1743960279::0::1::::<><>::
+tf2.gdshader::Shader::-1::1743960279::0::1::::<><>::
+vhs.gdshader::Shader::-1::1743973964::0::1::::<><>::
+::res://Data/Sound/::1743973933
+drop_object.ogg::AudioStreamOggVorbis::4850140531702417826::1743972796::1743973929::1::::<><>::
+idl_room0.ogg::AudioStreamOggVorbis::1514012575815168053::1743972837::1743973929::1::::<><>::
+idl_room_1.ogg::AudioStreamOggVorbis::8611810833294766172::1743972925::1743973929::1::::<><>::
+radio_music_0.mp3::AudioStreamMP3::6591630212850706026::1743971179::1743973929::1::::<><>::
+radio_music_0.ogg::AudioStreamOggVorbis::5083194647454089005::1743972854::1743973930::1::::<><>::
+sound_test.gd::GDScript::-1::1743973908::0::1::::<>Node3D<>::
+sound_test.tscn::PackedScene::2909988793128300419::1743973933::0::1::::<><>::res://Data/Sound/sound_test.gd<>uid://c06bglwocil2i::::res://Data/Sound/radio_music_0.mp3<>uid://ifcahko6vyow::::res://Data/Sound/walk_sound.ogg
+walk_sound.ogg::AudioStreamOggVorbis::571954455649962026::1743973555::1743973930::1::::<><>::
+::res://Data/Styles/::1743960279
+DefaultBUS.tres::AudioBusLayout::1024917755897270693::1743960279::0::1::::<><>::
+::res://Data/TNGR Bios/::1743973931
+Group 1.png::CompressedTexture2D::5558466030849136294::1743960279::1743973931::1::::<><>::
+::res://Puzzle Games/::1743960279
+::res://Puzzle Games/Game 1/::1743960279
+::res://Puzzle Games/Game 1/Images/::1743973930
+bomb.png::CompressedTexture2D::3131096547433812403::1743960279::1743973930::1::::<><>::
+down.png::CompressedTexture2D::825376000773247651::1743960279::1743973930::1::::<><>::
+WhatsApp Görsel 2025-03-24 saat 00.42.23_1f6e4b2f.jpg::CompressedTexture2D::4005122417422737281::1743960279::1743973930::1::::<><>::
+::res://Puzzle Games/Game 1/Images/Tilemaps/::1743973930
+down.png::CompressedTexture2D::5145796616989145909::1743960279::1743973930::1::::<><>::
+Rectangle 19.png::CompressedTexture2D::2607556014224157143::1743960279::1743973930::1::::<><>::
+Rectangle 20.png::CompressedTexture2D::6735276457993025605::1743960279::1743973930::1::::<><>::
+Rectangle 21.png::CompressedTexture2D::991053079164152786::1743960279::1743973930::1::::<><>::
+Rectangle 22.png::CompressedTexture2D::7495546713534139271::1743960279::1743973930::1::::<><>::
+Rectangle 23.png::CompressedTexture2D::6658589601187919947::1743960279::1743973930::1::::<><>::
+::res://Puzzle Games/Game 1/Scenes/::1743973933
+bomb_area.tscn::PackedScene::1695263235678010896::1743960279::0::1::::<><>::res://Puzzle Games/Game 1/Scripts/bomb_area.gd<>uid://bkuyx5ka8itih::::res://Puzzle Games/Game 1/Images/bomb.png
+character_game_1.tscn::PackedScene::8334206207852084237::1743973933::0::1::::<><>::res://Puzzle Games/Game 1/Scripts/character_game_1.gd<>uid://c14p86to7uaud::::res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 23.png<>uid://l0227nsl2io6::::res://Puzzle Games/Game 1/Images/down.png
+game_1.tscn::PackedScene::9218683805567986614::1743973933::0::1::::<><>::res://Puzzle Games/Game 1/Scripts/game_1.gd<>uid://c27vawhxwe5mv::::res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 20.png<>uid://dq0ffnlvvup1n::::res://Puzzle Games/Game 1/Scenes/character_game_1.tscn<>uid://yfg0c552s0ue::::res://Puzzle Games/Game 1/Scenes/bomb_area.tscn<>uid://4xa4fhkq27d::::res://Data/Images and Sprites/red-flag.png<>uid://de15tardx6056::::res://Puzzle Games/Game 1/Images/Tilemaps/Rectangle 22.png<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf
+::res://Puzzle Games/Game 1/Scripts/::1743973908
+bomb_area.gd::GDScript::-1::1743960279::0::1::::<>Area2D<>::
+character_game_1.gd::GDScript::-1::1743973908::0::1::::<>CharacterBody2D<>::
+game_1.gd::GDScript::-1::1743973908::0::1::::<>CanvasLayer<>::
+::res://Puzzle Games/Game 2/::1743960279
+::res://Puzzle Games/Game 2/Images/::1743973930
+bullet-shooter-game.png::CompressedTexture2D::6782311409717754844::1743960279::1743973930::1::::<><>::
+bullet.png::CompressedTexture2D::6985094873912467143::1743960279::1743973930::1::::<><>::
+::res://Puzzle Games/Game 2/Scenes/::1743973885
+area_2d.gd::GDScript::-1::1743960279::0::1::::<>Area2D<>::
+bomb_ball.tscn::PackedScene::4384308515492988302::1743960279::0::1::::<><>::res://Puzzle Games/Game 2/Scripts/bomb_ball.gd<>uid://28dyhnd3qlfn::::res://Puzzle Games/Game 3/Images/fire.png
+game_2.tscn::PackedScene::5662480928384171279::1743973885::0::1::::<><>::res://Puzzle Games/Game 2/Scripts/game_2.gd<>uid://c3vnxb1rdx4km::::res://Puzzle Games/Game 2/Images/bullet-shooter-game.png<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf
+::res://Puzzle Games/Game 2/Scripts/::1743973908
+bomb_ball.gd::GDScript::-1::1743960279::0::1::::<>CharacterBody2D<>::
+game_2.gd::GDScript::-1::1743973908::0::1::::<>CanvasLayer<>::
+node_2d.gd::GDScript::-1::1743960279::0::1::::<>Node2D<>::
+::res://Puzzle Games/Game 3/::1743960279
+::res://Puzzle Games/Game 3/Images/::1743973930
+3d-rocket.png::CompressedTexture2D::5356028610391463810::1743960279::1743973930::1::::<><>::
+comet.png::CompressedTexture2D::3006581007391925136::1743960279::1743973930::1::::<><>::
+fire.png::CompressedTexture2D::1963448642063137731::1743960279::1743973930::1::::<><>::
+Group 92.png::CompressedTexture2D::917128233186652416::1743960279::1743973930::1::::<><>::
+meteor-spaceship-game.png::CompressedTexture2D::6178808411813112784::1743960279::1743973930::1::::<><>::
+::res://Puzzle Games/Game 3/Scenes/::1743973885
+game_3.tscn::PackedScene::6034423916328999239::1743973885::0::1::::<><>::res://Puzzle Games/Game 3/Scripts/game_3.gd<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf<>uid://bxq1ukt1yc3et::::res://Puzzle Games/Game 3/Scenes/spaceship.tscn<>uid://nci76ar5rhoa::::res://Puzzle Games/Game 3/Images/Group 92.png<>uid://cubccpak0vrto::::res://Puzzle Games/Game 3/Images/meteor-spaceship-game.png
+meteor.tscn::PackedScene::5851841452763239441::1743960279::0::1::::<><>::res://Puzzle Games/Game 3/Scripts/meteor.gd<>uid://bi3n7kd3wl26o::::res://Puzzle Games/Game 3/Images/comet.png
+spaceship.tscn::PackedScene::4035409044921117851::1743960279::0::1::::<><>::res://Puzzle Games/Game 3/Scripts/spaceship.gd<>uid://cikrakbpru4ne::::res://Puzzle Games/Game 3/Images/3d-rocket.png
+::res://Puzzle Games/Game 3/Scripts/::1743973908
+game_3.gd::GDScript::-1::1743973908::0::1::::<>CanvasLayer<>::
+meteor.gd::GDScript::-1::1743960279::0::1::::<>CharacterBody2D<>::
+spaceship.gd::GDScript::-1::1743960279::0::1::::<>Area2D<>::
+::res://Puzzle Games/Game 4/::1743960279
+::res://Puzzle Games/Game 4/Images/::1743973930
+Rectangle 26.png::CompressedTexture2D::7985672537761724931::1743960279::1743973930::1::::<><>::
+spaceship-game-trying-to-get-through-walls.png::CompressedTexture2D::551620494174063728::1743960279::1743973930::1::::<><>::
+spaceship.png::CompressedTexture2D::2431879133107251813::1743960279::1743973930::1::::<><>::
+::res://Puzzle Games/Game 4/Scenes/::1743973885
+game_4.tscn::PackedScene::6197685280430190447::1743973885::0::1::::<><>::res://Puzzle Games/Game 4/Scripts/game_4.gd<>uid://dvhhpfypm2vng::::res://Puzzle Games/Game 4/Scenes/spaceship.tscn<>uid://nci76ar5rhoa::::res://Puzzle Games/Game 3/Images/Group 92.png<>uid://dl1k4ieqk67kx::::res://Puzzle Games/Game 4/Images/Rectangle 26.png<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf<>res://Puzzle Games/Game 4/Scripts/game_4_wall.gd<>uid://h4hdx7a3uwbw::::res://Puzzle Games/Game 4/Images/spaceship-game-trying-to-get-through-walls.png
+spaceship.tscn::PackedScene::8648130518005050380::1743960279::0::1::::<><>::res://Puzzle Games/Game 4/Scripts/spaceship.gd<>uid://bawaxuj1kcpdt::::res://Puzzle Games/Game 4/Images/spaceship.png
+::res://Puzzle Games/Game 4/Scripts/::1743973908
+game_4.gd::GDScript::-1::1743973908::0::1::::<>CanvasLayer<>::
+game_4_wall.gd::GDScript::-1::1743960279::0::1::::<>TileMapLayer<>::
+spaceship.gd::GDScript::-1::1743960279::0::1::::<>Area2D<>::
+::res://Puzzle Games/Game 5/::1743960279
+::res://Puzzle Games/Game 5/Images/::1743973930
+Rectangle 137.png::CompressedTexture2D::7060640371889149297::1743960279::1743973930::1::::<><>::
+Rectangle 138.png::CompressedTexture2D::5141135656869880535::1743960279::1743973930::1::::<><>::
+Rectangle 139.png::CompressedTexture2D::1743162602313212894::1743960279::1743973930::1::::<><>::
+Rectangle 140.png::CompressedTexture2D::8437983401405555275::1743960279::1743973930::1::::<><>::
+Rectangle 141.png::CompressedTexture2D::8510758458127534760::1743960279::1743973930::1::::<><>::
+::res://Puzzle Games/Game 5/Levels/::1743960279
+level_1.tscn::PackedScene::7759377119702202853::1743960279::0::1::::<><>::uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd<>res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd<>uid://bg6cfb58igsty::::res://Puzzle Games/Game 5/Scenes/enemy.tscn
+level_2.tscn::PackedScene::2381119007067586521::1743960279::0::1::::<><>::uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd<>res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd<>uid://bg6cfb58igsty::::res://Puzzle Games/Game 5/Scenes/enemy.tscn
+level_3.tscn::PackedScene::3554328498461112267::1743960279::0::1::::<><>::uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd<>res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd<>uid://bg6cfb58igsty::::res://Puzzle Games/Game 5/Scenes/enemy.tscn
+level_4.tscn::PackedScene::1516300981392653680::1743960279::0::1::::<><>::uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd<>res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd<>uid://bg6cfb58igsty::::res://Puzzle Games/Game 5/Scenes/enemy.tscn
+::res://Puzzle Games/Game 5/Scenes/::1743973933
+character_game_5.tscn::PackedScene::6579233176647622435::1743960279::0::1::::<><>::res://Puzzle Games/Game 5/Scripts/character_game_5.gd<>uid://dtiw7ikwjwcqa::::res://Puzzle Games/Game 5/Images/Rectangle 141.png
+enemy.tscn::PackedScene::2871679919230005430::1743960279::0::1::::<><>::res://Puzzle Games/Game 5/Scripts/enemy.gd<>uid://dshombanrx0hr::::res://Puzzle Games/Game 5/Images/Rectangle 140.png
+game_5.tscn::PackedScene::4099305222587956849::1743973933::0::1::::<><>::res://Puzzle Games/Game 5/Scripts/game_5.gd<>uid://c7uhyk7hmh1uj::::res://Puzzle Games/Game 5/Images/Rectangle 137.png<>uid://cfin0uvngwljj::::res://Puzzle Games/Game 5/Images/Rectangle 138.png<>uid://y3nvsgnvx8ja::::res://Puzzle Games/Game 5/Images/Rectangle 139.png<>uid://c00baku4ok14r::::res://Puzzle Games/Game 5/Scenes/character_game_5.tscn<>uid://by0fdwphtmen6::::res://Data/Fonts/Goldman-Bold.ttf<>uid://4xa4fhkq27d::::res://Data/Images and Sprites/red-flag.png
+::res://Puzzle Games/Game 5/Scripts/::1743973908
+character_game_5.gd::GDScript::-1::1743973908::0::1::::<>CharacterBody2D<>::
+enemy.gd::GDScript::-1::1743973908::0::1::::<>Node2D<>::
+game_5.gd::GDScript::-1::1743973908::0::1::::<>CanvasLayer<>::
+path_follow_2d.gd::GDScript::-1::1743960279::0::1::::<>PathFollow2D<>::
+tile_map_layer_game_5.gd::GDScript::-1::1743973908::0::1::::<>TileMapLayer<>::
+up_enemy.gd::GDScript::-1::1743960279::0::1::::<>Node2D<>::

@@ -71,6 +71,7 @@ func _input(event: InputEvent) -> void:
 		if GLobalVar.PlayerSettings['MiniGames'][str(GLobalVar.PlayerSettings['Day'])]==true:
 			if $CanvasLayer/Control/Label3.visible==true:
 				if Input.is_action_pressed('e'):if GLobalVar.EPress==true:
+					get_node('CanvasLayer/Control/Control/ColorRect/Control/Game').queue_free()
 					GLobalVar.PlayerSettings['Day']+=1
 					var Scene = load('res://Puzzle Games/Game '+str(GLobalVar.PlayerSettings['Day'])+'/Scenes/'+'game_'+str(GLobalVar.PlayerSettings['Day'])+'.tscn').instantiate()
 					Scene.name='Game'

@@ -24,8 +24,6 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:if body.is_in_group('Game1 Character'):
 	$CanvasLayer/ColorRect2.visible=true
 	GLobalVar.PlayerSettings['MiniGames']['1']=true
-	GLobalVar.shuwdownlabelvisible=true
-	queue_free()
 
 func _on_play_again_pressed() -> void:
 	$CanvasLayer/CharacterGame1.global_position=Vector2(32,320)

@@ -509,6 +509,10 @@ transform = Transform3D(-3.39884e-08, 0.628805, 0.777563, 2.74859e-08, 0.777563,
 [node name="Door" parent="Doors and Cubes" instance=ExtResource("17_u41kr")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.02641, -0.178523, 3.20086)
 
+[node name="door" parent="Doors and Cubes/Door/Node3D/MeshInstance3D5/Node3D" index="1"]
+surface_material_override/0 = null
+surface_material_override/1 = null
+
 [node name="Node3D2" parent="Doors and Cubes/Door" index="1"]
 transform = Transform3D(0.5, 0, -3.55271e-15, 0, 0.5, 0, 3.55271e-15, 0, 0.5, -1.48331, 0.23011, 1.36904)
 
@@ -518,6 +522,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0237331, 0, -0.0056529)
 [node name="Door3" parent="Doors and Cubes" instance=ExtResource("17_u41kr")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.02461, -0.178523, 3.20086)
 
+[node name="door" parent="Doors and Cubes/Door3/Node3D/MeshInstance3D5/Node3D" index="1"]
+surface_material_override/0 = null
+surface_material_override/1 = null
+
 [node name="Node3D2" parent="Doors and Cubes/Door3" index="1"]
 transform = Transform3D(0.5, 0, -3.55271e-15, 0, 0.5, 0, 3.55271e-15, 0, 0.5, 1.51669, -256.247, 1.36904)
 
@@ -526,6 +534,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0237331, 0, -0.0056529)
 
 [node name="Door2" parent="Doors and Cubes" instance=ExtResource("17_u41kr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.05712, -0.220525, 4.84277)
+
+[node name="door" parent="Doors and Cubes/Door2/Node3D/MeshInstance3D5/Node3D" index="1"]
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="Node3D2" parent="Doors and Cubes/Door2" index="1"]
 transform = Transform3D(0.5, 0, -6.03961e-14, 0, 0.5, 0, 6.03961e-14, 0, 0.5, 17.3376, -2.8562, -8.20812)
