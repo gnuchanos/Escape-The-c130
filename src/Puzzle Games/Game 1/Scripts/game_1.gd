@@ -1,8 +1,9 @@
 extends CanvasLayer
 
-@export var GameDay = 0
+@export var GameDay = 1
 
 func _process(delta: float) -> void:
+	name='Game'
 	if GLobalVar.Test==false:
 		if GLobalVar.GamesPanelVisible==false:
 			if GLobalVar.PlayerSettings['Day']==GameDay:
@@ -16,7 +17,9 @@ func _process(delta: float) -> void:
 	$CanvasLayer/Control/ProgressBar.value=GLobalVar.Game1ProgressBar
 	if GLobalVar.Game1ProgressBar<1:
 		$CanvasLayer/ColorRect.visible=true
-		
+	
+	if GLobalVar.PlayerSettings['Day']==GameDay:
+		GLobalVar.shuwdownlabelvisible=not $CanvasLayer/ColorRect.visible
 
 func _on_area_2d_body_entered(body: Node2D) -> void:if body.is_in_group('Game1 Character'):
 	$CanvasLayer/ColorRect2.visible=true

@@ -7,7 +7,7 @@
 radius = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vtsqh"]
-radius = 32.0
+radius = 28.0
 
 [node name="CharacterGame5" type="CharacterBody2D" groups=["C5"]]
 script = ExtResource("1_jtcm3")

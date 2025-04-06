@@ -1,101 +1,36 @@
-[gd_scene load_steps=28 format=4 uid="uid://byny7ttftllob"]
+[gd_scene load_steps=15 format=4 uid="uid://byny7ttftllob"]
 
 [ext_resource type="Script" path="res://Puzzle Games/Game 5/Scripts/game_5.gd" id="1_awv7c"]
-[ext_resource type="Texture2D" uid="uid://c7uhyk7hmh1uj" path="res://Puzzle Games/Game 5/Images/Rectangle 137.png" id="1_enk2o"]
-[ext_resource type="Texture2D" uid="uid://cfin0uvngwljj" path="res://Puzzle Games/Game 5/Images/Rectangle 138.png" id="2_kt5lk"]
-[ext_resource type="Texture2D" uid="uid://y3nvsgnvx8ja" path="res://Puzzle Games/Game 5/Images/Rectangle 139.png" id="3_vo07b"]
-[ext_resource type="PackedScene" uid="uid://bg6cfb58igsty" path="res://Puzzle Games/Game 5/Scenes/enemy.tscn" id="4_1bnb8"]
-[ext_resource type="Script" path="res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd" id="5_p5gvi"]
-[ext_resource type="Script" path="res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd" id="5_ymk7b"]
+[ext_resource type="Texture2D" uid="uid://c7uhyk7hmh1uj" path="res://Puzzle Games/Game 5/Images/Rectangle 137.png" id="4_jm3mv"]
+[ext_resource type="Texture2D" uid="uid://cfin0uvngwljj" path="res://Puzzle Games/Game 5/Images/Rectangle 138.png" id="5_7ravl"]
+[ext_resource type="Texture2D" uid="uid://y3nvsgnvx8ja" path="res://Puzzle Games/Game 5/Images/Rectangle 139.png" id="6_qwjhv"]
 [ext_resource type="PackedScene" uid="uid://c00baku4ok14r" path="res://Puzzle Games/Game 5/Scenes/character_game_5.tscn" id="7_p465m"]
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="9_0icgr"]
 [ext_resource type="Texture2D" uid="uid://4xa4fhkq27d" path="res://Data/Images and Sprites/red-flag.png" id="9_qfpyd"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hoi0v"]
-texture = ExtResource("1_enk2o")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rf6s8"]
-texture = ExtResource("2_kt5lk")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w4pet"]
-texture = ExtResource("3_vo07b")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_xv710"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_hoi0v")
-sources/1 = SubResource("TileSetAtlasSource_rf6s8")
-sources/2 = SubResource("TileSetAtlasSource_w4pet")
-
-[sub_resource type="Curve2D" id="Curve2D_2170h"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 416, 96, 0, 0, 0, 0, 416, 608, 0, 0, 0, 0, 416, 96)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Curve2D_1orfa"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 480, 608, 0, 0, 0, 0, 480, 96, 0, 0, 0, 0, 480, 608)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Curve2D_c6wcq"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 352, 352, 0, 0, 0, 0, 96, 352, 0, 0, 0, 0, 352, 352)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Curve2D_5kx7c"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 416, 96, 0, 0, 0, 0, 416, 352, 0, 0, 0, 0, 480, 352, 0, 0, 0, 0, 480, 608, 0, 0, 0, 0, 480, 352, 0, 0, 0, 0, 416, 352, 0, 0, 0, 0, 416, 96)
-}
-point_count = 7
-
-[sub_resource type="Curve2D" id="Curve2D_6l2qt"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1056, 96, 0, 0, 0, 0, 608, 96, 0, 0, 0, 0, 1056, 96)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Curve2D_onpak"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 736, 224, 0, 0, 0, 0, 88, 224, 0, 0, 0, 0, 736, 224)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Curve2D_spkki"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 480, 224, 0, 0, 0, 0, 352, 224, 0, 0, 0, 0, 352, 352, 0, 0, 0, 0, 480, 352, 0, 0, 0, 0, 480, 224)
-}
-point_count = 5
-
-[sub_resource type="Curve2D" id="Curve2D_5nj2g"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 544, 224, 0, 0, 0, 0, 544, 544, 0, 0, 0, 0, 544, 224)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Curve2D_hvf63"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 736, 608, 0, 0, 0, 0, 416, 608, 0, 0, 0, 0, 736, 608)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Curve2D_rrgb8"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 288, 480, 0, 0, 0, 0, 288, 280, 0, 0, 0, 0, 288, 480)
-}
-point_count = 3
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lh4r"]
 size = Vector2(58, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tsxsm"]
+texture = ExtResource("4_jm3mv")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsmwt"]
+texture = ExtResource("5_7ravl")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bg7jm"]
+texture = ExtResource("6_qwjhv")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_68qnp"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_tsxsm")
+sources/1 = SubResource("TileSetAtlasSource_qsmwt")
+sources/2 = SubResource("TileSetAtlasSource_bg7jm")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wu68"]
 bg_color = Color(0, 0.31663, 0, 1)
@@ -104,6 +39,7 @@ bg_color = Color(0, 0.31663, 0, 1)
 bg_color = Color(0, 0.540633, 7.70092e-07, 1)
 
 [node name="Game 5" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_awv7c")
 
 [node name="Level 1" type="Control" parent="."]
@@ -123,488 +59,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.772296, 0.850551, 0.923672, 1)
 
-[node name="Level 1" type="Node2D" parent="Level 1/ColorRect"]
-visible = false
-
-[node name="TileMapLayer1" type="TileMapLayer" parent="Level 1/ColorRect/Level 1"]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAoAAAAAAAAAAAARAAkAAAAAAAAAAAARAAgAAAAAAAAAAAARAAcAAAAAAAAAAAARAAYAAAAAAAAAAAARAAUAAAAAAAAAAAARAAQAAAAAAAAAAAARAAMAAAAAAAAAAAARAAIAAAAAAAAAAAARAAEAAAAAAAAAAAARAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAFAAkAAAAAAAAAAAAFAAgAAAAAAAAAAAAFAAcAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAUAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAEAAUAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAMAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAFAAIAAQAAAAAAAAAFAAMAAQAAAAAAAAAFAAQAAQAAAAAAAAADAAEAAQAAAAAAAAADAAIAAQAAAAAAAAADAAMAAQAAAAAAAAADAAQAAQAAAAAAAAADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAADAAcAAQAAAAAAAAADAAgAAQAAAAAAAAADAAkAAQAAAAAAAAABAAQAAQAAAAAAAAABAAMAAQAAAAAAAAABAAIAAQAAAAAAAAABAAEAAQAAAAAAAAACAAEAAQAAAAAAAAACAAIAAQAAAAAAAAACAAMAAQAAAAAAAAACAAQAAQAAAAAAAAACAAUAAQAAAAAAAAABAAUAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAABAAgAAQAAAAAAAAABAAkAAQAAAAAAAAACAAkAAQAAAAAAAAACAAgAAQAAAAAAAAACAAcAAQAAAAAAAAACAAYAAQAAAAAAAAAEAAYAAQAAAAAAAAAEAAcAAQAAAAAAAAAEAAgAAQAAAAAAAAAEAAkAAQAAAAAAAAAMAAUAAQAAAAAAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAAAAAAMAAgAAQAAAAAAAAAMAAkAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAYAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAIAAQAAAAAAAAAQAAEAAQAAAAAAAAAPAAEAAQAAAAAAAAAOAAEAAQAAAAAAAAANAAEAAQAAAAAAAAANAAIAAQAAAAAAAAANAAMAAQAAAAAAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAANAAYAAQAAAAAAAAANAAcAAQAAAAAAAAANAAgAAQAAAAAAAAANAAkAAQAAAAAAAAAOAAkAAQAAAAAAAAAOAAgAAQAAAAAAAAAOAAcAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAUAAQAAAAAAAAAOAAQAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAIAAQAAAAAAAAAPAAIAAQAAAAAAAAAPAAMAAQAAAAAAAAAPAAQAAQAAAAAAAAAPAAUAAQAAAAAAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAAAAAAPAAgAAQAAAAAAAAAPAAkAAQAAAAAAAAAQAAkAAQAAAAAAAAAQAAgAAQAAAAAAAAAJAAYAAgAAAAAAAAAJAAUAAgAAAAAAAAAJAAQAAgAAAAAAAAAJAAMAAgAAAAAAAAAJAAIAAgAAAAAAAAAJAAEAAgAAAAAAAAAIAAEAAgAAAAAAAAAHAAEAAgAAAAAAAAAGAAEAAgAAAAAAAAAGAAIAAgAAAAAAAAAGAAMAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAUAAgAAAAAAAAAGAAYAAgAAAAAAAAAGAAcAAgAAAAAAAAAGAAgAAgAAAAAAAAAGAAkAAgAAAAAAAAAHAAkAAgAAAAAAAAAHAAgAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAIAAYAAgAAAAAAAAAIAAcAAgAAAAAAAAAIAAgAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAJAAgAAgAAAAAAAAAJAAcAAgAAAAAAAAAKAAcAAgAAAAAAAAAKAAYAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAIAAgAAAAAAAAAKAAEAAgAAAAAAAAALAAEAAgAAAAAAAAALAAIAAgAAAAAAAAALAAMAAgAAAAAAAAALAAQAAgAAAAAAAAALAAUAAgAAAAAAAAALAAYAAgAAAAAAAAALAAcAAgAAAAAAAAALAAgAAgAAAAAAAAAKAAgAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAA=")
-tile_set = SubResource("TileSet_xv710")
-script = ExtResource("5_ymk7b")
-
-[node name="Path2D" type="Path2D" parent="Level 1/ColorRect/Level 1"]
-curve = SubResource("Curve2D_2170h")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 1/Path2D"]
-position = Vector2(416, 96)
-rotation = 1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 1/Path2D/PathFollow2D" instance=ExtResource("4_1bnb8")]
-
-[node name="Path2D2" type="Path2D" parent="Level 1/ColorRect/Level 1"]
-curve = SubResource("Curve2D_1orfa")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 1/Path2D2"]
-position = Vector2(480, 608)
-rotation = -1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 1/Path2D2/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 1.33514e-05)
-
-[node name="Path2D3" type="Path2D" parent="Level 1/ColorRect/Level 1"]
-position = Vector2(128, 0)
-curve = SubResource("Curve2D_2170h")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 1/Path2D3"]
-position = Vector2(416, 96)
-rotation = 1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 1/Path2D3/PathFollow2D" instance=ExtResource("4_1bnb8")]
-
-[node name="Path2D4" type="Path2D" parent="Level 1/ColorRect/Level 1"]
-position = Vector2(128, 0)
-curve = SubResource("Curve2D_1orfa")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 1/Path2D4"]
-position = Vector2(480, 608)
-rotation = -1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 1/Path2D4/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 1.33514e-05)
-
-[node name="Path2D5" type="Path2D" parent="Level 1/ColorRect/Level 1"]
-position = Vector2(256, 0)
-curve = SubResource("Curve2D_2170h")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 1/Path2D5"]
-position = Vector2(416, 96)
-rotation = 1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 1/Path2D5/PathFollow2D" instance=ExtResource("4_1bnb8")]
-
-[node name="Path2D6" type="Path2D" parent="Level 1/ColorRect/Level 1"]
-position = Vector2(256, 0)
-curve = SubResource("Curve2D_1orfa")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 1/Path2D6"]
-position = Vector2(480, 608)
-rotation = -1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 1/Path2D6/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 1.33514e-05)
-
-[node name="Level 2" type="Node2D" parent="Level 1/ColorRect"]
-visible = false
-
-[node name="TileMapLayer2" type="TileMapLayer" parent="Level 1/ColorRect/Level 2"]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAoAAAAAAAAAAAARAAkAAAAAAAAAAAARAAgAAAAAAAAAAAARAAcAAAAAAAAAAAARAAYAAAAAAAAAAAARAAUAAAAAAAAAAAARAAQAAAAAAAAAAAARAAMAAAAAAAAAAAARAAIAAAAAAAAAAAARAAEAAAAAAAAAAAARAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAgAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAEAAAAAAAAAAAANAAIAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAACAAkAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAgAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAEAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAAAAAAAAAAABAAEAAQAAAAAAAAABAAIAAQAAAAAAAAABAAMAAQAAAAAAAAABAAQAAQAAAAAAAAACAAEAAQAAAAAAAAACAAIAAQAAAAAAAAACAAMAAQAAAAAAAAACAAQAAQAAAAAAAAAEAAEAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAMAAQAAAAAAAAAEAAQAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAABAAgAAQAAAAAAAAABAAkAAQAAAAAAAAADAAYAAQAAAAAAAAADAAcAAQAAAAAAAAADAAgAAQAAAAAAAAADAAkAAQAAAAAAAAAFAAYAAQAAAAAAAAAFAAcAAQAAAAAAAAAFAAgAAQAAAAAAAAAFAAkAAQAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAHAAkAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAMAAgAAAAAAAAAGAAIAAgAAAAAAAAAGAAEAAgAAAAAAAAANAAYAAgAAAAAAAAANAAcAAgAAAAAAAAANAAgAAgAAAAAAAAANAAkAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAIAAgAAAAAAAAAMAAEAAgAAAAAAAAALAAkAAQAAAAAAAAALAAgAAQAAAAAAAAALAAcAAQAAAAAAAAALAAYAAQAAAAAAAAAJAAkAAQAAAAAAAAAJAAgAAQAAAAAAAAAJAAcAAQAAAAAAAAAJAAYAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAMAAQAAAAAAAAAKAAIAAQAAAAAAAAAKAAEAAQAAAAAAAAAIAAEAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAMAAQAAAAAAAAAIAAQAAQAAAAAAAAAOAAEAAQAAAAAAAAAOAAIAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAQAAQAAAAAAAAAQAAEAAQAAAAAAAAAQAAIAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAYAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAgAAQAAAAAAAAAQAAkAAQAAAAAAAAADAAUAAgAAAAAAAAACAAUAAgAAAAAAAAABAAUAAgAAAAAAAAAEAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAAGAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAJAAUAAgAAAAAAAAAKAAUAAgAAAAAAAAALAAUAAgAAAAAAAAAMAAUAAgAAAAAAAAANAAUAAgAAAAAAAAAOAAUAAQAAAAAAAAAPAAUAAQAAAAAAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAAAAAAPAAgAAQAAAAAAAAAPAAkAAQAAAAAAAAA=")
-tile_set = SubResource("TileSet_xv710")
-script = ExtResource("5_ymk7b")
-
-[node name="Path2D" type="Path2D" parent="Level 1/ColorRect/Level 2"]
-curve = SubResource("Curve2D_c6wcq")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 2/Path2D"]
-position = Vector2(352, 352)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 2/Path2D/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D2" type="Path2D" parent="Level 1/ColorRect/Level 2"]
-position = Vector2(416, 0)
-curve = SubResource("Curve2D_c6wcq")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 2/Path2D2"]
-position = Vector2(352, 352)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 2/Path2D2/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 1.01843e-06)
-
-[node name="Path2D3" type="Path2D" parent="Level 1/ColorRect/Level 2"]
-curve = SubResource("Curve2D_5kx7c")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 2/Path2D3"]
-position = Vector2(416, 96)
-rotation = 1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 2/Path2D3/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 1.208e-05)
-
-[node name="Path2D4" type="Path2D" parent="Level 1/ColorRect/Level 2"]
-position = Vector2(384, 0)
-curve = SubResource("Curve2D_5kx7c")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 2/Path2D4"]
-position = Vector2(416, 96)
-rotation = 1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 2/Path2D4/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 1.208e-05)
-
-[node name="Level 3" type="Node2D" parent="Level 1/ColorRect"]
-visible = false
-
-[node name="TileMapLayer3" type="TileMapLayer" parent="Level 1/ColorRect/Level 3"]
-tile_map_data = PackedByteArray("AAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAADAAoAAAAAAAAAAAACAAoAAAAAAAAAAAABAAoAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAARAAEAAAAAAAAAAAARAAIAAAAAAAAAAAARAAMAAAAAAAAAAAARAAQAAAAAAAAAAAARAAUAAAAAAAAAAAARAAYAAAAAAAAAAAARAAcAAAAAAAAAAAARAAgAAAAAAAAAAAARAAkAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAADAAgAAAAAAAAAAAACAAgAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAAOAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAAOAAUAAAAAAAAAAAABAAUAAQAAAAAAAAACAAUAAAAAAAAAAAAFAAcAAgAAAAAAAAAFAAYAAgAAAAAAAAAEAAYAAgAAAAAAAAADAAYAAgAAAAAAAAACAAYAAgAAAAAAAAABAAYAAgAAAAAAAAABAAcAAgAAAAAAAAABAAgAAQAAAAAAAAABAAkAAgAAAAAAAAACAAkAAgAAAAAAAAADAAkAAgAAAAAAAAAEAAkAAgAAAAAAAAAFAAkAAgAAAAAAAAAGAAkAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAALAAgAAQAAAAAAAAALAAcAAgAAAAAAAAALAAYAAgAAAAAAAAALAAUAAQAAAAAAAAALAAQAAgAAAAAAAAALAAMAAgAAAAAAAAALAAIAAQAAAAAAAAALAAEAAgAAAAAAAAAKAAEAAgAAAAAAAAAJAAEAAgAAAAAAAAAIAAEAAgAAAAAAAAAHAAEAAgAAAAAAAAAGAAEAAgAAAAAAAAAFAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAADAAEAAgAAAAAAAAACAAEAAgAAAAAAAAABAAEAAgAAAAAAAAABAAIAAQAAAAAAAAABAAMAAgAAAAAAAAABAAQAAgAAAAAAAAACAAQAAgAAAAAAAAACAAMAAgAAAAAAAAADAAMAAgAAAAAAAAADAAQAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAMAAgAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAMAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAMAAgAAAAAAAAAJAAMAAgAAAAAAAAAJAAQAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAMAAgAAAAAAAAAMAAEAAgAAAAAAAAANAAEAAgAAAAAAAAANAAIAAQAAAAAAAAANAAMAAQAAAAAAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAANAAYAAQAAAAAAAAANAAcAAQAAAAAAAAANAAgAAQAAAAAAAAANAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAAOAAkAAgAAAAAAAAAPAAkAAgAAAAAAAAAQAAkAAgAAAAAAAAAQAAgAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAYAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAIAAQAAAAAAAAAQAAEAAgAAAAAAAAAPAAEAAgAAAAAAAAAOAAEAAgAAAAAAAAAPAAMAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAQAAQAAAAAAAAAPAAcAAQAAAAAAAAAOAAcAAQAAAAAAAAAOAAYAAQAAAAAAAAAKAAYAAgAAAAAAAAAJAAYAAgAAAAAAAAAIAAYAAgAAAAAAAAAHAAYAAgAAAAAAAAAGAAYAAgAAAAAAAAAGAAcAAgAAAAAAAAAHAAcAAgAAAAAAAAAIAAcAAgAAAAAAAAAJAAcAAgAAAAAAAAAKAAcAAgAAAAAAAAACAAcAAgAAAAAAAAADAAcAAgAAAAAAAAAEAAcAAgAAAAAAAAA=")
-tile_set = SubResource("TileSet_xv710")
-script = ExtResource("5_ymk7b")
-
-[node name="Path2D" type="Path2D" parent="Level 1/ColorRect/Level 3"]
-curve = SubResource("Curve2D_6l2qt")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 3/Path2D"]
-position = Vector2(1056, 96)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 3/Path2D/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D2" type="Path2D" parent="Level 1/ColorRect/Level 3"]
-position = Vector2(-512, 0)
-curve = SubResource("Curve2D_6l2qt")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 3/Path2D2"]
-position = Vector2(1056, 96)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 3/Path2D2/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D3" type="Path2D" parent="Level 1/ColorRect/Level 3"]
-position = Vector2(0, 512)
-curve = SubResource("Curve2D_6l2qt")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 3/Path2D3"]
-position = Vector2(1056, 96)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 3/Path2D3/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D4" type="Path2D" parent="Level 1/ColorRect/Level 3"]
-position = Vector2(-512, 512)
-curve = SubResource("Curve2D_6l2qt")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 3/Path2D4"]
-position = Vector2(1056, 96)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 3/Path2D4/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D5" type="Path2D" parent="Level 1/ColorRect/Level 3"]
-curve = SubResource("Curve2D_onpak")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 3/Path2D5"]
-position = Vector2(736, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 3/Path2D5/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D6" type="Path2D" parent="Level 1/ColorRect/Level 3"]
-position = Vector2(0, 64)
-curve = SubResource("Curve2D_onpak")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 3/Path2D6"]
-position = Vector2(736, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 3/Path2D6/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D7" type="Path2D" parent="Level 1/ColorRect/Level 3"]
-position = Vector2(0, 200)
-curve = SubResource("Curve2D_onpak")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 3/Path2D7"]
-position = Vector2(736, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 3/Path2D7/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D8" type="Path2D" parent="Level 1/ColorRect/Level 3"]
-position = Vector2(0, 264)
-curve = SubResource("Curve2D_onpak")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 3/Path2D8"]
-position = Vector2(736, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 3/Path2D8/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Level 4" type="Node2D" parent="Level 1/ColorRect"]
-visible = false
-
-[node name="TileMapLayer4" type="TileMapLayer" parent="Level 1/ColorRect/Level 4"]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAoAAAAAAAAAAAARAAkAAAAAAAAAAAARAAgAAAAAAAAAAAARAAcAAAAAAAAAAAARAAYAAAAAAAAAAAARAAUAAAAAAAAAAAARAAQAAAAAAAAAAAARAAMAAAAAAAAAAAARAAIAAAAAAAAAAAARAAEAAAAAAAAAAAARAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAAQAAkAAAAAAAAAAAAPAAgAAAAAAAAAAAAOAAcAAAAAAAAAAAANAAgAAAAAAAAAAAAMAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAgAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAkAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAANAAMAAAAAAAAAAAAMAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAYAAgAAAAAAAAAFAAcAAgAAAAAAAAAFAAgAAgAAAAAAAAAGAAgAAgAAAAAAAAAHAAgAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAYAAgAAAAAAAAAGAAYAAgAAAAAAAAAHAAUAAgAAAAAAAAAGAAUAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAMAAgAAAAAAAAAGAAMAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAUAAgAAAAAAAAALAAMAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAALAAUAAgAAAAAAAAAMAAYAAgAAAAAAAAAMAAcAAgAAAAAAAAAMAAgAAgAAAAAAAAALAAgAAgAAAAAAAAAKAAgAAgAAAAAAAAAKAAcAAgAAAAAAAAAKAAYAAgAAAAAAAAALAAYAAgAAAAAAAAAIAAMAAgAAAAAAAAAJAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAIAAYAAgAAAAAAAAAIAAcAAgAAAAAAAAAIAAgAAgAAAAAAAAAJAAQAAgAAAAAAAAAJAAUAAgAAAAAAAAAJAAYAAgAAAAAAAAAJAAcAAgAAAAAAAAAJAAgAAgAAAAAAAAAGAAkAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAALAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAHAAIAAgAAAAAAAAAGAAIAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAUAAgAAAAAAAAAEAAYAAgAAAAAAAAAEAAcAAgAAAAAAAAANAAQAAgAAAAAAAAANAAUAAgAAAAAAAAANAAYAAgAAAAAAAAANAAcAAgAAAAAAAAACAAcAAQAAAAAAAAACAAYAAQAAAAAAAAACAAUAAQAAAAAAAAACAAQAAQAAAAAAAAABAAQAAQAAAAAAAAABAAMAAQAAAAAAAAABAAUAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAABAAgAAQAAAAAAAAADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAAPAAUAAQAAAAAAAAAPAAQAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAYAAQAAAAAAAAAPAAYAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAUAAQAAAAAAAAAPAAcAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAgAAQAAAAAAAAAGAAQAAQAAAAAAAAALAAQAAQAAAAAAAAALAAcAAQAAAAAAAAAGAAcAAQAAAAAAAAA=")
-tile_set = SubResource("TileSet_xv710")
-script = ExtResource("5_ymk7b")
-
-[node name="Path2D" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-curve = SubResource("Curve2D_spkki")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D"]
-position = Vector2(480, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D2" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-position = Vector2(0, 184)
-curve = SubResource("Curve2D_spkki")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D2"]
-position = Vector2(480, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D2/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(-1.11901e-05, -128)
-
-[node name="Path2D3" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-position = Vector2(320, 8)
-curve = SubResource("Curve2D_spkki")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D3"]
-position = Vector2(480, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D3/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(128, -128)
-
-[node name="Path2D4" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-position = Vector2(320, 192)
-curve = SubResource("Curve2D_spkki")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D4"]
-position = Vector2(480, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D4/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(128, -1.11901e-05)
-
-[node name="Path2D5" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-curve = SubResource("Curve2D_5nj2g")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D5"]
-position = Vector2(544, 224)
-rotation = 1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D5/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(4.76837e-07, -5.72205e-06)
-
-[node name="Path2D6" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-position = Vector2(64, 0)
-curve = SubResource("Curve2D_5nj2g")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D6"]
-position = Vector2(544, 224)
-rotation = 1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D6/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(320, -1.97097e-05)
-
-[node name="Path2D7" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-curve = SubResource("Curve2D_hvf63")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D7"]
-position = Vector2(736, 608)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D7/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(320, -1.97097e-05)
-
-[node name="Path2D8" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-position = Vector2(0, -448)
-curve = SubResource("Curve2D_hvf63")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D8"]
-position = Vector2(736, 608)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D8/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(6.99382e-07, -6.67572e-06)
-
-[node name="Path2D9" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-curve = SubResource("Curve2D_rrgb8")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D9"]
-position = Vector2(288, 480)
-rotation = -1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D9/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(6.99382e-07, -6.67572e-06)
-
-[node name="Path2D10" type="Path2D" parent="Level 1/ColorRect/Level 4"]
-position = Vector2(576, 0)
-curve = SubResource("Curve2D_rrgb8")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 4/Path2D10"]
-position = Vector2(288, 480)
-rotation = -1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 4/Path2D10/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(192, -1.52588e-05)
-
-[node name="Level 5" type="Node2D" parent="Level 1/ColorRect"]
-
-[node name="TileMapLayer4" type="TileMapLayer" parent="Level 1/ColorRect/Level 5"]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAoAAAAAAAAAAAARAAkAAAAAAAAAAAARAAgAAAAAAAAAAAARAAcAAAAAAAAAAAARAAYAAAAAAAAAAAARAAUAAAAAAAAAAAARAAQAAAAAAAAAAAARAAMAAAAAAAAAAAARAAIAAAAAAAAAAAARAAEAAAAAAAAAAAARAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAAQAAkAAAAAAAAAAAAPAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAMAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAgAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAkAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAANAAMAAAAAAAAAAAAMAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAYAAgAAAAAAAAAFAAcAAgAAAAAAAAAFAAgAAgAAAAAAAAAGAAgAAgAAAAAAAAAHAAgAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAYAAgAAAAAAAAAGAAYAAgAAAAAAAAAHAAUAAgAAAAAAAAAGAAUAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAMAAgAAAAAAAAAGAAMAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAUAAgAAAAAAAAALAAMAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAALAAUAAgAAAAAAAAAMAAYAAgAAAAAAAAAMAAcAAgAAAAAAAAAMAAgAAgAAAAAAAAALAAgAAgAAAAAAAAAKAAgAAgAAAAAAAAAKAAcAAgAAAAAAAAAKAAYAAgAAAAAAAAALAAYAAgAAAAAAAAAIAAMAAgAAAAAAAAAJAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAIAAYAAgAAAAAAAAAIAAcAAgAAAAAAAAAIAAgAAgAAAAAAAAAJAAQAAgAAAAAAAAAJAAUAAgAAAAAAAAAJAAYAAgAAAAAAAAAJAAcAAgAAAAAAAAAJAAgAAgAAAAAAAAAGAAkAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAALAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAHAAIAAgAAAAAAAAAGAAIAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAUAAgAAAAAAAAAEAAYAAgAAAAAAAAAEAAcAAgAAAAAAAAANAAQAAgAAAAAAAAANAAUAAgAAAAAAAAANAAYAAgAAAAAAAAANAAcAAgAAAAAAAAACAAcAAQAAAAAAAAACAAYAAQAAAAAAAAACAAUAAQAAAAAAAAACAAQAAQAAAAAAAAABAAQAAQAAAAAAAAABAAMAAQAAAAAAAAABAAUAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAABAAgAAQAAAAAAAAADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAAPAAUAAQAAAAAAAAAPAAQAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAYAAQAAAAAAAAAPAAYAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAUAAQAAAAAAAAAPAAcAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAgAAQAAAAAAAAAGAAQAAQAAAAAAAAALAAQAAQAAAAAAAAALAAcAAQAAAAAAAAAGAAcAAQAAAAAAAAAOAAcAAAAAAAAAAAAOAAkAAQAAAAAAAAAOAAgAAQAAAAAAAAANAAkAAQAAAAAAAAAPAAkAAQAAAAAAAAADAAkAAQAAAAAAAAADAAgAAQAAAAAAAAACAAkAAQAAAAAAAAAEAAkAAQAAAAAAAAADAAMAAQAAAAAAAAADAAIAAQAAAAAAAAACAAIAAQAAAAAAAAAEAAIAAQAAAAAAAAAPAAIAAQAAAAAAAAAOAAIAAQAAAAAAAAANAAIAAQAAAAAAAAAOAAMAAQAAAAAAAAA=")
-tile_set = SubResource("TileSet_xv710")
-script = ExtResource("5_ymk7b")
-
-[node name="Path2D" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-curve = SubResource("Curve2D_spkki")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D"]
-position = Vector2(480, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D2" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-position = Vector2(0, 192)
-curve = SubResource("Curve2D_spkki")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D2"]
-position = Vector2(480, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D2/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D3" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-position = Vector2(320, 0)
-curve = SubResource("Curve2D_spkki")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D3"]
-position = Vector2(480, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D3/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D4" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-position = Vector2(320, 192)
-curve = SubResource("Curve2D_spkki")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D4"]
-position = Vector2(480, 224)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D4/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 9.53674e-07)
-
-[node name="Path2D5" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-curve = SubResource("Curve2D_5nj2g")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D5"]
-position = Vector2(544, 224)
-rotation = 1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D5/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(4.76837e-07, -5.72205e-06)
-
-[node name="Path2D6" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-position = Vector2(1152, 768)
-rotation = 3.14159
-curve = SubResource("Curve2D_5nj2g")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D6"]
-position = Vector2(544, 224)
-rotation = 1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D6/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(-6.10352e-05, 2.28882e-05)
-
-[node name="Path2D7" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-position = Vector2(1152, 1216)
-rotation = 3.14159
-curve = SubResource("Curve2D_hvf63")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D7"]
-position = Vector2(736, 608)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D7/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(0, 8.2656e-06)
-
-[node name="Path2D8" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-position = Vector2(0, -448)
-curve = SubResource("Curve2D_hvf63")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D8"]
-position = Vector2(736, 608)
-rotation = 3.14159
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D8/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(6.99382e-07, -6.67572e-06)
-
-[node name="Path2D9" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-curve = SubResource("Curve2D_rrgb8")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D9"]
-position = Vector2(288, 480)
-rotation = 1.5708
-progress = 400.0
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D9/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(6.99382e-07, -6.67572e-06)
-
-[node name="Path2D10" type="Path2D" parent="Level 1/ColorRect/Level 5"]
-position = Vector2(1152, 768)
-rotation = 3.14159
-curve = SubResource("Curve2D_rrgb8")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Level 1/ColorRect/Level 5/Path2D10"]
-position = Vector2(288, 480)
-rotation = -1.5708
-script = ExtResource("5_p5gvi")
-
-[node name="CharacterBody2D" parent="Level 1/ColorRect/Level 5/Path2D10/PathFollow2D" instance=ExtResource("4_1bnb8")]
-position = Vector2(4.57764e-05, 1.52638e-06)
+[node name="Node2D" type="Node2D" parent="Level 1/ColorRect"]
 
 [node name="Character" type="Node2D" parent="Level 1/ColorRect"]
 
@@ -629,13 +84,17 @@ texture = ExtResource("9_qfpyd")
 expand_mode = 1
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.331114, 0.242184, 0.529314, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="ColorRect2"]
+self_modulate = Color(1, 1, 1, 0.411765)
+tile_map_data = PackedByteArray("AAAAAAAAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAABAAAAAgAAAAAAAAACAAAAAgAAAAAAAAAEAAAAAgAAAAAAAAAEAAEAAgAAAAAAAAAEAAIAAgAAAAAAAAAEAAMAAgAAAAAAAAAFAAAAAgAAAAAAAAAFAAMAAgAAAAAAAAAGAAAAAgAAAAAAAAAGAAEAAgAAAAAAAAAGAAIAAgAAAAAAAAAGAAMAAgAAAAAAAAAIAAAAAgAAAAAAAAAIAAEAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAMAAgAAAAAAAAAJAAAAAgAAAAAAAAAKAAAAAgAAAAAAAAAKAAEAAgAAAAAAAAAKAAIAAgAAAAAAAAAKAAMAAgAAAAAAAAALAAAAAgAAAAAAAAALAAEAAgAAAAAAAAALAAIAAgAAAAAAAAALAAMAAgAAAAAAAAAMAAAAAgAAAAAAAAANAAAAAgAAAAAAAAANAAEAAgAAAAAAAAANAAIAAgAAAAAAAAANAAMAAgAAAAAAAAAPAAAAAgAAAAAAAAAPAAEAAgAAAAAAAAAPAAIAAgAAAAAAAAAPAAMAAgAAAAAAAAAQAAAAAgAAAAAAAAARAAAAAgAAAAAAAAARAAQAAgAAAAAAAAAQAAQAAgAAAAAAAAARAAIAAgAAAAAAAAAQAAIAAgAAAAAAAAAPAAQAAgAAAAAAAAACAAQAAgAAAAAAAAABAAQAAgAAAAAAAAAAAAQAAgAAAAAAAAACAAIAAgAAAAAAAAACAAMAAgAAAAAAAAAMAAUAAgAAAAAAAAALAAUAAgAAAAAAAAAKAAUAAgAAAAAAAAAJAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAGAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAYAAgAAAAAAAAAFAAcAAgAAAAAAAAAGAAcAAgAAAAAAAAAHAAcAAgAAAAAAAAAIAAcAAgAAAAAAAAAJAAcAAgAAAAAAAAAKAAcAAgAAAAAAAAALAAcAAgAAAAAAAAAMAAcAAgAAAAAAAAAMAAgAAgAAAAAAAAAMAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAHAAkAAgAAAAAAAAAGAAkAAgAAAAAAAAAFAAkAAgAAAAAAAAABAAgAAQAAAAAAAAABAAcAAQAAAAAAAAABAAYAAQAAAAAAAAABAAUAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAgAAQAAAAAAAAAAAAkAAQAAAAAAAAABAAkAAQAAAAAAAAACAAkAAQAAAAAAAAACAAgAAQAAAAAAAAACAAcAAQAAAAAAAAACAAYAAQAAAAAAAAACAAUAAQAAAAAAAAADAAUAAQAAAAAAAAADAAQAAQAAAAAAAAADAAMAAQAAAAAAAAADAAIAAQAAAAAAAAADAAEAAQAAAAAAAAADAAAAAQAAAAAAAAACAAEAAQAAAAAAAAABAAEAAQAAAAAAAAABAAIAAQAAAAAAAAABAAMAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAAEAAYAAQAAAAAAAAADAAYAAQAAAAAAAAADAAcAAQAAAAAAAAADAAgAAQAAAAAAAAADAAkAAQAAAAAAAAAEAAkAAQAAAAAAAAAEAAgAAQAAAAAAAAAEAAcAAQAAAAAAAAAFAAgAAQAAAAAAAAAGAAgAAQAAAAAAAAAHAAgAAQAAAAAAAAAIAAgAAQAAAAAAAAAJAAgAAQAAAAAAAAAKAAgAAQAAAAAAAAALAAgAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQAAAAAAAAAHAAMAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAEAAQAAAAAAAAAHAAAAAQAAAAAAAAAIAAQAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAMAAQAAAAAAAAAJAAIAAQAAAAAAAAAJAAEAAQAAAAAAAAAKAAQAAQAAAAAAAAALAAQAAQAAAAAAAAAMAAQAAQAAAAAAAAAMAAMAAQAAAAAAAAAMAAIAAQAAAAAAAAAMAAEAAQAAAAAAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAANAAYAAQAAAAAAAAAMAAYAAQAAAAAAAAALAAYAAQAAAAAAAAAKAAYAAQAAAAAAAAAJAAYAAQAAAAAAAAAIAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAANAAcAAQAAAAAAAAANAAgAAQAAAAAAAAANAAkAAQAAAAAAAAAOAAkAAQAAAAAAAAAOAAgAAQAAAAAAAAAOAAcAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAUAAQAAAAAAAAAOAAQAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAIAAQAAAAAAAAAOAAEAAQAAAAAAAAAOAAAAAQAAAAAAAAAPAAUAAQAAAAAAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAAAAAAPAAgAAQAAAAAAAAAPAAkAAQAAAAAAAAAQAAkAAQAAAAAAAAAQAAgAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAYAAQAAAAAAAAAQAAUAAQAAAAAAAAARAAUAAQAAAAAAAAARAAYAAQAAAAAAAAARAAcAAQAAAAAAAAARAAgAAQAAAAAAAAARAAkAAQAAAAAAAAAFAAIAAQAAAAAAAAAFAAEAAQAAAAAAAAARAAEAAQAAAAAAAAAQAAEAAQAAAAAAAAARAAMAAQAAAAAAAAAQAAMAAQAAAAAAAAARAAoAAQAAAAAAAAAQAAoAAQAAAAAAAAAPAAoAAQAAAAAAAAAOAAoAAQAAAAAAAAANAAoAAQAAAAAAAAAMAAoAAQAAAAAAAAALAAoAAQAAAAAAAAAKAAoAAQAAAAAAAAAJAAoAAQAAAAAAAAAIAAoAAQAAAAAAAAAHAAoAAQAAAAAAAAAGAAoAAQAAAAAAAAAFAAoAAQAAAAAAAAAEAAoAAQAAAAAAAAADAAoAAQAAAAAAAAACAAoAAQAAAAAAAAABAAoAAQAAAAAAAAAAAAoAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_68qnp")
 
 [node name="Play Again" type="Button" parent="ColorRect2"]
 layout_mode = 0

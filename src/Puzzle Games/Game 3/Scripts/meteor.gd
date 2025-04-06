@@ -8,6 +8,6 @@ func _Game3Finish(Result:int):
 
 func _process(delta: float) -> void:
 	global_position.y+=4
-
+	
 func _on_timer_timeout() -> void:
 	queue_free()

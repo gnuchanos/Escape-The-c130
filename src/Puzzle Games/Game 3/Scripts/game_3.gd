@@ -3,6 +3,9 @@ extends CanvasLayer
 @export var GameDay = 3
 
 func _process(delta: float) -> void:
+	if GLobalVar.PlayerSettings['Day']==GameDay:
+		GLobalVar.shuwdownlabelvisible=not $Control/ColorRect2.visible
+	name='Game'
 	if GLobalVar.Test==false:
 		if GLobalVar.GamesPanelVisible==false:
 			if GLobalVar.PlayerSettings['Day']==GameDay:
@@ -37,7 +40,7 @@ func MeteorAdd(Number):
 		MeteorAdd(Number)
 
 func _on_play_again_pressed() -> void:
-	GLobalVar.Game3Countdown=30
+	GLobalVar.Game3Countdown=3
 	$Timer.start()
 	$Control/ColorRect2.visible=false
 

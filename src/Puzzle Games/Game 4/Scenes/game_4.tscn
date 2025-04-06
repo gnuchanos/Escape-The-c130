@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cukg8atfgupcp"]
+[gd_scene load_steps=14 format=4 uid="uid://cukg8atfgupcp"]
 
 [ext_resource type="Script" path="res://Puzzle Games/Game 4/Scripts/game_4.gd" id="1_2bwry"]
 [ext_resource type="PackedScene" uid="uid://dvhhpfypm2vng" path="res://Puzzle Games/Game 4/Scenes/spaceship.tscn" id="2_pxu41"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dl1k4ieqk67kx" path="res://Puzzle Games/Game 4/Images/Rectangle 26.png" id="4_2617v"]
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="4_rps0g"]
 [ext_resource type="Script" path="res://Puzzle Games/Game 4/Scripts/game_4_wall.gd" id="5_yf3nt"]
+[ext_resource type="Texture2D" uid="uid://h4hdx7a3uwbw" path="res://Puzzle Games/Game 4/Images/spaceship-game-trying-to-get-through-walls.png" id="6_u581n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4qq1"]
 texture = ExtResource("3_b2qgl")
@@ -36,6 +37,7 @@ bg_color = Color(0, 0.31663, 0, 1)
 bg_color = Color(0, 0.540633, 7.70092e-07, 1)
 
 [node name="Game 4" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_2bwry")
 
 [node name="Control" type="Control" parent="."]
@@ -108,7 +110,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.484438, 0.193524, 0.285097, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Control/ColorRect2"]
+self_modulate = Color(1, 1, 1, 0.431373)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_u581n")
+expand_mode = 1
 
 [node name="Play Again" type="Button" parent="Control/ColorRect2"]
 layout_mode = 0

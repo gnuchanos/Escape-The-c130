@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmw7h7bc7tm7h"]
+[gd_scene load_steps=8 format=3 uid="uid://cmw7h7bc7tm7h"]
 
 [ext_resource type="Script" path="res://Puzzle Games/Game 2/Scripts/game_2.gd" id="1_cwphe"]
+[ext_resource type="Texture2D" uid="uid://c3vnxb1rdx4km" path="res://Puzzle Games/Game 2/Images/bullet-shooter-game.png" id="2_jn0of"]
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="2_pwadq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_alqht"]
@@ -44,7 +45,7 @@ theme_override_font_sizes/font_size = 45
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer/ColorRect" groups=["Game2_Character"]]
+[node name="CharacterBody2D" type="Area2D" parent="CanvasLayer/ColorRect"]
 position = Vector2(592, 608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/ColorRect/CharacterBody2D"]
@@ -56,6 +57,12 @@ offset_top = -16.0
 offset_right = 48.0
 offset_bottom = 16.0
 color = Color(1.26343e-06, 0.399053, 0.109792, 1)
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer/ColorRect/CharacterBody2D"]
+
+[node name="Timer3" type="Timer" parent="CanvasLayer/ColorRect/CharacterBody2D"]
+wait_time = 0.05
+one_shot = true
 
 [node name="Area2D" type="StaticBody2D" parent="CanvasLayer" groups=["Game2_Floor"]]
 position = Vector2(-336, 656)
@@ -75,6 +82,8 @@ text = "AA"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Node2D2" type="Node2D" parent="CanvasLayer"]
+
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
 layout_mode = 1
 anchors_preset = 15
@@ -82,7 +91,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.205928, 0.395535, 0.550139, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ColorRect2"]
+self_modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jn0of")
+expand_mode = 1
 
 [node name="Play Again" type="Button" parent="CanvasLayer/ColorRect2"]
 layout_mode = 0
@@ -114,6 +134,7 @@ autostart = true
 
 [node name="Node2D" type="Node2D" parent="."]
 
+[connection signal="timeout" from="CanvasLayer/ColorRect/CharacterBody2D/Timer3" to="." method="_on_timer_3_timeout"]
 [connection signal="pressed" from="CanvasLayer/ColorRect2/Play Again" to="." method="_on_play_again_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

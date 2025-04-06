@@ -1,0 +1,120 @@
+[gd_scene load_steps=13 format=4 uid="uid://bqv0jhmmkgdk2"]
+
+[ext_resource type="Texture2D" uid="uid://c7uhyk7hmh1uj" path="res://Puzzle Games/Game 5/Images/Rectangle 137.png" id="1_mrgv1"]
+[ext_resource type="Texture2D" uid="uid://cfin0uvngwljj" path="res://Puzzle Games/Game 5/Images/Rectangle 138.png" id="2_p1ldd"]
+[ext_resource type="Texture2D" uid="uid://y3nvsgnvx8ja" path="res://Puzzle Games/Game 5/Images/Rectangle 139.png" id="3_uf7r6"]
+[ext_resource type="Script" path="res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd" id="4_5yivr"]
+[ext_resource type="Script" path="res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd" id="5_nsbu7"]
+[ext_resource type="PackedScene" uid="uid://bg6cfb58igsty" path="res://Puzzle Games/Game 5/Scenes/enemy.tscn" id="6_xvx3r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hoi0v"]
+texture = ExtResource("1_mrgv1")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rf6s8"]
+texture = ExtResource("2_p1ldd")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w4pet"]
+texture = ExtResource("3_uf7r6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xv710"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_hoi0v")
+sources/1 = SubResource("TileSetAtlasSource_rf6s8")
+sources/2 = SubResource("TileSetAtlasSource_w4pet")
+
+[sub_resource type="Curve2D" id="Curve2D_6l2qt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1056, 96, 0, 0, 0, 0, 608, 96, 0, 0, 0, 0, 1056, 96)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_onpak"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 736, 224, 0, 0, 0, 0, 88, 224, 0, 0, 0, 0, 736, 224)
+}
+point_count = 3
+
+[node name="Level 3" type="Node2D"]
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAADAAoAAAAAAAAAAAACAAoAAAAAAAAAAAABAAoAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAARAAEAAAAAAAAAAAARAAIAAAAAAAAAAAARAAMAAAAAAAAAAAARAAQAAAAAAAAAAAARAAUAAAAAAAAAAAARAAYAAAAAAAAAAAARAAcAAAAAAAAAAAARAAgAAAAAAAAAAAARAAkAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAADAAgAAAAAAAAAAAACAAgAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAAOAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAAOAAUAAAAAAAAAAAABAAUAAQAAAAAAAAACAAUAAAAAAAAAAAAFAAcAAgAAAAAAAAAFAAYAAQAAAAAAAAAEAAYAAQAAAAAAAAADAAYAAQAAAAAAAAACAAYAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAgAAAAAAAAABAAgAAQAAAAAAAAABAAkAAgAAAAAAAAACAAkAAgAAAAAAAAADAAkAAgAAAAAAAAAEAAkAAgAAAAAAAAAFAAkAAgAAAAAAAAAGAAkAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAALAAgAAQAAAAAAAAALAAcAAgAAAAAAAAALAAYAAQAAAAAAAAALAAUAAQAAAAAAAAALAAQAAQAAAAAAAAALAAMAAgAAAAAAAAALAAIAAQAAAAAAAAALAAEAAgAAAAAAAAAKAAEAAgAAAAAAAAAJAAEAAgAAAAAAAAAIAAEAAgAAAAAAAAAHAAEAAgAAAAAAAAAGAAEAAgAAAAAAAAAFAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAADAAEAAgAAAAAAAAACAAEAAgAAAAAAAAABAAEAAgAAAAAAAAABAAIAAQAAAAAAAAABAAMAAgAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAACAAMAAgAAAAAAAAADAAMAAgAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAMAAgAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAGAAMAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAQAAAAAAAAAIAAQAAQAAAAAAAAAIAAMAAgAAAAAAAAAJAAMAAgAAAAAAAAAJAAQAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAMAAgAAAAAAAAAMAAEAAgAAAAAAAAANAAEAAgAAAAAAAAANAAIAAQAAAAAAAAANAAMAAQAAAAAAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAANAAYAAQAAAAAAAAANAAcAAQAAAAAAAAANAAgAAQAAAAAAAAANAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAAOAAkAAgAAAAAAAAAPAAkAAgAAAAAAAAAQAAkAAgAAAAAAAAAQAAgAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAYAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAIAAQAAAAAAAAAQAAEAAgAAAAAAAAAPAAEAAgAAAAAAAAAOAAEAAgAAAAAAAAAPAAMAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAQAAQAAAAAAAAAPAAcAAQAAAAAAAAAOAAcAAQAAAAAAAAAOAAYAAQAAAAAAAAAKAAYAAQAAAAAAAAAJAAYAAQAAAAAAAAAIAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAGAAcAAgAAAAAAAAAHAAcAAgAAAAAAAAAIAAcAAgAAAAAAAAAJAAcAAgAAAAAAAAAKAAcAAgAAAAAAAAACAAcAAgAAAAAAAAADAAcAAgAAAAAAAAAEAAcAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_xv710")
+script = ExtResource("4_5yivr")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_6l2qt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(1056, 96)
+rotation = 3.14159
+script = ExtResource("5_nsbu7")
+
+[node name="CharacterBody2D" parent="Path2D/PathFollow2D" instance=ExtResource("6_xvx3r")]
+position = Vector2(0, 9.53674e-07)
+
+[node name="Path2D2" type="Path2D" parent="."]
+position = Vector2(-512, 0)
+curve = SubResource("Curve2D_6l2qt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
+position = Vector2(1056, 96)
+rotation = 3.14159
+script = ExtResource("5_nsbu7")
+
+[node name="CharacterBody2D" parent="Path2D2/PathFollow2D" instance=ExtResource("6_xvx3r")]
+position = Vector2(0, 9.53674e-07)
+
+[node name="Path2D3" type="Path2D" parent="."]
+position = Vector2(0, 512)
+curve = SubResource("Curve2D_6l2qt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D3"]
+position = Vector2(1056, 96)
+rotation = 3.14159
+script = ExtResource("5_nsbu7")
+
+[node name="CharacterBody2D" parent="Path2D3/PathFollow2D" instance=ExtResource("6_xvx3r")]
+position = Vector2(0, 9.53674e-07)
+
+[node name="Path2D4" type="Path2D" parent="."]
+position = Vector2(-512, 512)
+curve = SubResource("Curve2D_6l2qt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D4"]
+position = Vector2(1056, 96)
+rotation = 3.14159
+script = ExtResource("5_nsbu7")
+
+[node name="CharacterBody2D" parent="Path2D4/PathFollow2D" instance=ExtResource("6_xvx3r")]
+position = Vector2(0, 9.53674e-07)
+
+[node name="Path2D5" type="Path2D" parent="."]
+curve = SubResource("Curve2D_onpak")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D5"]
+position = Vector2(736, 224)
+rotation = 3.14159
+script = ExtResource("5_nsbu7")
+
+[node name="CharacterBody2D" parent="Path2D5/PathFollow2D" instance=ExtResource("6_xvx3r")]
+position = Vector2(0, 9.53674e-07)
+
+[node name="Path2D8" type="Path2D" parent="."]
+position = Vector2(0, 264)
+curve = SubResource("Curve2D_onpak")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D8"]
+position = Vector2(736, 224)
+rotation = 3.14159
+script = ExtResource("5_nsbu7")
+
+[node name="CharacterBody2D" parent="Path2D8/PathFollow2D" instance=ExtResource("6_xvx3r")]
+position = Vector2(0, 9.53674e-07)

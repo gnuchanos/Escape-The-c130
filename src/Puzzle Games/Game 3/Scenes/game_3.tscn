@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cr8ecy1uoq4ox"]
+[gd_scene load_steps=10 format=3 uid="uid://cr8ecy1uoq4ox"]
 
 [ext_resource type="Script" path="res://Puzzle Games/Game 3/Scripts/game_3.gd" id="1_nusrp"]
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="2_slti6"]
 [ext_resource type="PackedScene" uid="uid://bxq1ukt1yc3et" path="res://Puzzle Games/Game 3/Scenes/spaceship.tscn" id="2_ybh3c"]
 [ext_resource type="Texture2D" uid="uid://nci76ar5rhoa" path="res://Puzzle Games/Game 3/Images/Group 92.png" id="4_atwbj"]
+[ext_resource type="Texture2D" uid="uid://cubccpak0vrto" path="res://Puzzle Games/Game 3/Images/meteor-spaceship-game.png" id="4_pktux"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4qq1"]
 texture = ExtResource("4_atwbj")
@@ -23,6 +24,7 @@ bg_color = Color(0, 0.31663, 0, 1)
 bg_color = Color(0, 0.540633, 7.70092e-07, 1)
 
 [node name="Game 3" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_nusrp")
 
 [node name="Control" type="Control" parent="."]
@@ -89,7 +91,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0952468, 0.093984, 0.144128, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Control/ColorRect2"]
+self_modulate = Color(1, 1, 1, 0.486275)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_pktux")
+expand_mode = 1
 
 [node name="Play Again" type="Button" parent="Control/ColorRect2"]
 layout_mode = 0

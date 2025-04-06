@@ -13,7 +13,7 @@ func _process(delta: float) -> void:if Devam==true:
 	global_position.y += 2
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group('Game2_Character'):
+	if body.is_in_group('BulletGame'):
 		$Node2D.visible=true
 		Devam=false
 		$Node2D/AnimationPlayer.play("A")

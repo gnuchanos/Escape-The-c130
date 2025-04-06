@@ -5,12 +5,12 @@ var Enabled = true
 
 func _ready() -> void:
 	randomize()
-	Random=randi_range(-50,25)
+	Random=randi_range(-100,25)
 	GLobalVar.Game1Restart.connect(_Game1Restart)
 	
 func _Game1Restart():
 	randomize()
-	Random=randi_range(-50,25)
+	Random=randi_range(-100,25)
 	Enabled=true
 	
 func _on_timer_timeout() -> void:
@@ -27,7 +27,3 @@ func _on_body_entered(body: Node2D) -> void:if Enabled==true:
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group('Game1Character'):
 		pass
-
-func _process(delta: float) -> void:
-	pass
-	

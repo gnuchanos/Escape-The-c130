@@ -70,7 +70,7 @@ _data = {
 [sub_resource type="BoxMesh" id="BoxMesh_ghxfi"]
 size = Vector3(3, 6, 0.25)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lskec"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkdjd"]
 resource_name = "door"
 cull_mode = 2
 albedo_texture = ExtResource("2_10stc")
@@ -78,7 +78,7 @@ roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("3_1rpck")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fouvn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s78au"]
 resource_name = "v_0"
 cull_mode = 2
 albedo_texture = ExtResource("4_umdgg")
@@ -86,7 +86,7 @@ roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("5_cpkx2")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_6honf"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_243pf"]
 _surfaces = [{
 "aabb": AABB(0, -0.994489, 0, 0.0882025, 2.53885, 0.702496),
 "format": 34896613377,
@@ -120,7 +120,7 @@ _surfaces = [{
 "index_count": 174,
 "index_data": PackedByteArray("MAAIAAEAMAAxAAgAHwACAAQAHwAeAAIAHQAEAAYAHQAfAAQAAwAMAAUAAwAJAAwAIwAGACAAIwAdAAYABQAPAAcABQAMAA8AGAAMAAkAGAAaAAwAPgAIADEAPgA7AAgACgATAA0ACgARABMAGQASAAsAGQAXABIAKQAQABUAKQArABAAOQAiAA8AOQA8ACIAKAAgACUAKAAjACAABwAiACEABwAPACIANwAlADQANwAoACUAPAAnACIAPAA9ACcAIQAnACYAIQAiACcAFgAtACoAFgAkAC0AOAArACkAOAA6ACsALgAsADMALgAbACwAHAAvAAAAHAAyAC8APwAxADYAPwA+ADEANQAxADAANQA2ADEAJgA2ADUAJgAnADYAPQA2ACcAPQA/ADYAMgA0AC8AMgA3ADQADgA6ADgADgAUADoAKgA8ADkAKgAtADwAMwA7AD4AMwAsADsA"),
 "lods": [0.000254429, PackedByteArray("BwAIAAEABwA8AAgAPQAIADwAPQA/AAgAPwA+AAgAPgA7AAgAMwA7AD4AMwAsADsALgAsADMALgAbACwABwAPADwADwAtADwAFgAtAA8AFgAkAC0ABwAMAA8AAwAMAAcAAwAJAAwAGAAMAAkAGAAaAAwAHwACAAYAHwAeAAIAHQAfAAYAIwAdAAYAKAAjAAYANwAoAAYAMgA3AAYAHAAyAAYAHAAGAAAACgATAA0ACgARABMAGQASAAsAGQAXABIADgAQABUADgAUABAA")],
-"material": SubResource("StandardMaterial3D_lskec"),
+"material": SubResource("StandardMaterial3D_tkdjd"),
 "name": "door",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -132,7 +132,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 126,
 "index_data": PackedByteArray("AgAGAAAAAgAIAAYAAQAKAAQAAQAHAAoAAwALAAUAAwAJAAsADgASAAwADgAUABIADQAWABAADQATABYADwAXABEADwAVABcAGgAeABgAGgAgAB4AGQAiABwAGQAfACIAGwAjAB0AGwAhACMAJgAqACQAJgAsACoAJQAuACgAJQArAC4AJwAvACkAJwAtAC8AMgA2ADAAMgA4ADYAMQA6ADQAMQA3ADoAMwA7ADUAMwA5ADsAPgBCADwAPgBEAEIAPQBGAEAAPQBDAEYAPwBHAEEAPwBFAEcASgBOAEgASgBQAE4ASQBSAEwASQBPAFIASwBTAE0ASwBRAFMA"),
-"material": SubResource("StandardMaterial3D_fouvn"),
+"material": SubResource("StandardMaterial3D_s78au"),
 "name": "v_0",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -140,9 +140,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("//9puv//AID//2m6////vwAAabr//wCA//9purnlAAD//2m6ueX/vwAAabq55QAA////////AID/////////vwAA/////wCA/////7nlAAD/////ueX/vwAA//+55QAA//9pumKvAID//2m6Yq//vwAAabpirwCA//9puh2VAAD//2m6HZX/vwAAabodlQAA/////2KvAID/////Yq//vwAA//9irwCA/////x2VAAD/////HZX/vwAA//8dlQAA//9pusBoAID//2m6wGj/vwAAabrAaACA//9puntOAAD//2m6e07/vwAAabp7TgAA/////8BoAID/////wGj/vwAA///AaACA/////3tOAAD/////e07/vwAA//97TgAA//9pukUaAID//2m6RRr/vwAAabpFGgCA//9pugAAAAD//2m6AAD/vwAAaboAAAAA/////0UaAID/////RRr/vwAA//9FGgCA/////wAAAAD/////AAD/vwAA//8AAAAALaEAAHtXAIAtoQAAe1f/vwAAAAB7VwCALaEAADY9AAAtoQAANj3/vwAAAAA2PQAALaGVRXtXAIAtoZVFe1f/vwAAlUV7VwCALaGVRTY9AAAtoZVFNj3/vwAAlUU2PQAALaEAAK+NAIAtoQAAr43/vwAAAACvjQCALaEAAGlzAAAtoQAAaXP/vwAAAABpcwAALaGVRa+NAIAtoZVFr43/vwAAlUWvjQCALaGVRWlzAAAtoZVFaXP/vwAAlUVpcwAALaEAACnFAIAtoQAAKcX/vwAAAAApxQCALaEAAOSqAAAtoQAA5Kr/vwAAAADkqgAALaGVRSnFAIAtoZVFKcX/vwAAlUUpxQCALaGVReSqAAAtoZVF5Kr/vwAAlUXkqgAA/3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9//3////9/AAD/f///////f/9/AAD///9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_6honf")
+shadow_mesh = SubResource("ArrayMesh_243pf")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_xye07"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_x1jd5"]
 _surfaces = [{
 "aabb": AABB(0, -0.371228, 0, 0.0882025, 0.481948, 0.436838),
 "format": 34896613377,
@@ -164,7 +164,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 90,
 "index_data": PackedByteArray("AAANAAEAAAAPAA0ABwAZAAkABwAWABkACQAnAAwACQAZACcABAAdAAMABAAiAB0AEAAVAA4AEAASABUAHAAjACEAHAAeACMAEQAGABQAEQACAAYAFQAoABoAFQAhACgAIQAmACgAIQAjACYADgAaABgADgAVABoADAAkAAoADAAnACQAAQAXAAgAAQANABcACwAiAAQACwAlACIAIAApABsAIAArACkAEwAqAB8AEwAFACoA"),
-"material": SubResource("StandardMaterial3D_lskec"),
+"material": SubResource("StandardMaterial3D_tkdjd"),
 "name": "door",
 "primitive": 3,
 "uv_scale": Vector4(1.62699, 2.36171, 0, 0),
@@ -172,7 +172,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////wAA/7//////AOv/vwAA5OsAAP+///8AAAAA/7///wAAAOv/vwAA5OsA6///AADk6wDr/7////////////////////+////k6////////wAA////////AAD///+///+TFP//////0f//AOv/v//R//8A6/+//9H//wAA/7//0f//AAD/v//R5OsAAP+//9Hk6wAA/7//0eTrAOv////R5OsA6/+//9Hk6wDr/7//0f/////////R//////+//9H//////7//0eTr///////R5Ov///+//9GTFAAAVNX/0ZMUAAD/v//RAAAAAP+//9EAAAAA/7//0ZMUAOv////RkxQA61TV/9GTFADr/7//0QAAAOv/v//RAAAA6/+//9EAAP//////0QAA////v//RAAD///+//9GTFP//////0ZMU////vwAAkxQAAFTVAACTFADr//8AAJMUAOtU1QAA/38AAP9/AAD/f////3////9//3///wAA/3////9/AAD/f////3////9/////f////38AAP9//38AAAAA/3//fwAAAAD/f/9/AAD5efj5AAD/f/9/AAD///9/AAD/f/9/AAD///9//38AAFTVqir/fwAA////f/9/AAAjUyLTVNWqKv9/AAD///9//38AAP///3////9//38AAP///3//fwAAVNWqKqFWodZU1aoq")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_xye07")
+shadow_mesh = SubResource("ArrayMesh_x1jd5")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ielgf"]
 size = Vector3(0.093933, 2.54102, 1.37863)
@@ -205,7 +205,7 @@ visible = false
 mesh = SubResource("BoxMesh_ghxfi")
 
 [node name="Node3D" type="Node3D" parent="Node3D/MeshInstance3D5"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.36682, -1.70412, 3.2217e-06)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.36682, -1.70412, 0.116152)
 
 [node name="door" type="MeshInstance3D" parent="Node3D/MeshInstance3D5/Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00212, -0.702496)

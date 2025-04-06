@@ -33,3 +33,31 @@ func _on_button_4_pressed() -> void:
 
 func _on_timer_timeout() -> void:
 	K=true
+
+var _Visible = true
+
+func _input(event: InputEvent) -> void:
+	if _Visible==true:
+		if not $Node2D/RayCast2D3.is_colliding():
+			if event.is_action_pressed('ui_left'):
+				global_position.x-=Speed
+				_Visible=false
+				$Timer2.start()
+		if not $Node2D/RayCast2D4.is_colliding():
+			if event.is_action_pressed('ui_right'):
+				global_position.x+=Speed
+				_Visible=false
+				$Timer2.start()
+		if not $Node2D/RayCast2D2.is_colliding():
+			if event.is_action_pressed('ui_up'):
+				global_position.y-=Speed
+				_Visible=false
+				$Timer2.start()
+		if not $Node2D/RayCast2D.is_colliding():
+			if event.is_action_pressed('ui_down'):
+				global_position.y+=Speed
+				_Visible=false
+				$Timer2.start()
+		
+func _on_timer_2_timeout() -> void:
+	_Visible=true

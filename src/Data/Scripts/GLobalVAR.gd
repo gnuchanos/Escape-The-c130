@@ -41,12 +41,14 @@ var PlayerSettings = {
 	'Game5Level':1,
 }
 
+var shuwdownlabelvisible = true
+
 var Asleep = false
 var EPress = true
 var KeyPress = false
 var KeyMaked = false
 
-var Test = true
+var Test = false
 
 ##Games
 var GamesPanelVisible = true

@@ -40,6 +40,7 @@ texture = ExtResource("1_pi86q")
 expand_mode = 1
 
 [node name="Node2D" type="Node2D" parent="."]
+visible = false
 
 [node name="RayCast2D" type="RayCast2D" parent="Node2D"]
 position = Vector2(0, 8)
@@ -104,8 +105,13 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_wwefr")
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
 [connection signal="pressed" from="Node2D/RayCast2D/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Node2D/RayCast2D2/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Node2D/RayCast2D3/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Node2D/RayCast2D4/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

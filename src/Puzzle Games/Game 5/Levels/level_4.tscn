@@ -1,0 +1,155 @@
+[gd_scene load_steps=14 format=4 uid="uid://vurixriqxkj5"]
+
+[ext_resource type="Texture2D" uid="uid://c7uhyk7hmh1uj" path="res://Puzzle Games/Game 5/Images/Rectangle 137.png" id="1_r2op2"]
+[ext_resource type="Texture2D" uid="uid://cfin0uvngwljj" path="res://Puzzle Games/Game 5/Images/Rectangle 138.png" id="2_uy7wh"]
+[ext_resource type="Texture2D" uid="uid://y3nvsgnvx8ja" path="res://Puzzle Games/Game 5/Images/Rectangle 139.png" id="3_mfnif"]
+[ext_resource type="Script" path="res://Puzzle Games/Game 5/Scripts/tile_map_layer_game_5.gd" id="4_n5auq"]
+[ext_resource type="Script" path="res://Puzzle Games/Game 5/Scripts/path_follow_2d.gd" id="5_6bwc6"]
+[ext_resource type="PackedScene" uid="uid://bg6cfb58igsty" path="res://Puzzle Games/Game 5/Scenes/enemy.tscn" id="6_ti8k6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hoi0v"]
+texture = ExtResource("1_r2op2")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rf6s8"]
+texture = ExtResource("2_uy7wh")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w4pet"]
+texture = ExtResource("3_mfnif")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xv710"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_hoi0v")
+sources/1 = SubResource("TileSetAtlasSource_rf6s8")
+sources/2 = SubResource("TileSetAtlasSource_w4pet")
+
+[sub_resource type="Curve2D" id="Curve2D_spkki"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 480, 224, 0, 0, 0, 0, 352, 224, 0, 0, 0, 0, 352, 352, 0, 0, 0, 0, 480, 352, 0, 0, 0, 0, 480, 224)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_hvf63"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 416, 608, 0, 0, 0, 0, 736, 608, 0, 0, 0, 0, 416, 608)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_rrgb8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 288, 480, 0, 0, 0, 0, 288, 280, 0, 0, 0, 0, 288, 480)
+}
+point_count = 3
+
+[node name="Level 4" type="Node2D"]
+
+[node name="TileMapLayer4" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAoAAAAAAAAAAAARAAkAAAAAAAAAAAARAAgAAAAAAAAAAAARAAcAAAAAAAAAAAARAAYAAAAAAAAAAAARAAUAAAAAAAAAAAARAAQAAAAAAAAAAAARAAMAAAAAAAAAAAARAAIAAAAAAAAAAAARAAEAAAAAAAAAAAARAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAAQAAkAAAAAAAAAAAAPAAgAAAAAAAAAAAAOAAcAAAAAAAAAAAANAAgAAAAAAAAAAAAMAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAgAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAkAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAANAAMAAAAAAAAAAAAMAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAUAAgAAAAAAAAAFAAYAAgAAAAAAAAAFAAcAAgAAAAAAAAAFAAgAAgAAAAAAAAAGAAgAAgAAAAAAAAAHAAgAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAYAAgAAAAAAAAAGAAYAAgAAAAAAAAAHAAUAAgAAAAAAAAAGAAUAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAMAAgAAAAAAAAAGAAMAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAUAAgAAAAAAAAALAAMAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAALAAUAAgAAAAAAAAAMAAYAAgAAAAAAAAAMAAcAAgAAAAAAAAAMAAgAAgAAAAAAAAALAAgAAgAAAAAAAAAKAAgAAgAAAAAAAAAKAAcAAgAAAAAAAAAKAAYAAgAAAAAAAAALAAYAAgAAAAAAAAAIAAMAAgAAAAAAAAAJAAMAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAIAAYAAgAAAAAAAAAIAAcAAgAAAAAAAAAIAAgAAgAAAAAAAAAJAAQAAgAAAAAAAAAJAAUAAgAAAAAAAAAJAAYAAgAAAAAAAAAJAAcAAgAAAAAAAAAJAAgAAgAAAAAAAAAGAAkAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAALAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAHAAIAAgAAAAAAAAAGAAIAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAUAAgAAAAAAAAAEAAYAAgAAAAAAAAAEAAcAAgAAAAAAAAANAAQAAgAAAAAAAAANAAUAAgAAAAAAAAANAAYAAgAAAAAAAAANAAcAAgAAAAAAAAACAAcAAQAAAAAAAAACAAYAAQAAAAAAAAACAAUAAQAAAAAAAAACAAQAAQAAAAAAAAABAAQAAQAAAAAAAAABAAMAAQAAAAAAAAABAAUAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAABAAgAAQAAAAAAAAADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAAPAAUAAQAAAAAAAAAPAAQAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAYAAQAAAAAAAAAPAAYAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAUAAQAAAAAAAAAPAAcAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAgAAQAAAAAAAAAGAAQAAQAAAAAAAAALAAQAAQAAAAAAAAALAAcAAQAAAAAAAAAGAAcAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_xv710")
+script = ExtResource("4_n5auq")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_spkki")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(480, 224)
+rotation = -1.5708
+progress = 512.0
+script = ExtResource("5_6bwc6")
+
+[node name="CharacterBody2D" parent="Path2D/PathFollow2D" instance=ExtResource("6_ti8k6")]
+position = Vector2(0, 9.53674e-07)
+
+[node name="Path2D2" type="Path2D" parent="."]
+position = Vector2(0, 184)
+curve = SubResource("Curve2D_spkki")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
+position = Vector2(480, 224)
+rotation = -1.5708
+progress = 512.0
+script = ExtResource("5_6bwc6")
+
+[node name="CharacterBody2D" parent="Path2D2/PathFollow2D" instance=ExtResource("6_ti8k6")]
+position = Vector2(0, 9.53674e-07)
+
+[node name="Path2D3" type="Path2D" parent="."]
+position = Vector2(320, 0)
+curve = SubResource("Curve2D_spkki")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D3"]
+position = Vector2(480, 224)
+rotation = -1.5708
+progress = 512.0
+script = ExtResource("5_6bwc6")
+
+[node name="CharacterBody2D" parent="Path2D3/PathFollow2D" instance=ExtResource("6_ti8k6")]
+position = Vector2(0, 9.53674e-07)
+
+[node name="Path2D4" type="Path2D" parent="."]
+position = Vector2(320, 184)
+curve = SubResource("Curve2D_spkki")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D4"]
+position = Vector2(480, 224)
+rotation = -1.5708
+progress = 512.0
+script = ExtResource("5_6bwc6")
+
+[node name="CharacterBody2D" parent="Path2D4/PathFollow2D" instance=ExtResource("6_ti8k6")]
+position = Vector2(0, 9.53674e-07)
+
+[node name="Path2D7" type="Path2D" parent="."]
+position = Vector2(1144, 1216)
+rotation = 3.14159
+curve = SubResource("Curve2D_hvf63")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D7"]
+position = Vector2(416, 608)
+script = ExtResource("5_6bwc6")
+
+[node name="CharacterBody2D" parent="Path2D7/PathFollow2D" instance=ExtResource("6_ti8k6")]
+position = Vector2(0, -1.97097e-05)
+
+[node name="Path2D8" type="Path2D" parent="."]
+position = Vector2(0, -448)
+curve = SubResource("Curve2D_hvf63")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D8"]
+position = Vector2(416, 608)
+script = ExtResource("5_6bwc6")
+
+[node name="CharacterBody2D" parent="Path2D8/PathFollow2D" instance=ExtResource("6_ti8k6")]
+position = Vector2(6.99382e-07, -6.67572e-06)
+
+[node name="Path2D9" type="Path2D" parent="."]
+curve = SubResource("Curve2D_rrgb8")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D9"]
+position = Vector2(288, 480)
+rotation = 1.5708
+progress = 400.0
+script = ExtResource("5_6bwc6")
+
+[node name="CharacterBody2D" parent="Path2D9/PathFollow2D" instance=ExtResource("6_ti8k6")]
+position = Vector2(6.99382e-07, -6.67572e-06)
+
+[node name="Path2D10" type="Path2D" parent="."]
+position = Vector2(1152, 768)
+rotation = 3.14159
+curve = SubResource("Curve2D_rrgb8")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D10"]
+position = Vector2(288, 480)
+rotation = -1.5708
+script = ExtResource("5_6bwc6")
+
+[node name="CharacterBody2D" parent="Path2D10/PathFollow2D" instance=ExtResource("6_ti8k6")]
+position = Vector2(6.99382e-07, -6.67572e-06)
