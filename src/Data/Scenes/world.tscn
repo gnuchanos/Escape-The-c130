@@ -20,7 +20,7 @@
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="25_jsed2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kb6fp"]
-size = Vector3(4.44189, 1.77002, 2.33801)
+size = Vector3(1.13891, 3.18372, 2.33801)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ej7m1"]
 size = Vector3(0.879823, 2.84839, 1.38496)
@@ -451,7 +451,15 @@ spot_angle = 81.36
 [node name="Area3D3" type="Area3D" parent="Node3D/Computer"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Computer/Area3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27905, 0.38501, 0.669005)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62756, 1.09186, 0.669005)
+shape = SubResource("BoxShape3D_kb6fp")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/Computer/Area3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86703, 1.09186, 0.669005)
+shape = SubResource("BoxShape3D_kb6fp")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Node3D/Computer/Area3D3"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 3.73412, 1.77697, -0.672973)
 shape = SubResource("BoxShape3D_kb6fp")
 
 [node name="table2" parent="Node3D/Computer" instance=ExtResource("2_wiwhr")]
@@ -680,7 +688,7 @@ shape = SubResource("BoxShape3D_2jobm")
 environment = ExtResource("18_h1koa")
 
 [node name="fps" parent="." instance=ExtResource("19_1xhq4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.24812, 0.324134, 1.90034)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.69132, 0.324134, 1.90034)
 
 [node name="Label" type="Label" parent="."]
 offset_top = 576.0
