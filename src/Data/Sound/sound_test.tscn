@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhpvdcl5tgyb8"]
+
+[ext_resource type="Script" path="res://Data/Sound/sound_test.gd" id="1_3fjc0"]
+[ext_resource type="AudioStream" uid="uid://c06bglwocil2i" path="res://Data/Sound/radio_music_0.mp3" id="2_kfnwe"]
+[ext_resource type="AudioStream" uid="uid://ifcahko6vyow" path="res://Data/Sound/walk_sound.ogg" id="3_7lk3y"]
+
+[node name="test" type="Node3D"]
+script = ExtResource("1_3fjc0")
+
+[node name="test_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kfnwe")
+volume_db = -20.0
+
+[node name="test_audio2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7lk3y")
+volume_db = -10.0

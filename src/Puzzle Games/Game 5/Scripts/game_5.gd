@@ -32,5 +32,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		GLobalVar.SonucGame5='Victory'
 		GLobalVar.DevamGame5=false
 		GLobalVar.PlayerSettings['Game5Level']+=1
-		GLobalVar.shuwdownlabelvisible=true
-		queue_free()
