@@ -117,7 +117,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_efu2j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nfa4w")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_efu2j")
 theme_override_styles/normal = SubResource("StyleBoxFlat_nfa4w")
-text = "Play Again"
+text = "Play"
 
 [node name="Label" type="Label" parent="Control/ColorRect2"]
 layout_mode = 0

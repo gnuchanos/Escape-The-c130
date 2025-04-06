@@ -385,7 +385,6 @@ offset_right = 1152.0
 offset_bottom = 128.0
 theme_override_fonts/font = ExtResource("6_ttwxi")
 theme_override_font_sizes/font_size = 25
-text = "Defeated"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -401,7 +400,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_f4o7j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3dfa8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_f4o7j")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3dfa8")
-text = "Play Again"
+text = "Play"
 
 [node name="Exit" type="Button" parent="CanvasLayer/ColorRect"]
 visible = false

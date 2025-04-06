@@ -67,6 +67,8 @@ func _on_timer_2_timeout() -> void:
 			GLobalVar.Game2PanelText='Victory'
 			GLobalVar.PlayerSettings['MiniGames']['2']=true
 			GLobalVar.emit_signal('Game2GameResult')
+			GLobalVar.shuwdownlabelvisible=true
+			queue_free()
 			
 func _on_timer_3_timeout() -> void:
 	BulletFireEnabled=true

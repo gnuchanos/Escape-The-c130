@@ -20,7 +20,7 @@
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="25_jsed2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kb6fp"]
-size = Vector3(4.44189, 1.77002, 1.41016)
+size = Vector3(4.44189, 1.77002, 2.33801)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ej7m1"]
 size = Vector3(0.879823, 2.84839, 1.38496)
@@ -117,7 +117,7 @@ shadow_mesh = SubResource("ArrayMesh_77k0t")
 data = PackedVector3Array(-1.5379, 0.4853, 0.4668, 1.4679, 0.4853, -0.6989, 1.4679, 0.4853, 0.4668, -1.5379, 0.4853, 0.4668, -1.5379, 0.4853, -0.6989, 1.4679, 0.4853, -0.6989, 1.4679, 0.3259, 0.4668, 1.4679, 0.4853, -0.6989, 1.4679, 0.3259, -0.6989, 1.4679, 0.3259, 0.4668, 1.4679, 0.4853, 0.4668, 1.4679, 0.4853, -0.6989, 1.4679, 0.3259, -0.6989, -1.5379, 0.4853, -0.6989, -1.5379, 0.3259, -0.6989, 1.4679, 0.3259, -0.6989, 1.4679, 0.4853, -0.6989, -1.5379, 0.4853, -0.6989, -1.5379, 0.3259, -0.6989, -1.5379, 0.4853, 0.4668, -1.5379, 0.3259, 0.4668, -1.5379, 0.3259, -0.6989, -1.5379, 0.4853, -0.6989, -1.5379, 0.4853, 0.4668)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c5w46"]
-size = Vector3(4.60657, 1.49109, 1.90497)
+size = Vector3(4.60657, 2.12299, 2.07602)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nwf0k"]
 size = Vector3(0.869629, 1, 1.12769)
@@ -451,7 +451,7 @@ spot_angle = 81.36
 [node name="Area3D3" type="Area3D" parent="Node3D/Computer"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Computer/Area3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27905, 0.38501, 0.205078)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27905, 0.38501, 0.669005)
 shape = SubResource("BoxShape3D_kb6fp")
 
 [node name="table2" parent="Node3D/Computer" instance=ExtResource("2_wiwhr")]
@@ -496,7 +496,7 @@ shape = SubResource("ConcavePolygonShape3D_x2htm")
 [node name="Area3D4" type="Area3D" parent="Node3D/Bad"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Bad/Area3D4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21853, 0.245544, 4.21216)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21853, 0.561492, 4.12664)
 shape = SubResource("BoxShape3D_c5w46")
 
 [node name="Camera3D" type="Camera3D" parent="Node3D/Bad"]

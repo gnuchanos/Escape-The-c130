@@ -45,4 +45,6 @@ func _Game4Finish(Result:int):
 	elif Result==1:
 		$Control/ColorRect2/Label.text='Victory'
 		GLobalVar.PlayerSettings['MiniGames']['4']=true
+		GLobalVar.shuwdownlabelvisible=true
+		queue_free()
 	$Control/ColorRect2.visible=true
