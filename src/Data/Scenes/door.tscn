@@ -69,7 +69,7 @@ _data = {
 size = Vector3(3, 6, 0.25)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ielgf"]
-size = Vector3(0.093933, 2.54102, 1.37863)
+size = Vector3(0.175827, 2.54102, 1.37863)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t441d"]
 resource_name = "door"
@@ -176,11 +176,11 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.3668
 [node name="StaticBody3D" type="StaticBody3D" parent="Node3D/MeshInstance3D5/Node3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/MeshInstance3D5/Node3D/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0398109, 1.26758, -0.676431)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123772, 1.26758, -0.676431)
 shape = SubResource("BoxShape3D_ielgf")
 
 [node name="door" type="MeshInstance3D" parent="Node3D/MeshInstance3D5/Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00212, -0.702496)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.124554, 1.00212, -0.661694)
 mesh = SubResource("ArrayMesh_a353l")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_l5u2b")

@@ -7,8 +7,14 @@ var Door1Info = false
 var Door2Info = false
 
 func _ready() -> void:
-	if GLobalVar.PlayerSettings['Day']>=2:
+	if GLobalVar.PlayerSettings['GameDay2Victory']==true:
 		$"Doors and Cubes/Door3/Node3D/MeshInstance3D5/AnimationPlayer".play("A")
+		var Cube = preload('res://Data/Scenes/cubes.tscn').instantiate()
+		Cube.global_position=Vector3(-0.45,0.375,0.554)
+		$"Doors and Cubes".add_child(Cube)
+		Cube.global_position=Vector3(-0.45,0.375,0.554)
+	if GLobalVar.PlayerSettings['Day']==5:
+		$"Doors and Cubes/Parmaklik".global_position.y=100
 	var Scene = load('res://Puzzle Games/Game '+str(GLobalVar.PlayerSettings['Day'])+'/Scenes/'+'game_'+str(GLobalVar.PlayerSettings['Day'])+'.tscn').instantiate()
 	Scene.name='Game'
 	$CanvasLayer/Control/Control/ColorRect/Control.add_child(Scene)
@@ -25,6 +31,7 @@ func _Game2GameResult():
 	Cube.global_position=Vector3(-0.45,0.375,0.554)
 
 func _process(delta: float) -> void:
+	
 	$CanvasLayer/Control/Control/ColorRect/Label.visible=not GLobalVar.shuwdownlabelvisible
 	$CanvasLayer/ColorRect.visible=GLobalVar.Asleep
 	$Label.visible=not GLobalVar.Asleep
@@ -73,6 +80,8 @@ func _input(event: InputEvent) -> void:
 				if Input.is_action_pressed('e'):if GLobalVar.EPress==true:
 					get_node('CanvasLayer/Control/Control/ColorRect/Control/Game').queue_free()
 					GLobalVar.PlayerSettings['Day']+=1
+					if GLobalVar.PlayerSettings['Day']==5:
+						$"Doors and Cubes/Parmaklik".global_position.y=100
 					var Scene = load('res://Puzzle Games/Game '+str(GLobalVar.PlayerSettings['Day'])+'/Scenes/'+'game_'+str(GLobalVar.PlayerSettings['Day'])+'.tscn').instantiate()
 					Scene.name='Game'
 					$CanvasLayer/Control/Control/ColorRect/Control.add_child(Scene)

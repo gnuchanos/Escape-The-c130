@@ -66,6 +66,7 @@ func _on_timer_2_timeout() -> void:
 			GLobalVar.Game2Panel=true
 			GLobalVar.Game2PanelText='Victory'
 			GLobalVar.PlayerSettings['MiniGames']['2']=true
+			GLobalVar.PlayerSettings['GameDay2Victory']=true
 			GLobalVar.emit_signal('Game2GameResult')
 			
 func _on_timer_3_timeout() -> void:
