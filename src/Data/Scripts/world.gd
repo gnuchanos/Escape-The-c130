@@ -72,6 +72,8 @@ func _input(event: InputEvent) -> void:
 	if GLobalVar.Asleep==true:
 		if Input.is_action_pressed('e'):if GLobalVar.EPress==true:
 			$Timer.start()
+			if GLobalVar.PlayerSettings['Day']==5:
+				$"Doors and Cubes/Parmaklik".global_position.y=100
 			GLobalVar.EPress=false
 			GLobalVar.Asleep=false
 	elif GLobalVar.Asleep==false:

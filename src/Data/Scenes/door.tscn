@@ -1,8 +1,8 @@
-[gd_scene load_steps=18 format=4 uid="uid://dvn0rr23uxh25"]
+[gd_scene load_steps=16 format=4 uid="uid://dvn0rr23uxh25"]
 
 [ext_resource type="Script" path="res://Data/Scripts/door.gd" id="1_5w617"]
-[ext_resource type="Texture2D" uid="uid://dqglef1u4f5mm" path="res://Data/Models/door_rusty_metal_grid_diff_1k.jpg" id="2_10stc"]
-[ext_resource type="Texture2D" uid="uid://dcn0bung2koe5" path="res://Data/Models/door_rusty_metal_04_diff_1k.jpg" id="4_umdgg"]
+[ext_resource type="Material" uid="uid://bbbphh6t0uuum" path="res://Data/Materials/Door Materials/0.tres" id="2_qomiv"]
+[ext_resource type="Material" uid="uid://cert7oaowylai" path="res://Data/Materials/Door Materials/1.tres" id="3_o4hsu"]
 
 [sub_resource type="Animation" id="Animation_es1jv"]
 resource_name = "A"
@@ -137,12 +137,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_svtqg")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5u2b"]
-albedo_texture = ExtResource("2_10stc")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hhpms"]
-albedo_texture = ExtResource("4_umdgg")
-
 [sub_resource type="BoxMesh" id="BoxMesh_xbxao"]
 size = Vector3(1.5, 0.25, 1.5)
 
@@ -183,8 +177,8 @@ shape = SubResource("BoxShape3D_ielgf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.124554, 1.00212, -0.661694)
 mesh = SubResource("ArrayMesh_a353l")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_l5u2b")
-surface_material_override/1 = SubResource("StandardMaterial3D_hhpms")
+surface_material_override/0 = ExtResource("2_qomiv")
+surface_material_override/1 = ExtResource("3_o4hsu")
 
 [node name="Node3D2" type="Node3D" parent="."]
 

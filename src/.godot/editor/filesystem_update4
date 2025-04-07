@@ -1,15 +1,11 @@
-res://Data/Environments/DefaultEnviroment.tres
 res://Data/Scenes/world.tscn
-res://Data/Materials/table.tres
-res://Data/Models/Toprak.tres
-res://Data/Models/Floor.tres
-res://Data/Materials/CollisionMaterial.tres
+res://Data/Environments/DefaultEnviroment.tres
 res://Data/Environments/DefaultTheme.tres
 res://Data/Shaders/vhs.gdshader
 res://Puzzle Games/Game 1/Scenes/character_game_1.tscn
 res://Data/Scenes/door.tscn
 res://Data/Scenes/cubes.tscn
 res://Data/Scenes/lamb.tscn
-res://Data/Scripts/GLobalVAR.gd
+res://Data/Scripts/door.gd
 res://Data/Scripts/world.gd
-res://Puzzle Games/Game 2/Scripts/game_2.gd
+res://Data/Scripts/GLobalVAR.gd

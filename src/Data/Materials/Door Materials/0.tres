@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bbbphh6t0uuum"]
+
+[ext_resource type="Texture2D" uid="uid://dqglef1u4f5mm" path="res://Data/Models/door_rusty_metal_grid_diff_1k.jpg" id="1_54guj"]
+
+[resource]
+albedo_texture = ExtResource("1_54guj")
