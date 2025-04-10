@@ -35,7 +35,7 @@ _subresources={
 "materials": {
 "arrow_0": {
 "use_external/enabled": true,
-"use_external/path": "res://Data/Models/Toprak.tres"
+"use_external/path": "res://Data/Materials/table.tres"
 },
 "collision": {
 "use_external/enabled": true,

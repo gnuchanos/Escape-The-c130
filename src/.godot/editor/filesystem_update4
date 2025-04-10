@@ -2,10 +2,10 @@ res://Data/Scenes/world.tscn
 res://Data/Environments/DefaultEnviroment.tres
 res://Data/Environments/DefaultTheme.tres
 res://Data/Shaders/vhs.gdshader
-res://Puzzle Games/Game 1/Scenes/character_game_1.tscn
 res://Data/Scenes/door.tscn
 res://Data/Scenes/cubes.tscn
 res://Data/Scenes/lamb.tscn
-res://Data/Scripts/door.gd
+res://Data/Scenes/fps.tscn
+res://Data/Scripts/fps.gd
 res://Data/Scripts/world.gd
 res://Data/Scripts/GLobalVAR.gd

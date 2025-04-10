@@ -36,11 +36,20 @@ var PlayerSettings = {
 		'4':false,
 		'5':false
 	},
-	'Day':4,
+	'Day':1,
 	'KeyPlaced':false,
 	'Game5Level':1,
-	'GameDay2Victory':true
+	'GameDay2Victory':false,
+	'Combinations':{
+		'1':true,
+		'2':true,
+		'3':true,
+		'4':true,
+	},
+	'GameOver':false,
 }
+
+signal KeyChanged
 
 var shuwdownlabelvisible = true
 

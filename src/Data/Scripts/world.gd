@@ -7,6 +7,10 @@ var Door1Info = false
 var Door2Info = false
 
 func _ready() -> void:
+	if GLobalVar.PlayerSettings['Combinations']['1']==false and GLobalVar.PlayerSettings['Combinations']['4']==false and GLobalVar.PlayerSettings['Combinations']['2']==true and GLobalVar.PlayerSettings['Combinations']['3']==true:
+		$"Doors and Cubes/Door_2/MeshInstance3D5/AnimationPlayer".play("A")
+		$"Doors and Cubes/Door_3/MeshInstance3D5/AnimationPlayer".play("A")
+	GLobalVar.KeyChanged.connect(_KeyChanged)
 	if GLobalVar.PlayerSettings['GameDay2Victory']==true:
 		$"Doors and Cubes/Door3/Node3D/MeshInstance3D5/AnimationPlayer".play("A")
 		var Cube = preload('res://Data/Scenes/cubes.tscn').instantiate()
@@ -21,6 +25,12 @@ func _ready() -> void:
 	Scene.name='Game'
 	GLobalVar.Game2GameResult.connect(_Game2GameResult)
 	if GLobalVar.PlayerSettings['KeyPlaced']==true:
+		$"Doors and Cubes/Door_2/MeshInstance3D5/AnimationPlayer".play("A")
+		$"Doors and Cubes/Door_3/MeshInstance3D5/AnimationPlayer".play("A")
+
+func _KeyChanged():
+	if GLobalVar.PlayerSettings['Combinations']['1']==false and GLobalVar.PlayerSettings['Combinations']['4']==false and GLobalVar.PlayerSettings['Combinations']['2']==true and GLobalVar.PlayerSettings['Combinations']['3']==true:
+		$"Doors and Cubes/Door_2/MeshInstance3D5/AnimationPlayer".play("A")
 		$"Doors and Cubes/Door_3/MeshInstance3D5/AnimationPlayer".play("A")
 
 func _Game2GameResult():
@@ -184,3 +194,26 @@ func _on_area_3d_6_body_entered(body: Node3D) -> void:
 func _on_area_3d_6_body_exited(body: Node3D) -> void:
 	if body.is_in_group('Character'):
 		$CanvasLayer/Control/Label5.visible=false
+
+
+func _on_area_3d_7_body_entered(body: Node3D) -> void:
+	if body.is_in_group('Character'):
+		DoorGameOver()
+
+func _on_area_3d_7_body_exited(body: Node3D) -> void:
+	if body.is_in_group('Character'):
+		pass
+
+func DoorGameOver():
+	$CanvasLayer/Control2.visible=true
+	GLobalVar.PlayerSettings['GameOver']=true
+	$CanvasLayer/Control2/ColorRect.visible=true
+	$CanvasLayer/Control2/AudioStreamPlayer2.play()
+	$CanvasLayer/Control2/ColorRect/AnimationPlayer.play("A")
+	$Timer2.start()
+	
+func _on_timer_2_timeout() -> void:
+	$CanvasLayer/Control2/ColorRect2.visible=true
+	$CanvasLayer/Control2/ColorRect2/TextureRect/AnimationPlayer.play("new_animation")
+	$CanvasLayer/Control2/AudioStreamPlayer.play()
+	

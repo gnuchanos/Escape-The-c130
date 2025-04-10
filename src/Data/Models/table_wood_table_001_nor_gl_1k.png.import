@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djpuwa2rjakww"
+uid="uid://cmt4n2mv4nei6"
 path.s3tc="res://.godot/imported/table_wood_table_001_nor_gl_1k.png-65e8bcf7b31db3bd752f5e3fb7568d11.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "0409038d1b3c99376b4f2110b064b2b0"
 }
 
 [deps]
@@ -27,8 +24,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Data/Models/table_wood_table_001_nor_gl_1k.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

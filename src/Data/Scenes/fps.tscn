@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cns1uy01wn0kj"]
+[gd_scene load_steps=26 format=4 uid="uid://cns1uy01wn0kj"]
 
 [ext_resource type="Script" path="res://Data/Scripts/fps.gd" id="1_apen5"]
 [ext_resource type="Texture2D" uid="uid://cu15jqtsbg4t3" path="res://Data/Images and Sprites/Gnu iImages/cursor0.png" id="2_imjip"]
@@ -88,6 +88,13 @@ bg_color = Color(0.326543, 0.0382518, 0.577341, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ev6us"]
 bg_color = Color(0.32549, 0.0392157, 0.576471, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6x18"]
+bg_color = Color(0.686275, 0, 0, 1)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hibti"]
 
 [node name="fps" type="CharacterBody3D" groups=["Character"]]
@@ -114,6 +121,14 @@ fov = 90.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="head/standCam"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -1.11377)
+visible = false
+mesh = SubResource("CylinderMesh_eik4a")
+skeleton = NodePath("../hitRay")
+surface_material_override/0 = SubResource("StandardMaterial3D_wn4aq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="head/standCam"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -1.11377)
+visible = false
 mesh = SubResource("CylinderMesh_eik4a")
 skeleton = NodePath("../hitRay")
 surface_material_override/0 = SubResource("StandardMaterial3D_wn4aq")
@@ -123,6 +138,13 @@ target_position = Vector3(0, 0, -3)
 collision_mask = 2
 
 [node name="Node3D" type="Node3D" parent="head/standCam/hitRay"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.63262)
+
+[node name="hitRay2" type="RayCast3D" parent="head/standCam"]
+target_position = Vector3(0, 0, -3)
+collision_mask = 4
+
+[node name="Node3D" type="Node3D" parent="head/standCam/hitRay2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.63262)
 
 [node name="main_004" type="MeshInstance3D" parent="head/standCam"]
@@ -419,6 +441,15 @@ offset_right = 597.0
 offset_bottom = 40.0
 theme_override_fonts/font = ExtResource("7_lq2l8")
 
+[node name="Panel" type="Panel" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = 568.0
+offset_top = 312.0
+offset_right = 584.0
+offset_bottom = 328.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o6x18")
+
 [node name="shaders" type="CanvasLayer" parent="."]
 
 [node name="vhs" type="ColorRect" parent="shaders"]
@@ -437,6 +468,10 @@ wait_time = 0.1
 one_shot = true
 autostart = true
 
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
 [connection signal="close_requested" from="UI/settings" to="UI/settings" method="_on_close_requested"]
 [connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/MusicVolume/MusicVolumeSlider" to="UI/settings" method="_on_music_volume_slider_value_changed"]
 [connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/EffectVolume/EffectVolumeSlider" to="UI/settings" method="_on_effect_volume_slider_value_changed"]
@@ -448,3 +483,4 @@ autostart = true
 [connection signal="pressed" from="UI/settings/ScrollContainer/VBoxContainer/fullScreen/fullScreenCheckBox" to="UI/settings" method="_on_full_screen_check_box_pressed"]
 [connection signal="close_requested" from="UI/consoleWin" to="UI/consoleWin" method="_on_close_requested"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
