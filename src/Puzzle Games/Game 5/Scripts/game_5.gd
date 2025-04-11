@@ -31,4 +31,12 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('C5'):
 		GLobalVar.SonucGame5='Victory'
 		GLobalVar.DevamGame5=false
-		GLobalVar.PlayerSettings['Game5Level']+=1
+		if GLobalVar.PlayerSettings['Game5Level']<4:
+			GLobalVar.PlayerSettings['Game5Level']+=1
+			GLobalVar.PlayerSettings['MiniGame5Levels'][str(GLobalVar.PlayerSettings['Game5Level'])]=true
+			if GLobalVar.PlayerSettings['MiniGame5Levels']['4']==true:
+				GLobalVar.PlayerSettings['MiniGames']['5']=true
+		elif GLobalVar.PlayerSettings['Game5Level']>=4:
+			GLobalVar.PlayerSettings['Game5Level']=true
+			
+		

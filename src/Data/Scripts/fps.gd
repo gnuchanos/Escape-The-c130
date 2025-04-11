@@ -175,18 +175,26 @@ func _physics_process(delta: float) -> void:if GLobalVar.CharacterMovement==0:if
 		var input_dir := Input.get_vector("a", "d", "w", "s")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
+			RunDevam=true
 			velocity.x = direction.x * GLobalVar.PlayerSettings["Speed"]
 			velocity.z = direction.z * GLobalVar.PlayerSettings["Speed"]
 		else:
+			RunDevam=false
 			velocity.x = move_toward(velocity.x, 0, GLobalVar.PlayerSettings["Speed"])
 			velocity.z = move_toward(velocity.z, 0, GLobalVar.PlayerSettings["Speed"])
-
+		
+		if RunDevam==true:
+			if $AudioStreamPlayer.playing==false:
+				$AudioStreamPlayer.play()
+		
 		# Head bob
 		if GLobalVar.PlayerSettings["HeadBob"]:
 			t_bob += delta * velocity.length() * float(is_on_floor())
 			Camera.transform.origin = _headbob(t_bob)
 
 		move_and_slide()
+
+var RunDevam = true
 
 func _on_timer_timeout() -> void:if GLobalVar.CharacterMovement==0:if GLobalVar.PlayerSettings['GameOver']==false:
 	Fallse=true

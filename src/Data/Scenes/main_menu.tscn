@@ -1,0 +1,492 @@
+[gd_scene load_steps=10 format=3 uid="uid://dyi12bs27xwdp"]
+
+[ext_resource type="Script" path="res://Data/Scripts/main_menu.gd" id="1_b7dtr"]
+[ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="2_0flu7"]
+[ext_resource type="Script" path="res://Data/Scripts/scroll_container.gd" id="3_b5ovu"]
+[ext_resource type="Theme" uid="uid://cmqilhqwhy1tl" path="res://Data/Environments/DefaultTheme.tres" id="3_l7w3o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hy7l"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.741385, 0.741385, 0.741385, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vjkr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_nsqeg"]
+resource_name = "A"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1152, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ovkje"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ycgw"]
+_data = {
+"A": SubResource("Animation_nsqeg"),
+"RESET": SubResource("Animation_ovkje")
+}
+
+[node name="Main Menu" type="CanvasLayer"]
+script = ExtResource("1_b7dtr")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/Control"]
+offset_right = 1152.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("2_0flu7")
+theme_override_font_sizes/font_size = 75
+text = "Escape The c130"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -196.0
+offset_right = 160.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vjkr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vjkr")
+text = "Play"
+
+[node name="Settings" type="Button" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -92.0
+offset_right = 160.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vjkr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vjkr")
+text = "Settings"
+
+[node name="About Us" type="Button" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 12.0
+offset_right = 160.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vjkr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vjkr")
+text = "About Us"
+
+[node name="Donation" type="Button" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 116.0
+offset_right = 160.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vjkr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vjkr")
+text = "Donation"
+
+[node name="Exit" type="Button" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 220.0
+offset_right = 160.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vjkr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vjkr")
+text = "Exit"
+
+[node name="Control2" type="Control" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="Control/Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 220.0
+offset_right = 160.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vjkr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vjkr")
+text = "Back"
+
+[node name="Label" type="Label" parent="Control/Control2"]
+offset_right = 1152.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("2_0flu7")
+theme_override_font_sizes/font_size = 75
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 120.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("3_b5ovu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Control2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MusicVolume" type="HBoxContainer" parent="Control/Control2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+
+[node name="MusicVolumeSlider" type="HSlider" parent="Control/Control2/ScrollContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="sep" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+text = " "
+
+[node name="EffectVolume" type="HBoxContainer" parent="Control/Control2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/EffectVolume"]
+layout_mode = 2
+
+[node name="EffectVolumeSlider" type="HSlider" parent="Control/Control2/ScrollContainer/VBoxContainer/EffectVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="sep2" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/EffectVolume"]
+layout_mode = 2
+text = " "
+
+[node name="AmbianceVolume" type="HBoxContainer" parent="Control/Control2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/AmbianceVolume"]
+layout_mode = 2
+
+[node name="AmbianceVolumeSlider" type="HSlider" parent="Control/Control2/ScrollContainer/VBoxContainer/AmbianceVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="sep2" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/AmbianceVolume"]
+layout_mode = 2
+text = " "
+
+[node name="VoiceVolume" type="HBoxContainer" parent="Control/Control2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/VoiceVolume"]
+layout_mode = 2
+
+[node name="VoiceVolumeSlider" type="HSlider" parent="Control/Control2/ScrollContainer/VBoxContainer/VoiceVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="sep3" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/VoiceVolume"]
+layout_mode = 2
+text = " "
+
+[node name="mouseSpeed" type="HBoxContainer" parent="Control/Control2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/mouseSpeed"]
+layout_mode = 2
+
+[node name="mouseSpeedSlider" type="HSlider" parent="Control/Control2/ScrollContainer/VBoxContainer/mouseSpeed"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 0.1
+max_value = 0.8
+step = 0.1
+value = 0.5
+
+[node name="sep4" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/mouseSpeed"]
+layout_mode = 2
+text = " "
+
+[node name="camFOV" type="HBoxContainer" parent="Control/Control2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/camFOV"]
+layout_mode = 2
+text = " FOV"
+
+[node name="camFOVSlider" type="HSlider" parent="Control/Control2/ScrollContainer/VBoxContainer/camFOV"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 60.0
+max_value = 120.0
+value = 90.0
+
+[node name="sep4" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/camFOV"]
+layout_mode = 2
+text = " "
+
+[node name="headShake" type="HBoxContainer" parent="Control/Control2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/headShake"]
+layout_mode = 2
+
+[node name="headShakeCheckBox" type="CheckBox" parent="Control/Control2/ScrollContainer/VBoxContainer/headShake"]
+layout_mode = 2
+button_pressed = true
+
+[node name="fullScreen" type="HBoxContainer" parent="Control/Control2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="text" type="Label" parent="Control/Control2/ScrollContainer/VBoxContainer/fullScreen"]
+layout_mode = 2
+
+[node name="fullScreenCheckBox" type="CheckBox" parent="Control/Control2/ScrollContainer/VBoxContainer/fullScreen"]
+layout_mode = 2
+theme = ExtResource("3_l7w3o")
+
+[node name="Control3" type="Control" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="Control/Control3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 220.0
+offset_right = 160.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vjkr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vjkr")
+text = "Back"
+
+[node name="Label" type="Label" parent="Control/Control3"]
+offset_right = 1152.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("2_0flu7")
+theme_override_font_sizes/font_size = 75
+text = "About Us"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control4" type="Control" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="Control/Control4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 220.0
+offset_right = 160.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vjkr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1hy7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vjkr")
+text = "Back"
+
+[node name="Label" type="Label" parent="Control/Control4"]
+offset_right = 1152.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("2_0flu7")
+theme_override_font_sizes/font_size = 75
+text = "Donations and Support"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+"": SubResource("AnimationLibrary_1ycgw")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="pressed" from="Control/Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/Control/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/Control/About Us" to="." method="_on_about_us_pressed"]
+[connection signal="pressed" from="Control/Control/Donation" to="." method="_on_donation_pressed"]
+[connection signal="pressed" from="Control/Control/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Control/Control2/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Control/Control3/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Control/Control4/Back" to="." method="_on_back_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

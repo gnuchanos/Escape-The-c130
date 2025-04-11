@@ -47,6 +47,12 @@ var PlayerSettings = {
 		'4':true,
 	},
 	'GameOver':false,
+	'MiniGame5Levels':{
+		'1':false,
+		'2':false,
+		'3':false,
+		'4':false
+	}
 }
 
 signal KeyChanged
@@ -100,7 +106,7 @@ func _Save():
 	File.close()
 
 func _ready() -> void:
-	#_Load()
+	_Load()
 	pass
 	
 func _process(delta: float) -> void:

@@ -40,7 +40,7 @@ func MeteorAdd(Number):
 		MeteorAdd(Number)
 
 func _on_play_again_pressed() -> void:
-	GLobalVar.Game3Countdown=3
+	GLobalVar.Game3Countdown=30
 	$Timer.start()
 	$Control/ColorRect2.visible=false
 

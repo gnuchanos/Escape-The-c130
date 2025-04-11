@@ -17,6 +17,7 @@ bg_color = Color(0, 0.31663, 0, 1)
 bg_color = Color(0, 0.540633, 7.70092e-07, 1)
 
 [node name="Game 2" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_cwphe")
 
 [node name="CanvasLayer" type="Control" parent="."]

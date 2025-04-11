@@ -7,6 +7,9 @@ var Door1Info = false
 var Door2Info = false
 
 func _ready() -> void:
+	if GLobalVar.PlayerSettings['GameOver']==true:
+		GLobalVar.PlayerSettings['GameOver']=false
+		get_tree().reload_current_scene()
 	if GLobalVar.PlayerSettings['Combinations']['1']==false and GLobalVar.PlayerSettings['Combinations']['4']==false and GLobalVar.PlayerSettings['Combinations']['2']==true and GLobalVar.PlayerSettings['Combinations']['3']==true:
 		$"Doors and Cubes/Door_2/MeshInstance3D5/AnimationPlayer".play("A")
 		$"Doors and Cubes/Door_3/MeshInstance3D5/AnimationPlayer".play("A")
@@ -84,6 +87,9 @@ func _input(event: InputEvent) -> void:
 			$Timer.start()
 			if GLobalVar.PlayerSettings['Day']==5:
 				$"Doors and Cubes/Parmaklik".global_position.y=100
+			elif GLobalVar.PlayerSettings['Day']==6:
+				GLobalVar.PlayerSettings['GameOver']=true
+				$CanvasLayer2.visible=true
 			GLobalVar.EPress=false
 			GLobalVar.Asleep=false
 	elif GLobalVar.Asleep==false:
@@ -216,4 +222,16 @@ func _on_timer_2_timeout() -> void:
 	$CanvasLayer/Control2/ColorRect2.visible=true
 	$CanvasLayer/Control2/ColorRect2/TextureRect/AnimationPlayer.play("new_animation")
 	$CanvasLayer/Control2/AudioStreamPlayer.play()
-	
+	$Timer3.start()
+
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file('res://Data/Scenes/main_menu.tscn')
+
+func _on_oyunfor_donate_pressed() -> void:
+	OS.shell_open('https://www.oyunfor.com/donate/gnuchanos')
+
+
+func _on_timer_3_timeout() -> void:
+	GLobalVar.PlayerSettings['GameOver']=true
+	$CanvasLayer2.visible=true

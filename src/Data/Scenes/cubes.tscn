@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://dcwc38njcdthr"]
+[gd_scene load_steps=11 format=4 uid="uid://dcwc38njcdthr"]
 
 [ext_resource type="Script" path="res://Data/Scripts/cubes.gd" id="1_1qnnc"]
 [ext_resource type="Texture2D" uid="uid://blkiaafm6ooeu" path="res://Data/Models/easterCube_rusty_metal_grid_diff_1k.jpg" id="2_ruqln"]
+[ext_resource type="AudioStream" uid="uid://cbdpdup8di1v7" path="res://Data/Sound/drop_object.ogg" id="3_665xm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sqryo"]
 size = Vector3(0.555664, 0.5, 0.584717)
@@ -76,5 +77,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.254964, 0)
 mesh = SubResource("ArrayMesh_84nmk")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_8i30u")
+
+[node name="DropObject" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_665xm")
+volume_db = -10.0
+unit_size = 0.5
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

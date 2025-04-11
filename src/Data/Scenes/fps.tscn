@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://cns1uy01wn0kj"]
+[gd_scene load_steps=27 format=4 uid="uid://cns1uy01wn0kj"]
 
 [ext_resource type="Script" path="res://Data/Scripts/fps.gd" id="1_apen5"]
 [ext_resource type="Texture2D" uid="uid://cu15jqtsbg4t3" path="res://Data/Images and Sprites/Gnu iImages/cursor0.png" id="2_imjip"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Data/Scripts/settings.gd" id="5_rpkvk"]
 [ext_resource type="Script" path="res://Data/Scripts/console_win.gd" id="6_0rnxf"]
 [ext_resource type="FontFile" uid="uid://dpn24n1mjdh6q" path="res://Data/Fonts/FreeSans.otf" id="7_lq2l8"]
+[ext_resource type="AudioStream" uid="uid://iymioyqmbek8" path="res://Data/Sound/walk_sound (mp3cut.net).mp3" id="10_4dtxd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xwnqa"]
 radius = 0.225
@@ -471,6 +472,9 @@ autostart = true
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 0.25
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_4dtxd")
 
 [connection signal="close_requested" from="UI/settings" to="UI/settings" method="_on_close_requested"]
 [connection signal="value_changed" from="UI/settings/ScrollContainer/VBoxContainer/MusicVolume/MusicVolumeSlider" to="UI/settings" method="_on_music_volume_slider_value_changed"]
