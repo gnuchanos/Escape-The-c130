@@ -919,7 +919,7 @@ shape = SubResource("BoxShape3D_2jobm")
 environment = ExtResource("18_h1koa")
 
 [node name="fps" parent="." instance=ExtResource("19_1xhq4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72561, 1.31675, 3.21708)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72561, 0.0700934, 3.21708)
 
 [node name="Label" type="Label" parent="."]
 offset_top = 576.0
