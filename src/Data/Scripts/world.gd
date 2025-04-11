@@ -79,7 +79,12 @@ func _process(delta: float) -> void:
 	elif GLobalVar.GamesPanelVisible==true:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
-	GLobalVar.GamesPanelVisible=not $CanvasLayer/Control/Control.visible
+	if GLobalVar.PlayerSettings['MiniGames'][str(GLobalVar.PlayerSettings['Day'])]==false:
+		GLobalVar.GamesPanelVisible=not $CanvasLayer/Control/Control.visible
+		$CanvasLayer/Control/Label2.text='Press the “E” key to turn on the computer'
+	elif GLobalVar.PlayerSettings['MiniGames'][str(GLobalVar.PlayerSettings['Day'])]==true:
+		GLobalVar.GamesPanelVisible=true
+		$CanvasLayer/Control/Label2.text=''
 
 func _input(event: InputEvent) -> void:
 	if GLobalVar.Asleep==true:
