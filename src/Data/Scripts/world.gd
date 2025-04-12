@@ -44,7 +44,12 @@ func _Game2GameResult():
 	Cube.global_position=Vector3(-0.45,0.375,0.554)
 
 func _process(delta: float) -> void:
-	
+	if GLobalVar.PlayerSettings['MiniGames'][str(GLobalVar.PlayerSettings['Day'])]==true:
+		$CanvasLayer/Control/Label2.visible=false
+		GLobalVar.shuwdownlabelvisible=true
+		GLobalVar.CharacterMovement=0
+		
+		
 	$CanvasLayer/Control/Control/ColorRect/Label.visible=not GLobalVar.shuwdownlabelvisible
 	$CanvasLayer/ColorRect.visible=GLobalVar.Asleep
 	$Label.visible=not GLobalVar.Asleep
