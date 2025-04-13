@@ -1,4 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://ccluxym7oe3ye"]
+[gd_scene load_steps=11 format=4 uid="uid://ccluxym7oe3ye"]
+
+[ext_resource type="Texture2D" uid="uid://dgxqlrluyjtid" path="res://Data/Models/lamb_rusty_metal_04_diff_1k.jpg" id="1_8sct6"]
+[ext_resource type="Texture2D" uid="uid://bbh01codwnlea" path="res://Data/Models/lamb_rusty_metal_grid_diff_1k.jpg" id="2_afrr2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3lns"]
 resource_name = "door"
@@ -100,14 +103,31 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3u6fq")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3yj7"]
+albedo_texture = ExtResource("1_8sct6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axwe8"]
+albedo_texture = ExtResource("2_afrr2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_702pc"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
 [node name="Lamb" type="Node3D"]
 
 [node name="door" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_7lch4")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_a3yj7")
+surface_material_override/1 = SubResource("StandardMaterial3D_axwe8")
+surface_material_override/2 = SubResource("StandardMaterial3D_702pc")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.519599, 0)
 light_energy = 2.0
 spot_range = 10.0
 spot_angle = 75.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.574134, 0)
+omni_range = 0.665662

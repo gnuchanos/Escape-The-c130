@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cekd6et0kyu1e"
+path="res://.godot/imported/Cosmic Dogfight.mp3-92420d78f24e8e3daa78048ab413c43f.mp3str"
+
+[deps]
+
+source_file="res://Data/Sound/Cosmic Dogfight.mp3"
+dest_files=["res://.godot/imported/Cosmic Dogfight.mp3-92420d78f24e8e3daa78048ab413c43f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcigeabumec37"]
+[gd_scene load_steps=5 format=3 uid="uid://bcigeabumec37"]
 
 [ext_resource type="Script" path="res://Data/Scripts/bullet_game_2.gd" id="1_3kmdw"]
 [ext_resource type="Texture2D" uid="uid://c6rvqy2cmqk0n" path="res://Puzzle Games/Game 2/Images/bullet.png" id="2_dfcqd"]
@@ -6,10 +6,13 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkqtr"]
 radius = 8.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ueqp1"]
+
 [node name="BulletGame2" type="CharacterBody2D" groups=["BulletGame"]]
 script = ExtResource("1_3kmdw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.898039, 0, 0, 1)
 offset_left = -8.0
 offset_top = -8.0
 offset_right = 8.0
@@ -24,4 +27,16 @@ shape = SubResource("CircleShape2D_rkqtr")
 wait_time = 3.0
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ueqp1")
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.1
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

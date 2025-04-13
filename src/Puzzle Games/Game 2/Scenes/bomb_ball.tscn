@@ -78,6 +78,8 @@ _data = {
 }
 
 [node name="Bomb Ball" type="CharacterBody2D"]
+collision_layer = 65
+collision_mask = 65
 script = ExtResource("1_6i5tb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

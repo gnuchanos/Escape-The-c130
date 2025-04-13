@@ -29,12 +29,12 @@ func _ready() -> void:
 	GLobalVar.Game2GameResult.connect(_Game2GameResult)
 	if GLobalVar.PlayerSettings['KeyPlaced']==true:
 		$"Doors and Cubes/Door_2/MeshInstance3D5/AnimationPlayer".play("A")
-		$"Doors and Cubes/Door_3/MeshInstance3D5/AnimationPlayer".play("A")
+		$"Doors and Cubes/Door_/MeshInstance3D5/AnimationPlayer".play("A")
 
 func _KeyChanged():
 	if GLobalVar.PlayerSettings['Combinations']['1']==false and GLobalVar.PlayerSettings['Combinations']['4']==false and GLobalVar.PlayerSettings['Combinations']['2']==true and GLobalVar.PlayerSettings['Combinations']['3']==true:
 		$"Doors and Cubes/Door_2/MeshInstance3D5/AnimationPlayer".play("A")
-		$"Doors and Cubes/Door_3/MeshInstance3D5/AnimationPlayer".play("A")
+		$"Doors and Cubes/Door_/MeshInstance3D5/AnimationPlayer".play("A")
 
 func _Game2GameResult():
 	$"Doors and Cubes/Door3/Node3D/MeshInstance3D5/AnimationPlayer".play("A")
@@ -43,7 +43,11 @@ func _Game2GameResult():
 	$"Doors and Cubes".add_child(Cube)
 	Cube.global_position=Vector3(-0.45,0.375,0.554)
 
-func _process(delta: float) -> void:
+func _pnocess(delta: float) -> void:
+	if not $IdlRoom0.playing:
+		$IdlRoom0.play()
+	if not $IdlRoom1.playing:
+		$IdlRoom1.play()
 	if GLobalVar.PlayerSettings['MiniGames'][str(GLobalVar.PlayerSettings['Day'])]==true:
 		$CanvasLayer/Control/Label2.visible=false
 		GLobalVar.shuwdownlabelvisible=true
@@ -55,14 +59,14 @@ func _process(delta: float) -> void:
 	$Label.visible=not GLobalVar.Asleep
 	$Label.text='Day '+str(GLobalVar.PlayerSettings['Day'])
 	if $CanvasLayer/Control/Label4.visible==true:
-		if Input.is_action_pressed('e'):if GLobalVar.EPress==true:
+		if Input.is_action_just_pressed('e'):
 			$Node3D2/Area3D5.queue_free()
 			GLobalVar.KeyPress=true
 			$Timer.start()
 			GLobalVar.EPress=false
 		
-	if $CanvasLayer/Control/Label5.visible==true:
-		if Input.is_action_pressed('e'):if GLobalVar.EPress==true:
+	if $CanvasLayer/Control/Label5.visible==true:if GLobalVar.PlayerSettings['KeyPlaced']==false:
+		if Input.is_action_just_pressed('e'):
 			GLobalVar.KeyPress=false
 			GLobalVar.PlayerSettings['KeyPlaced']=true
 			$"Doors and Cubes/Door_3/MeshInstance3D5/AnimationPlayer".play("A")
@@ -79,33 +83,38 @@ func _process(delta: float) -> void:
 		elif GLobalVar.PlayerSettings['MiniGames'][str(GLobalVar.PlayerSettings['Day'])]==false:
 			$CanvasLayer/Control/Label3.text="Finish this day's play to sleep"
 	
-	if GLobalVar.GamesPanelVisible==false:
+	if $CanvasLayer2.visible==false:
+		if GLobalVar.GamesPanelVisible==false:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+		elif GLobalVar.GamesPanelVisible==true:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	elif $CanvasLayer2.visible==true:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
-	elif GLobalVar.GamesPanelVisible==true:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	if GLobalVar.PlayerSettings['MiniGames'][str(GLobalVar.PlayerSettings['Day'])]==false:
 		GLobalVar.GamesPanelVisible=not $CanvasLayer/Control/Control.visible
 		$CanvasLayer/Control/Label2.text='Press the “E” key to turn on the computer'
 	elif GLobalVar.PlayerSettings['MiniGames'][str(GLobalVar.PlayerSettings['Day'])]==true:
+		$CanvasLayer/Control/Control.visible=false
 		GLobalVar.GamesPanelVisible=true
 		$CanvasLayer/Control/Label2.text=''
 
 func _input(event: InputEvent) -> void:
 	if GLobalVar.Asleep==true:
-		if Input.is_action_pressed('e'):if GLobalVar.EPress==true:
+		if Input.is_action_just_pressed('e'):if GLobalVar.EPress==true:
 			$Timer.start()
 			if GLobalVar.PlayerSettings['Day']==5:
 				$"Doors and Cubes/Parmaklik".global_position.y=100
 			elif GLobalVar.PlayerSettings['Day']==6:
-				GLobalVar.PlayerSettings['GameOver']=true
 				$CanvasLayer2.visible=true
+				Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 			GLobalVar.EPress=false
 			GLobalVar.Asleep=false
 	elif GLobalVar.Asleep==false:
 		if GLobalVar.PlayerSettings['MiniGames'][str(GLobalVar.PlayerSettings['Day'])]==true:
 			if $CanvasLayer/Control/Label3.visible==true:
-				if Input.is_action_pressed('e'):if GLobalVar.EPress==true:
+				if Input.is_action_just_pressed('e'):if GLobalVar.EPress==true:
+					GLobalVar.GamesPanelVisible=true
 					get_node('CanvasLayer/Control/Control/ColorRect/Control/Game').queue_free()
 					GLobalVar.PlayerSettings['Day']+=1
 					if GLobalVar.PlayerSettings['Day']==5:
@@ -121,7 +130,7 @@ func _input(event: InputEvent) -> void:
 	
 	
 	if GLobalVar.EPress==true:
-		if Input.is_action_pressed('e'):
+		if Input.is_action_just_pressed('e'):
 			if E1==true:
 				if Door1Info==false:
 					$"Doors and Cubes/Door_/MeshInstance3D5/AnimationPlayer".play("A")
@@ -245,3 +254,4 @@ func _on_oyunfor_donate_pressed() -> void:
 func _on_timer_3_timeout() -> void:
 	GLobalVar.PlayerSettings['GameOver']=true
 	$CanvasLayer2.visible=true
+	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)

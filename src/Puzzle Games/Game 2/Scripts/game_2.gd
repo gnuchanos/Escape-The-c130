@@ -53,9 +53,10 @@ func CreateBomb(Number):
 			CreateBomb(Number)
 
 func _on_play_again_pressed() -> void:
-	GLobalVar.Countdown = 30
+	GLobalVar.Countdown = 3
 	GLobalVar.GameResult = 0
 	GLobalVar.Game2Panel=false
+	$Timer.start()
 	
 
 func _on_timer_2_timeout() -> void:

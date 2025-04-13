@@ -1,7 +1,11 @@
+AudioStreamPlayer3D
+OmniLight3D
+Timer
+CollisionShape2D
+Area2D
 CollisionShape3D
 Area3D
 AudioStreamPlayer
-Timer
 AnimationPlayer
 Control
 ColorRect
@@ -9,5 +13,3 @@ Button
 CanvasLayer
 TextureRect
 Panel
-Node3D
-StaticBody3D

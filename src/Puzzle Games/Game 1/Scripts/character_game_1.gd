@@ -36,7 +36,7 @@ func _on_timer_timeout() -> void:
 
 var _Visible = true
 
-func _input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:if $"../..".visible==true:
 	if _Visible==true:
 		if not $Node2D/RayCast2D3.is_colliding():
 			if event.is_action_pressed('ui_left'):

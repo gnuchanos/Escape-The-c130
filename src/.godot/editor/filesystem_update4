@@ -6,3 +6,20 @@ res://Data/Scenes/main_menu.tscn
 res://Data/Scenes/fps.tscn
 res://Puzzle Games/Game 5/Scenes/game_5.tscn
 res://Data/Scripts/world.gd
+res://Puzzle Games/Game 5/Levels/level_2.tscn
+res://Puzzle Games/Game 5/Levels/level_3.tscn
+res://Puzzle Games/Game 5/Levels/level_4.tscn
+res://Puzzle Games/Game 2/Scripts/game_2.gd
+res://Data/Scripts/fps.gd
+res://Data/Scripts/main_menu.gd
+res://Puzzle Games/Game 2/Scenes/game_2.tscn
+res://Puzzle Games/Game 1/Scenes/game_1.tscn
+res://Puzzle Games/Game 1/Scenes/character_game_1.tscn
+res://Puzzle Games/Game 1/Scripts/character_game_1.gd
+res://Puzzle Games/Game 3/Scripts/game_3.gd
+res://Data/Scenes/bullet_game_2.tscn
+res://Data/Scripts/bullet_game_2.gd
+res://Puzzle Games/Game 2/Scenes/bomb_ball.tscn
+res://Puzzle Games/Game 4/Scripts/game_4.gd
+res://Data/Scenes/lamb.tscn
+res://Data/Scripts/GLobalVAR.gd

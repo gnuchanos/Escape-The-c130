@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 				$Control/Control/Spaceship.global_position=$Control/Control/Node2D.get_global_mouse_position()
 
 func _on_play_again_pressed() -> void:
-	GLobalVar.Game4Countdown=30
+	GLobalVar.Game4Countdown=3
 	$Control/ColorRect2.visible=false
 	$Control/Node2D/Game4Wall.position.y=0
 	$Control/Node2D/Game4Wall2.position.y=-384

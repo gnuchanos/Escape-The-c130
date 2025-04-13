@@ -156,10 +156,6 @@ func _Run(delta):if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:
 		elif GLobalVar.PlayerSettings["FOV"] < GLobalVar.PlayerSettings["FOVMAX"]:
 			GLobalVar.PlayerSettings["FOV"] += 50 * delta
 
-func _jump():if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:if GLobalVar.PlayerSettings['GameOver']==false:
-	if Input.is_action_just_pressed("space") and is_on_floor():
-		if GLobalVar.PlayerSettings["CanJump"]:
-			velocity.y = GLobalVar.PlayerSettings["JumpHeight"]
 
 func _physics_process(delta: float) -> void:if GLobalVar.CharacterMovement==0:if GLobalVar.Asleep==false:if GLobalVar.PlayerSettings['GameOver']==false:
 	# Add the gravity.
@@ -167,7 +163,6 @@ func _physics_process(delta: float) -> void:if GLobalVar.CharacterMovement==0:if
 		velocity += get_gravity() * delta
 
 	if GLobalVar.PlayerSettings["CanWalk"] and not GLobalVar.PlayerSettings["GiveLife"] and not GLobalVar.PlayerSettings["UsingPC"]:
-		_jump()
 		_Run(delta)
 		_duckORcrawling()
 		_SpeedChange()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://oc162eltjbu3"]
+[gd_scene load_steps=74 format=4 uid="uid://oc162eltjbu3"]
 
 [ext_resource type="Script" path="res://Data/Scripts/world.gd" id="1_1vpts"]
 [ext_resource type="PackedScene" uid="uid://ccluxym7oe3ye" path="res://Data/Scenes/lamb.tscn" id="2_vdmc6"]
@@ -24,6 +24,10 @@
 [ext_resource type="AudioStream" uid="uid://dtxe071bpfcp1" path="res://Data/Sound/slap-237622.mp3" id="23_mwrfm"]
 [ext_resource type="Texture2D" uid="uid://ct4lhlv2u2g3e" path="res://Data/Images and Sprites/Group 174.png" id="24_cqtbt"]
 [ext_resource type="FontFile" uid="uid://by0fdwphtmen6" path="res://Data/Fonts/Goldman-Bold.ttf" id="25_jsed2"]
+[ext_resource type="AudioStream" uid="uid://ceolqc8334n14" path="res://Data/Sound/radio_music_0.ogg" id="25_tib3l"]
+[ext_resource type="AudioStream" uid="uid://vtntihcf52h2" path="res://Data/Sound/idl_room0.ogg" id="26_dttvg"]
+[ext_resource type="AudioStream" uid="uid://duxvjb0vpoa2g" path="res://Data/Sound/idl_room_1.ogg" id="27_uftdu"]
+[ext_resource type="PackedScene" uid="uid://b5jit2a1q2hbp" path="res://Data/Models/RadioX.glb" id="28_ct4vw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kb6fp"]
 size = Vector3(1.13891, 3.18372, 3.22162)
@@ -124,9 +128,6 @@ data = PackedVector3Array(-1.5379, 0.4853, 0.4668, 1.4679, 0.4853, -0.6989, 1.46
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c5w46"]
 size = Vector3(4.60657, 2.12299, 2.07602)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_6tdg3"]
-size = Vector3(4.42358, 1.62903, 2.50024)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfwsl"]
 resource_name = "door"
@@ -497,7 +498,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_20a4q"]
-size = Vector3(7.3338, 5.37793, 11.0853)
+size = Vector3(7.3338, 5.37793, 8.78597)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpdvp"]
 bg_color = Color(1, 1, 1, 0)
@@ -670,13 +671,6 @@ transform = Transform3D(-3.39884e-08, 0.628805, 0.777563, 2.74859e-08, 0.777563,
 [node name="jail" parent="Node3D" instance=ExtResource("17_g5xol")]
 
 [node name="Node3D2" type="Node3D" parent="Node3D"]
-
-[node name="Area3D" type="Area3D" parent="Node3D/Node3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.708, -2.18307, 17.4044)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Node3D2/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.673462, 0.314514, -0.750122)
-shape = SubResource("BoxShape3D_6tdg3")
 
 [node name="Node3D" type="Node3D" parent="Node3D/Node3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3593, -2.74503, 15.7936)
@@ -856,7 +850,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0521094, 1.26758, -0.671844
 shape = SubResource("BoxShape3D_8tt53")
 
 [node name="door" type="MeshInstance3D" parent="Doors and Cubes/Door_3/MeshInstance3D5/Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00212, -0.702496)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00164032, 1.00212, -0.702496)
 mesh = SubResource("ArrayMesh_4tuub")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_xdjuw")
@@ -893,7 +887,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48822, 1, 2.91506)
 
 [node name="Area3D5" type="Area3D" parent="Node3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79462, 0.444118, 3.05758)
-visible = false
 script = ExtResource("16_2r0wf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/Area3D5"]
@@ -1115,7 +1108,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.24681, -0.00180006, 3.34425
 [node name="Area3D7" type="Area3D" parent="Node3D3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D3/Area3D7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.430704, 2.18896, 27.6441)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.430704, 2.18896, 28.7938)
 shape = SubResource("BoxShape3D_20a4q")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D3/Area3D7"]
@@ -1202,6 +1195,25 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_dpdvp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_0xs5m")
 text = "Oyunfor
 Donate"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0622869, 4.34773, 19.5584)
+stream = ExtResource("25_tib3l")
+
+[node name="IdlRoom0" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8439, 0.494705, 1.83196)
+stream = ExtResource("26_dttvg")
+autoplay = true
+bus = &"Ambiance"
+
+[node name="IdlRoom1" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.06053, 0.516512, 1.84433)
+stream = ExtResource("27_uftdu")
+autoplay = true
+bus = &"Ambiance"
+
+[node name="RadioX" parent="." instance=ExtResource("28_ct4vw")]
+transform = Transform3D(-0.1, 1.06804e-10, -8.74163e-09, 0, 0.0999925, 0.0012217, 8.74228e-09, 0.0012217, -0.0999925, 1.07421, -46.9116, 10.74)
 
 [connection signal="body_entered" from="Node3D/Computer/Area3D3" to="." method="_on_area_3d_3_body_entered"]
 [connection signal="body_exited" from="Node3D/Computer/Area3D3" to="." method="_on_area_3d_3_body_exited"]

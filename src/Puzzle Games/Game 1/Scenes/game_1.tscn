@@ -66,6 +66,7 @@ bg_color = Color(0.705939, 3.53761e-06, 3.85046e-07, 1)
 bg_color = Color(0.961518, 4.45209e-06, 9.62615e-07, 1)
 
 [node name="Game 1" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_312k5")
 
 [node name="CanvasLayer" type="Control" parent="."]
@@ -80,7 +81,7 @@ tile_set = SubResource("TileSet_cqubl")
 position = Vector2(32, 320)
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer"]
-position = Vector2(-8, 504)
+position = Vector2(136, 288)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D"]
 position = Vector2(19, 40)

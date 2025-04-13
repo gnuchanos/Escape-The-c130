@@ -36,7 +36,7 @@ var PlayerSettings = {
 		'4':false,
 		'5':false
 	},
-	'Day':1,
+	'Day':4,
 	'KeyPlaced':false,
 	'Game5Level':1,
 	'GameDay2Victory':false,

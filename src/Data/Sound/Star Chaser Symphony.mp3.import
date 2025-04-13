@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvwa16818jvfw"
+path="res://.godot/imported/Star Chaser Symphony.mp3-a4ce6d0b857c5246e206c73ddd2f1b59.mp3str"
+
+[deps]
+
+source_file="res://Data/Sound/Star Chaser Symphony.mp3"
+dest_files=["res://.godot/imported/Star Chaser Symphony.mp3-a4ce6d0b857c5246e206c73ddd2f1b59.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
